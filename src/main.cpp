@@ -36,7 +36,7 @@ Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS)
 
 // for bidirectional entry detection system
 int visitorCount = 0;
-int entranceScanInterval = 5000; // delay too slow may cause the detection to detect the same visitor multiple times
+int entranceScanInterval = 1000; // delay too slow may cause the detection to detect the same visitor multiple times
 // for door locking system
 bool isHomeEntryCompleted = false; // has the user entered the house and closed the door?
 int tryAttempt = 0;
@@ -62,14 +62,13 @@ void setup() {
 }
 
 
-int mode = 0;
+int mode = 1;
 void loop() {
   if (mode == 0) {
     // Door closed as default in the beginning
     servo.write(0); // If not set, at default, its angle is 90°!
 
     // Display welcome message
-    displayMessage(LCD_DOOR_LOCK_SYSTEM, "Welcome home!", "");
     delay(2000);
 
     // Check if the password hash has been initialized

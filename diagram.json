@@ -65,14 +65,14 @@
       "id": "pir1",
       "top": -197.6,
       "left": 21.42,
-      "attrs": {}
+      "attrs": { "delayTime": "1" }
     },
     {
       "type": "wokwi-pir-motion-sensor",
       "id": "pir2",
       "top": -197.6,
       "left": 261.42,
-      "attrs": {}
+      "attrs": { "delayTime": "1" }
     },
     {
       "type": "wokwi-lcd1602",
