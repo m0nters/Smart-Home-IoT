@@ -73,6 +73,13 @@
       "top": -197.6,
       "left": 261.42,
       "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd2",
+      "top": -368,
+      "left": 34.4,
+      "attrs": { "pins": "i2c", "i2cAddress": "0x20" }
     }
   ],
   "connections": [
@@ -94,14 +101,21 @@
     ["keypad1:R3", "esp:0", "green", ["v0"]],
     ["keypad1:R2", "esp:4", "green", ["v0"]],
     ["keypad1:R1", "esp:16", "green", ["v0"]],
-    ["servo1:V+", "bb1:tp.2", "red", ["h0"]],
-    ["servo1:GND", "bb1:tn.3", "black", ["h0"]],
     ["servo1:PWM", "esp:17", "cyan", ["h-182.4", "v221"]],
     ["bb1:1t.b", "bb1:bn.1", "black", ["v0"]],
     ["bb1:2t.b", "esp:5", "yellow", ["v38.4", "h-124.8", "v-230.4"]],
     ["bb1:47b.g", "bb1:bp.38", "red", ["v0"]],
     ["bb1:55t.c", "bb1:tn.45", "black", ["v0"]],
     ["bb1:49b.g", "esp:18", "blue", ["v105.6", "h-566.4", "v-374.4"]],
+    ["pir1:VCC", "bb1:tp.4", "red", ["v134.4", "h220.8"]],
+    ["pir2:VCC", "bb1:tp.5", "red", ["v0", "h-19.2"]],
+    ["pir1:GND", "bb1:tn.6", "black", ["v124.8", "h191.74"]],
+    ["pir2:GND", "bb1:tn.8", "black", ["v0"]],
+    ["pir1:OUT", "esp:19", "gray", ["v163.2", "h47.86", "v96"]],
+    ["pir2:OUT", "esp:23", "#8f4814", ["v0"]],
+    ["lcd2:GND", "bb1:tn.4", "black", ["h-67.2", "v662.4"]],
+    ["lcd2:SDA", "esp:21", "purple", ["h-38.4", "v365", "h144", "v86.4"]],
+    ["lcd2:SCL", "esp:22", "magenta", ["h-28.8", "v345.9", "h163.2", "v67.2"]],
     ["bz1:1", "bb1:1t.a", "", ["$bb"]],
     ["bz1:2", "bb1:2t.a", "", ["$bb"]],
     ["btn1:1.l", "bb1:49t.e", "", ["$bb"]],
@@ -110,12 +124,9 @@
     ["btn1:2.r", "bb1:47b.f", "", ["$bb"]],
     ["r1:1", "bb1:49t.d", "", ["$bb"]],
     ["r1:2", "bb1:55t.d", "", ["$bb"]],
-    ["pir1:VCC", "bb1:tp.4", "red", ["v134.4", "h220.8"]],
-    ["pir2:VCC", "bb1:tp.5", "red", ["v0", "h-19.2"]],
-    ["pir1:GND", "bb1:tn.6", "black", ["v124.8", "h191.74"]],
-    ["pir2:GND", "bb1:tn.8", "black", ["v0"]],
-    ["pir1:OUT", "esp:19", "gray", ["v163.2", "h47.86", "v96"]],
-    ["pir2:OUT", "esp:23", "#8f4814", ["v0"]]
+    ["servo1:GND", "bb1:tn.46", "black", ["h0"]],
+    ["servo1:V+", "bb1:tp.47", "red", ["h0"]],
+    ["lcd2:VCC", "bb1:bp.1", "red", ["h-115.2", "v796.9"]]
   ],
   "dependencies": {}
 }

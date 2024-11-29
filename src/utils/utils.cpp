@@ -1,7 +1,7 @@
 #include "utils.h"
 
 // Function to display messages on the LCD
-void displayMessage(const String& line1, const String& line2) {
+void displayMessage(LiquidCrystal_I2C& lcd, const String& line1, const String& line2) {
   lcd.clear();
   if (line1 != "") {
     lcd.setCursor(0, 0);

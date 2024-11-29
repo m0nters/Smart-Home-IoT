@@ -8,7 +8,7 @@
 extern const int BUZZER;
 extern const int SERVO;
 extern const int BUTTON;
-extern LiquidCrystal_I2C lcd;
+extern LiquidCrystal_I2C LCD_DOOR_LOCK_SYSTEM;
 extern Servo servo;
 extern Keypad customKeypad;
 

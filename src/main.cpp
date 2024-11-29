@@ -13,7 +13,8 @@ const int sensorA = 23;
 const int sensorB = 19;
 
 // LCD setup
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+LiquidCrystal_I2C LCD_DOOR_LOCK_SYSTEM(0x27, 16, 2);
+LiquidCrystal_I2C LCD_BIENTRY_DETECTION_SYSTEM(0x20, 16, 2);
 
 // Servo setup
 Servo servo;
@@ -35,7 +36,6 @@ Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS)
 
 // for bidirectional entry detection system
 int visitorCount = 0;
-
 int entranceScanInterval = 5000; // delay too slow may cause the detection to detect the same visitor multiple times
 // for door locking system
 bool isHomeEntryCompleted = false; // has the user entered the house and closed the door?
@@ -49,10 +49,11 @@ byte hashedPassword[32]; // 32 bytes for SHA-256 hash
 String passwordPlaceholder = ""; // for display on LCD screen
 
 
-
 void setup() {
-  lcd.init();
-  lcd.backlight();
+  LCD_DOOR_LOCK_SYSTEM.init();
+  LCD_DOOR_LOCK_SYSTEM.backlight();
+  LCD_BIENTRY_DETECTION_SYSTEM.init();
+  LCD_BIENTRY_DETECTION_SYSTEM.backlight();
   servo.attach(SERVO); // setup servo, for locking/unlocking the door
   pinMode(BUTTON, INPUT); // for sending a signal to lock the door again when enter the house
   pinMode(BUZZER, OUTPUT); // for auditory notification
@@ -60,15 +61,15 @@ void setup() {
   bidirectional_entry_detection_init();
 }
 
-int mode = 1;
 
+int mode = 0;
 void loop() {
   if (mode == 0) {
     // Door closed as default in the beginning
     servo.write(0); // If not set, at default, its angle is 90°!
 
     // Display welcome message
-    displayMessage("Welcome home!", "");
+    displayMessage(LCD_DOOR_LOCK_SYSTEM, "Welcome home!", "");
     delay(2000);
 
     // Check if the password hash has been initialized
@@ -94,7 +95,7 @@ void loop() {
         if (digitalRead(sensorB) == HIGH) {
           handleVisitorArrival();
           delay(entranceScanInterval);
-          visitorCount ? displayMessage("No movement", "Total: " + String(visitorCount)) : displayMessage("No vistors", "Total: 0");
+          visitorCount ? displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No movement", "Total: " + String(visitorCount)) : displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No vistors", "Total: 0");
           return;
         }
       }
@@ -104,7 +105,7 @@ void loop() {
         if (digitalRead(sensorA) == HIGH) {
           handleVisitorExit();
           delay(entranceScanInterval);
-          visitorCount ? displayMessage("No movement", "Total: " + String(visitorCount)) : displayMessage("No vistors", "Total: 0");
+          visitorCount ? displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No movement", "Total: " + String(visitorCount)) : displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No vistors", "Total: 0");
           return;
         }
       }
