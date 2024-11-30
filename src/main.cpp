@@ -112,3 +112,22 @@ void loop() {
     }
   }
 }
+
+// int LED_PIN = 12; 
+// int LDR_PIN = 13;
+// void setup() {
+//   Serial.begin(9600);
+//   pinMode(LED_PIN, OUTPUT);
+//   pinMode(LDR_PIN, INPUT);
+// }
+
+// void loop() {
+//   int lightValue = analogRead(LDR_PIN);
+//   if (lightValue > 700) {
+//     digitalWrite(LED_PIN, HIGH);
+//   }
+//   else {
+//     digitalWrite(LED_PIN, LOW);
+//   }
+//   delay(100);
+// }
