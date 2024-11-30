@@ -37,3 +37,6 @@ void playFailureSound();
 void playSuccessSound();
 void playDoorClosedSound();
 void playWaitingToCloseDoorSound();
+
+// Main program
+void taskDoorLockSystem(void *parameter);

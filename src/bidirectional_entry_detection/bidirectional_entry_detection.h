@@ -11,3 +11,6 @@ extern LiquidCrystal_I2C LCD_BIENTRY_DETECTION_SYSTEM;
 void bidirectional_entry_detection_init();
 void handleVisitorArrival();
 void handleVisitorExit();
+
+// Main program
+void taskBidirectionalEntryDetection(void* parameter);

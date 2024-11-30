@@ -13,7 +13,6 @@ const int BUTTON = 18;
 const int sensorA = 23;
 const int sensorB = 19;
 
-
 // LCD setup
 LiquidCrystal_I2C LCD_DOOR_LOCK_SYSTEM(0x27, 16, 2);
 LiquidCrystal_I2C LCD_BIENTRY_DETECTION_SYSTEM(0x20, 16, 2);
@@ -45,18 +44,18 @@ bool isMuted = false;
 byte hashedPassword[32];
 String passwordPlaceholder = "";
 
-void taskDoorLockSystem(void *parameter);
-void taskBidirectionalEntryDetection(void *parameter);
 void setup() {
-  // Setup for Door Locking and Bidirectional Entry Detection
+  // Setup for Door Locking
   LCD_DOOR_LOCK_SYSTEM.init();
   LCD_DOOR_LOCK_SYSTEM.backlight();
-  LCD_BIENTRY_DETECTION_SYSTEM.init();
-  LCD_BIENTRY_DETECTION_SYSTEM.backlight();
   servo.attach(SERVO);
   pinMode(BUTTON, INPUT);
   pinMode(BUZZER, OUTPUT);
   door_locking_system_init();
+
+  // Setup for Bidirectional Entry Detection
+  LCD_BIENTRY_DETECTION_SYSTEM.init();
+  LCD_BIENTRY_DETECTION_SYSTEM.backlight();
   bidirectional_entry_detection_init();
 
   // Setup for Light Detection
@@ -72,63 +71,11 @@ void setup() {
 
   // Start tasks
   xTaskCreate(taskDoorLockSystem, "Door Lock System", 2048, NULL, 1, NULL);
-  xTaskCreate(taskLightDetection, "Light Detection", 2048, NULL, 1, NULL);
-  xTaskCreate(taskFireDetection, "Fire Detection", 2048, NULL, 1, NULL); 
-  xTaskCreate(taskBidirectionalEntryDetection, "Bidirectional Entry Detection", 2048, NULL, 1, NULL); 
+  xTaskCreate(taskBidirectionalEntryDetection, "Bidirectional Entry Detection", 2048, NULL, 2, NULL);
+  xTaskCreate(taskLightDetection, "Light Detection", 2048, NULL, 3, NULL);
+  xTaskCreate(taskFireDetection, "Fire Detection", 2048, NULL, 4, NULL);
 }
 
 void loop() {
   // The loop is empty as tasks are being handled in the background.
-}
-
-// Task for Door Lock System and Bidirectional Entry Detection
-
-void taskDoorLockSystem(void *parameter) {
-    while(true) {
-      servo.write(0);
-      displayMessage(LCD_DOOR_LOCK_SYSTEM, "Welcome home!", "");
-      delay(2000);
-
-      bool isPasswordSet = false;
-      for (int i = 0; i < 32; i++) {
-        if (hashedPassword[i] != 0) {
-          isPasswordSet = true;
-          break;
-        }
-      }
-
-      if (!isPasswordSet) {
-        setNewPassword();
-      } else {
-        enterPassword();
-      }
-        vTaskDelay(100 / portTICK_PERIOD_MS); // Yield to other tasks
-    }
-}
-
-void taskBidirectionalEntryDetection(void *parameter) {
-  while(true) {
-    if (digitalRead(sensorA) == HIGH) {
-        while (true) {
-          if (digitalRead(sensorB) == HIGH) {
-            handleVisitorArrival();
-            delay(entranceScanInterval);
-            visitorCount ? displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No movement", "Total: " + String(visitorCount)) : displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No visitors", "Total: 0");
-            break;
-          }
-        }
-      }
-
-      if (digitalRead(sensorB) == HIGH) {
-        while (true) {
-          if (digitalRead(sensorA) == HIGH) {
-            handleVisitorExit();
-            delay(entranceScanInterval);
-            visitorCount ? displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No movement", "Total: " + String(visitorCount)) : displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No visitors", "Total: 0");
-            break;
-          }
-        }
-      }
-      vTaskDelay(100 / portTICK_PERIOD_MS); // Yield to other tasks
-  }
 }
