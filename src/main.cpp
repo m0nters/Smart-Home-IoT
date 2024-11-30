@@ -4,15 +4,15 @@
 #include <ESP32Servo.h>
 #include "door_lock_system/door_lock_system.h"
 #include "bidirectional_entry_detection/bidirectional_entry_detection.h"
-
+#include "light_detection/light_detection.h"
+#include "fire_detection/fire_detection.h"
 // Pin setup
 const int BUZZER = 5;
 const int SERVO = 17;
 const int BUTTON = 18;
 const int sensorA = 23;
 const int sensorB = 19;
-const int LED_PIN = 12; 
-const int LDR_PIN = 13;
+
 
 // LCD setup
 LiquidCrystal_I2C LCD_DOOR_LOCK_SYSTEM(0x27, 16, 2);
@@ -36,7 +36,7 @@ Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS)
 
 // Global variables
 int visitorCount = 0;
-int entranceScanInterval = 5000;
+int entranceScanInterval = 1000;
 bool isHomeEntryCompleted = false;
 int tryAttempt = 0;
 const int maxTryAttempt = 3;
@@ -46,8 +46,6 @@ byte hashedPassword[32];
 String passwordPlaceholder = "";
 
 void taskDoorLockSystem(void *parameter);
-void taskLightDetection(void *parameter);
-
 void setup() {
   // Setup for Door Locking and Bidirectional Entry Detection
   LCD_DOOR_LOCK_SYSTEM.init();
@@ -64,13 +62,21 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
   pinMode(LDR_PIN, INPUT);
 
+  // Set up for Fire Detection
+  dhtSensor.setup(DHT_PIN, DHTesp::DHT22);
+  pinMode(WATER_PIN, OUTPUT);
+  pinMode(BUZZER_FIRE_PIN, OUTPUT);
+  FastLED.addLeds<WS2812, NEO_LED_PIN, GRB>(leds, NUM_LEDS);
+  FastLED.setBrightness(200); // Set brightness for the LED strip
+
   // Start tasks
   xTaskCreate(taskDoorLockSystem, "Door Lock System", 4096, NULL, 1, NULL);
   xTaskCreate(taskLightDetection, "Light Detection", 2048, NULL, 1, NULL);
+  xTaskCreate(taskFireDetection, "Fire Detection", 2048, NULL, 1, NULL); 
 }
 
 void loop() {
-  // The loop is now empty because tasks handle everything.
+  // The loop is empty as tasks are being handled in the background.
 }
 
 // Task for Door Lock System and Bidirectional Entry Detection
@@ -123,19 +129,5 @@ void taskDoorLockSystem(void *parameter) {
     }
 
     vTaskDelay(100 / portTICK_PERIOD_MS); // Yield to other tasks
-  }
-}
-
-// Task for Light Detection
-void taskLightDetection(void *parameter) {
-  while (true) {
-    int lightValue = analogRead(LDR_PIN);
-    if (lightValue > 700) {
-      digitalWrite(LED_PIN, HIGH);
-    } else {
-      digitalWrite(LED_PIN, LOW);
-    }
-
-    vTaskDelay(100 / portTICK_PERIOD_MS); // Run every 100ms
   }
 }
