@@ -171,6 +171,8 @@
     ["keypad1:R3", "esp:0", "green", ["v0"]],
     ["keypad1:R2", "esp:4", "green", ["v0"]],
     ["keypad1:R1", "esp:16", "green", ["v0"]],
+    ["servo1:V+", "bb1:tp.2", "red", ["h0"]],
+    ["servo1:GND", "bb1:tn.3", "black", ["h0"]],
     ["servo1:PWM", "esp:17", "cyan", ["h-182.4", "v221"]],
     ["bb1:1t.b", "bb1:bn.1", "black", ["v0"]],
     ["bb1:2t.b", "esp:5", "yellow", ["v38.4", "h-124.8", "v-230.4"]],
