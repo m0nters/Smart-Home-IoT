@@ -77,22 +77,22 @@
     {
       "type": "wokwi-led",
       "id": "led1",
-      "top": 34.8,
+      "top": 82.8,
       "left": -505,
       "attrs": { "colors": "red", "color": "red" }
     },
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "ldr1",
-      "top": 99.2,
-      "left": -757.6,
+      "top": 176,
+      "left": -719.2,
       "attrs": {}
     },
     {
       "type": "wokwi-slide-switch",
       "id": "sw1",
-      "top": 42.8,
-      "left": -572.9,
+      "top": 110,
+      "left": -457.7,
       "attrs": {}
     },
     {
@@ -143,6 +143,13 @@
       "top": -170.4,
       "left": -430.2,
       "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd2",
+      "top": -368,
+      "left": 53.6,
+      "attrs": { "pins": "i2c", "i2cAddress": "0x20" }
     }
   ],
   "connections": [
@@ -202,16 +209,22 @@
     ["r4:1", "bb1:13t.d", "green", ["v0"]],
     ["bb1:19t.d", "r4:2", "green", ["v0"]],
     ["bb1:19t.c", "esp:26", "green", ["v0"]],
+    ["bz2:2", "esp:25", "red", ["v0"]],
+    ["bz2:1", "bb1:tn.13", "black", ["v0"]],
+    ["bz1:1", "bb1:1t.a", "", ["$bb"]],
+    ["bz1:2", "bb1:2t.a", "", ["$bb"]],
     ["btn1:1.l", "bb1:49t.e", "", ["$bb"]],
     ["btn1:2.l", "bb1:47t.e", "", ["$bb"]],
     ["btn1:1.r", "bb1:49b.f", "", ["$bb"]],
     ["btn1:2.r", "bb1:47b.f", "", ["$bb"]],
     ["r1:1", "bb1:49t.d", "", ["$bb"]],
     ["r1:2", "bb1:55t.d", "", ["$bb"]],
-    ["bz1:1", "bb1:1t.a", "", ["$bb"]],
-    ["bz1:2", "bb1:2t.a", "", ["$bb"]],
-    ["bz2:2", "esp:25", "red", ["v0"]],
-    ["bz2:1", "bb1:tn.13", "black", ["v0"]]
+    ["servo1:V+", "bb1:tp.48", "red", ["h0"]],
+    ["servo1:GND", "bb1:tn.47", "black", ["h0"]],
+    ["lcd2:VCC", "bb1:bp.1", "red", ["h-806.4", "v883.3"]],
+    ["lcd2:GND", "bb1:bn.3", "black", ["h-864", "v854.4"]],
+    ["lcd2:SDA", "esp:21", "purple", ["h-67.2", "v365", "h182.4", "v86.4"]],
+    ["lcd2:SCL", "esp:22", "magenta", ["h-96", "v297.9", "h259.2", "v115.2"]]
   ],
   "dependencies": {}
 }

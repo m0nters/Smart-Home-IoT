@@ -46,6 +46,7 @@ byte hashedPassword[32];
 String passwordPlaceholder = "";
 
 void taskDoorLockSystem(void *parameter);
+void taskBidirectionalEntryDetection(void *parameter);
 void setup() {
   // Setup for Door Locking and Bidirectional Entry Detection
   LCD_DOOR_LOCK_SYSTEM.init();
@@ -70,9 +71,10 @@ void setup() {
   FastLED.setBrightness(200); // Set brightness for the LED strip
 
   // Start tasks
-  xTaskCreate(taskDoorLockSystem, "Door Lock System", 4096, NULL, 1, NULL);
+  xTaskCreate(taskDoorLockSystem, "Door Lock System", 2048, NULL, 1, NULL);
   xTaskCreate(taskLightDetection, "Light Detection", 2048, NULL, 1, NULL);
   xTaskCreate(taskFireDetection, "Fire Detection", 2048, NULL, 1, NULL); 
+  xTaskCreate(taskBidirectionalEntryDetection, "Bidirectional Entry Detection", 2048, NULL, 1, NULL); 
 }
 
 void loop() {
@@ -80,11 +82,9 @@ void loop() {
 }
 
 // Task for Door Lock System and Bidirectional Entry Detection
-void taskDoorLockSystem(void *parameter) {
-  while (true) {
-    static int mode = 0;
 
-    if (mode == 0) {
+void taskDoorLockSystem(void *parameter) {
+    while(true) {
       servo.write(0);
       displayMessage(LCD_DOOR_LOCK_SYSTEM, "Welcome home!", "");
       delay(2000);
@@ -102,10 +102,13 @@ void taskDoorLockSystem(void *parameter) {
       } else {
         enterPassword();
       }
+        vTaskDelay(100 / portTICK_PERIOD_MS); // Yield to other tasks
     }
+}
 
-    if (mode == 1) {
-      if (digitalRead(sensorA) == HIGH) {
+void taskBidirectionalEntryDetection(void *parameter) {
+  while(true) {
+    if (digitalRead(sensorA) == HIGH) {
         while (true) {
           if (digitalRead(sensorB) == HIGH) {
             handleVisitorArrival();
@@ -126,8 +129,6 @@ void taskDoorLockSystem(void *parameter) {
           }
         }
       }
-    }
-
-    vTaskDelay(100 / portTICK_PERIOD_MS); // Yield to other tasks
+      vTaskDelay(100 / portTICK_PERIOD_MS); // Yield to other tasks
   }
 }
