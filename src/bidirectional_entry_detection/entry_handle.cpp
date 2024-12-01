@@ -3,27 +3,27 @@
 void handleVisitorArrival() {
   visitorCount++;
   displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "Entering...", "Total: " + String(visitorCount));
-  tone(BUZZER, 880); // A5
+  tone(BUZZER_BidirectionalEntryDetection, 880); // A5
   delay(200);
-  noTone(BUZZER);
+  noTone(BUZZER_BidirectionalEntryDetection);
   delay(100);
-  tone(BUZZER, 698); // F5
+  tone(BUZZER_BidirectionalEntryDetection, 698); // F5
   delay(200);
-  noTone(BUZZER);
+  noTone(BUZZER_BidirectionalEntryDetection);
 }
 
 void handleVisitorExit() {
   visitorCount != 0 ? visitorCount-- : visitorCount = 0;
   displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "Exiting...", "Total: " + String(visitorCount));
-  tone(BUZZER, 440); // A4
+  tone(BUZZER_BidirectionalEntryDetection, 440); // A4
   delay(100);
-  noTone(BUZZER);
+  noTone(BUZZER_BidirectionalEntryDetection);
   delay(100);
-  tone(BUZZER, 440); // A4
+  tone(BUZZER_BidirectionalEntryDetection, 440); // A4
   delay(100);
-  noTone(BUZZER);
+  noTone(BUZZER_BidirectionalEntryDetection);
   delay(100);
-  tone(BUZZER, 440); // A4
+  tone(BUZZER_BidirectionalEntryDetection, 440); // A4
   delay(100);
-  noTone(BUZZER);
+  noTone(BUZZER_BidirectionalEntryDetection);
 }

@@ -4,24 +4,23 @@
 #include <ESP32Servo.h>
 #include "utils/utils.h"
 
-// devices inherited from `main.cpp`
-extern const int BUZZER;
-extern const int SERVO;
-extern const int BUTTON;
+const int BUZZER_DoorLockSystem = 1;
+const int SERVO = 17;
+const int BUTTON = 18;
+
 extern LiquidCrystal_I2C LCD_DOOR_LOCK_SYSTEM;
 extern Servo servo;
 extern Keypad customKeypad;
 
-// global miscellaneous variables
 extern bool isHomeEntryCompleted; // has the user entered the house and closed the door?
+extern byte hashedPassword[32]; // 32 bytes for SHA-256 hash
+extern String passwordPlaceholder; // for display on LCD screen
+
+// Specification variables for websites inherited from `main.cpp`
 extern int tryAttempt;
 extern const int maxTryAttempt;
 extern const int passwordLength;
 extern bool isMuted; // turn on/off sound effect
-
-// Password setup
-extern byte hashedPassword[32]; // 32 bytes for SHA-256 hash
-extern String passwordPlaceholder; // for display on LCD screen
 
 // Function declarations
 void door_locking_system_init();
@@ -37,3 +36,6 @@ void playFailureSound();
 void playSuccessSound();
 void playDoorClosedSound();
 void playWaitingToCloseDoorSound();
+
+// Main program
+void taskDoorLockSystem(void* parameter);
