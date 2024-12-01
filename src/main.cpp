@@ -6,56 +6,16 @@
 #include "bidirectional_entry_detection/bidirectional_entry_detection.h"
 #include "light_detection/light_detection.h"
 #include "fire_detection/fire_detection.h"
-// Pin setup
-const int BUZZER = 5;
-const int SERVO = 17;
-const int BUTTON = 18;
-const int sensorA = 23;
-const int sensorB = 19;
 
-// LCD setup
-LiquidCrystal_I2C LCD_DOOR_LOCK_SYSTEM(0x27, 16, 2);
-LiquidCrystal_I2C LCD_BIENTRY_DETECTION_SYSTEM(0x20, 16, 2);
-
-// Servo setup
-Servo servo;
-
-// Keypad setup
-const byte ROWS = 4;
-const byte COLS = 4;
-char hexaKeys[ROWS][COLS] = {
-  {'1','2','3','A'},
-  {'4','5','6','B'},
-  {'7','8','9','C'},
-  {'*','0','#','D'}
-};
-byte rowPins[ROWS] = { 16, 4, 0, 2 };
-byte colPins[COLS] = { 15, 8, 7, 6 };
-Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS);
-
-// Global variables
+// Specification variables for websites
 int visitorCount = 0;
-int entranceScanInterval = 1000;
-bool isHomeEntryCompleted = false;
 int tryAttempt = 0;
 const int maxTryAttempt = 3;
 const int passwordLength = 4;
-bool isMuted = false;
-byte hashedPassword[32];
-String passwordPlaceholder = "";
+bool isMuted = false; // turn on/off sound effect
 
 void setup() {
-  // Setup for Door Locking
-  LCD_DOOR_LOCK_SYSTEM.init();
-  LCD_DOOR_LOCK_SYSTEM.backlight();
-  servo.attach(SERVO);
-  pinMode(BUTTON, INPUT);
-  pinMode(BUZZER, OUTPUT);
   door_locking_system_init();
-
-  // Setup for Bidirectional Entry Detection
-  LCD_BIENTRY_DETECTION_SYSTEM.init();
-  LCD_BIENTRY_DETECTION_SYSTEM.backlight();
   bidirectional_entry_detection_init();
 
   // Setup for Light Detection

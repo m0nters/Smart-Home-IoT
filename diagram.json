@@ -150,6 +150,13 @@
       "top": -368,
       "left": 53.6,
       "attrs": { "pins": "i2c", "i2cAddress": "0x20" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz3",
+      "top": 271.2,
+      "left": 606.6,
+      "attrs": { "volume": "0.1" }
     }
   ],
   "connections": [
@@ -211,6 +218,12 @@
     ["bb1:19t.c", "esp:26", "green", ["v0"]],
     ["bz2:2", "esp:25", "red", ["v0"]],
     ["bz2:1", "bb1:tn.13", "black", ["v0"]],
+    ["servo1:V+", "bb1:tp.48", "red", ["h0"]],
+    ["servo1:GND", "bb1:tn.47", "black", ["h0"]],
+    ["lcd2:VCC", "bb1:bp.1", "red", ["h-806.4", "v883.3"]],
+    ["lcd2:GND", "bb1:bn.3", "black", ["h-864", "v854.4"]],
+    ["lcd2:SDA", "esp:21", "purple", ["h-67.2", "v365", "h182.4", "v86.4"]],
+    ["lcd2:SCL", "esp:22", "magenta", ["h-96", "v297.9", "h259.2", "v115.2"]],
     ["bz1:1", "bb1:1t.a", "", ["$bb"]],
     ["bz1:2", "bb1:2t.a", "", ["$bb"]],
     ["btn1:1.l", "bb1:49t.e", "", ["$bb"]],
@@ -219,12 +232,10 @@
     ["btn1:2.r", "bb1:47b.f", "", ["$bb"]],
     ["r1:1", "bb1:49t.d", "", ["$bb"]],
     ["r1:2", "bb1:55t.d", "", ["$bb"]],
-    ["servo1:V+", "bb1:tp.48", "red", ["h0"]],
-    ["servo1:GND", "bb1:tn.47", "black", ["h0"]],
-    ["lcd2:VCC", "bb1:bp.1", "red", ["h-806.4", "v883.3"]],
-    ["lcd2:GND", "bb1:bn.3", "black", ["h-864", "v854.4"]],
-    ["lcd2:SDA", "esp:21", "purple", ["h-67.2", "v365", "h182.4", "v86.4"]],
-    ["lcd2:SCL", "esp:22", "magenta", ["h-96", "v297.9", "h259.2", "v115.2"]]
+    ["bz3:1", "bb1:44t.a", "", ["$bb"]],
+    ["bz3:2", "bb1:45t.a", "", ["$bb"]],
+    ["bb1:44t.b", "bb1:bn.35", "black", ["v0"]],
+    ["bb1:45t.b", "esp:TX", "orange", ["v192", "h-556.8", "v-441.6"]]
   ],
   "dependencies": {}
 }

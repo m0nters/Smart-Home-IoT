@@ -1,6 +1,5 @@
 #include "bidirectional_entry_detection.h"
 
-extern int entranceScanInterval;
 // Task for Bidirectional Entry Detection
 void taskBidirectionalEntryDetection(void *parameter) {
   while(true) {
@@ -8,7 +7,7 @@ void taskBidirectionalEntryDetection(void *parameter) {
         while (true) {
           if (digitalRead(sensorB) == HIGH) {
             handleVisitorArrival();
-            delay(entranceScanInterval);
+            delay(1000);
             visitorCount ? displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No movement", "Total: " + String(visitorCount)) : displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No visitors", "Total: 0");
             break;
           }
@@ -19,7 +18,7 @@ void taskBidirectionalEntryDetection(void *parameter) {
         while (true) {
           if (digitalRead(sensorA) == HIGH) {
             handleVisitorExit();
-            delay(entranceScanInterval);
+            delay(1000);
             visitorCount ? displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No movement", "Total: " + String(visitorCount)) : displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "No visitors", "Total: 0");
             break;
           }
