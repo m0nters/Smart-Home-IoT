@@ -140,13 +140,14 @@ bool validatePassword(const String& input) {
 
 
 void lockTheSystem() {
+  isDoorPermanentlyLocked = true;
   displayMessage(LCD_DOOR_LOCK_SYSTEM, "System locked...", "");
   delay(3000);
   while (true) {
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Please verify", "online!");
     for (int i = 8; i <= 16; ++i) {
       LCD_DOOR_LOCK_SYSTEM.print(".");
-      delay(800);
+      vTaskDelay(800 / portTICK_PERIOD_MS); // Yield to other tasks
     }
   }
 }

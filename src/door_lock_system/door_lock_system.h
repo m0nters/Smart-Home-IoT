@@ -17,10 +17,12 @@ extern byte hashedPassword[32]; // 32 bytes for SHA-256 hash
 extern String passwordPlaceholder; // for display on LCD screen
 
 // Specification variables for websites inherited from `main.cpp`
+extern bool isPasswordSet;
 extern int tryAttempt;
 extern const int maxTryAttempt;
 extern const int passwordLength;
 extern bool isMuted; // turn on/off sound effect
+extern bool isDoorPermanentlyLocked; // type password wrong `maxTryAttempt` times, this will be true
 
 // Function declarations
 void door_locking_system_init();

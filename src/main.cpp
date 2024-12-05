@@ -9,10 +9,12 @@
 
 // Specification variables for websites
 int visitorCount = 0;
+bool isPasswordSet = false;
 int tryAttempt = 0;
 const int maxTryAttempt = 3;
 const int passwordLength = 4;
 bool isMuted = false; // turn on/off sound effect
+bool isDoorPermanentlyLocked = false; // type password wrong `maxTryAttempt` times, this will be true
 
 void setup() {
   door_locking_system_init();
@@ -21,10 +23,10 @@ void setup() {
   fire_detection_init();
 
   // Start tasks
-  xTaskCreate(taskDoorLockSystem, "Door Lock System", 2048, NULL, 1, NULL);
-  xTaskCreate(taskBidirectionalEntryDetection, "Bidirectional Entry Detection", 2048, NULL, 2, NULL);
-  xTaskCreate(taskLightDetection, "Light Detection", 2048, NULL, 3, NULL);
-  xTaskCreate(taskFireDetection, "Fire Detection", 2048, NULL, 4, NULL);
+  xTaskCreate(taskLightDetection, "Light Detection", 2048, NULL, 1, NULL);
+  xTaskCreate(taskFireDetection, "Fire Detection", 2048, NULL, 2, NULL);
+  xTaskCreate(taskBidirectionalEntryDetection, "Bidirectional Entry Detection", 2048, NULL, 3, NULL);
+  xTaskCreate(taskDoorLockSystem, "Door Lock System", 2048, NULL, 4, NULL);
 }
 
 void loop() {
