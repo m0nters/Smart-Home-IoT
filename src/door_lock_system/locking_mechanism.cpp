@@ -122,19 +122,21 @@ bool validatePassword(const String& input) {
   }
   // Hashes match
   displayMessage(LCD_DOOR_LOCK_SYSTEM, "Door unlocked!", "");
-  tryAttempt = 0;
-  servo.write(90);
+  isDoorLocked = false; 
+  tryAttempt = 0; // Reset the attempt counter
+  servo.write(90); // Open the door
   playSuccessSound();
   delay(1300);
   while (!isHomeEntryCompleted) {
-    awaitDoorClosure();
+    awaitDoorClosure(); // Wait for the door to be closed
+    servo.write(0); // Close the door
+    isDoorLocked = true;
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Door closed!", "");
-    servo.write(0);
-    isHomeEntryCompleted = true;
+    isHomeEntryCompleted = true; // User has entered the house, turn off the sound
     playDoorClosedSound();
     delay(1500);
   }
-  isHomeEntryCompleted = false;
+  isHomeEntryCompleted = false; // Reset the entry status
   return true;
 }
 
@@ -143,7 +145,7 @@ void lockTheSystem() {
   isDoorPermanentlyLocked = true;
   displayMessage(LCD_DOOR_LOCK_SYSTEM, "System locked...", "");
   delay(3000);
-  while (true) {
+  while (isDoorPermanentlyLocked) {
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Please verify", "online!");
     for (int i = 8; i <= 16; ++i) {
       LCD_DOOR_LOCK_SYSTEM.print(".");

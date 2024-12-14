@@ -21,7 +21,6 @@ Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS)
 
 // password setup
 bool isHomeEntryCompleted = false;
-byte hashedPassword[32] = { 0 };
 String passwordPlaceholder = "";
 
 void door_locking_system_init() {

@@ -2,7 +2,7 @@
 
 // Function to play failure sound (set password failed, wrong password)
 void playFailureSound() { // 300ms
-  if (isMuted) {
+  if (isMutedDoorSystem) {
     delay(300);
     return;
   }
@@ -16,7 +16,7 @@ void playFailureSound() { // 300ms
 
 
 void playTypingSound() { // 50ms
-  if (isMuted) {
+  if (isMutedDoorSystem) {
     delay(50);
     return;
   }
@@ -28,7 +28,7 @@ void playTypingSound() { // 50ms
 
 // Function to play success sound (password set successfully, correct password entered)
 void playSuccessSound() { // 700ms
-  if (isMuted) {
+  if (isMutedDoorSystem) {
     delay(700);
     return;
   }
@@ -43,7 +43,7 @@ void playSuccessSound() { // 700ms
 
 
 void playDoorClosedSound() { // 500ms
-  if (isMuted) {
+  if (isMutedDoorSystem) {
     delay(500);
     return;
   }
