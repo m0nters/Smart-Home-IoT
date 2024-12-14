@@ -26,7 +26,7 @@ byte hashedPassword[32] = { 0 };
 
 
 // WiFi credentials
-const char* ssid = "Wowki-GUEST";
+const char* ssid = "Wokwi-GUEST";
 const char* password = "";
 
 
@@ -42,8 +42,10 @@ PubSubClient mqttClient(wifiClient);
 
 // Function to connect to WiFi
 void setup_wifi() {
-  delay(10);
+  // Connect to WiFi
   WiFi.begin(ssid, password);
+
+  // Wait for connection
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
   }
@@ -96,6 +98,10 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 void taskMQTT(void* parameter) {
   while (1) {
+    if (WiFi.status() != WL_CONNECTED) {
+      setup_wifi();  // Reconnect WiFi if disconnected
+    }
+
     if (!mqttClient.connected()) {
       reconnect();
     }
@@ -105,9 +111,24 @@ void taskMQTT(void* parameter) {
 }
 
 
+void publishData() {
+  mqttClient.publish("home-0PPKrXoRcgyppks/visitorCount", String(visitorCount).c_str());
+  mqttClient.publish("home-0PPKrXoRcgyppks/isMutedEntryDetection", isMutedEntryDetection ? "true" : "false");
+
+  // Door lock system data
+  mqttClient.publish("home-0PPKrXoRcgyppks/isPasswordSet", isPasswordSet ? "true" : "false");
+  mqttClient.publish("home-0PPKrXoRcgyppks/tryAttempt", String(tryAttempt).c_str());
+  mqttClient.publish("home-0PPKrXoRcgyppks/maxTryAttempt", String(maxTryAttempt).c_str());
+  mqttClient.publish("home-0PPKrXoRcgyppks/passwordLength", String(passwordLength).c_str());
+  mqttClient.publish("home-0PPKrXoRcgyppks/isMutedDoorSystem", isMutedDoorSystem ? "true" : "false");
+  mqttClient.publish("home-0PPKrXoRcgyppks/isDoorPermanentlyLocked", isDoorPermanentlyLocked ? "true" : "false");
+}
+
+
 // everything works in here, this is the entry point
 void setup() {
   setup_wifi();
+
   mqttClient.setServer(mqtt_server, mqtt_port);
   mqttClient.setCallback(callback);
   mqttClient.setKeepAlive(90);
@@ -118,11 +139,19 @@ void setup() {
   fire_detection_init();
 
   // Start tasks
-  xTaskCreate(taskLightDetection, "Light Detection", 2048, NULL, 1, NULL);
-  xTaskCreate(taskFireDetection, "Fire Detection", 2048, NULL, 2, NULL);
-  xTaskCreate(taskBidirectionalEntryDetection, "Bidirectional Entry Detection", 2048, NULL, 3, NULL);
-  xTaskCreate(taskDoorLockSystem, "Door Lock System", 2048, NULL, 4, NULL);
-  xTaskCreate(taskMQTT, "MQTT Task", 2048, NULL, 5, NULL);
+  xTaskCreate(taskLightDetection, "Light Detection", 4096, NULL, 2, NULL);
+  xTaskCreate(taskFireDetection, "Fire Detection", 4096, NULL, 2, NULL);
+  xTaskCreate(taskBidirectionalEntryDetection, "Bidirectional Entry Detection", 4096, NULL, 3, NULL);
+  xTaskCreate(taskDoorLockSystem, "Door Lock System", 4096, NULL, 4, NULL);
+  xTaskCreate(taskMQTT, "MQTT Task", 4096, NULL, 1, NULL);
+
+  // Publish data periodically
+  xTaskCreate([](void* parameter) {
+    while (true) {
+      publishData();
+      vTaskDelay(10 / portTICK_PERIOD_MS); // Publish data every 10 seconds
+    }
+    }, "Publish Data", 4096, NULL, 1, NULL);
 }
 
 void loop() {
