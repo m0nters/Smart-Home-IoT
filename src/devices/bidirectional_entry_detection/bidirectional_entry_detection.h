@@ -1,5 +1,6 @@
 #pragma once
 #include "utils/utils.h"
+#include "../../connection/mqtt/mqtt.h"
 
 const int sensorA = 23;
 const int sensorB = 19;

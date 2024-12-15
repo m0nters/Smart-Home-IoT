@@ -3,6 +3,7 @@
 #include <LiquidCrystal_I2C.h>
 #include <ESP32Servo.h>
 #include "utils/utils.h"
+#include "../../connection/mqtt/mqtt.h"
 
 const int BUZZER_DoorLockSystem = 1;
 const int SERVO = 17;
