@@ -90,7 +90,7 @@ void enterPassword() {
     // Check password correctness
     if (validatePassword(input)) break; // Break out of the password entry loop after success
 
-    if (tryAttempt == maxTryAttempt) {
+    if (tryAttempt >= maxTryAttempt) { // the reason for `>=` is that user may change `maxTryAttempt` to something less than `tryAttempt`
       lockTheSystem();
     }
   }
@@ -108,20 +108,21 @@ bool validatePassword(const String& input) {
       if (tryAttempt == maxTryAttempt - 1) {
         displayMessage(LCD_DOOR_LOCK_SYSTEM, "Wrong password", "Last attempt!");
       }
-      else if (tryAttempt == maxTryAttempt) {
+      else if (tryAttempt >= maxTryAttempt) { // the reason for `>=` is that user may change `maxTryAttempt` to something less than `tryAttempt`
         displayMessage(LCD_DOOR_LOCK_SYSTEM, "Stop! Max", "attempts reached!");
       }
       else {
         displayMessage(LCD_DOOR_LOCK_SYSTEM, "Wrong password", "Try again!");
       }
 
-      if (tryAttempt != maxTryAttempt) {
-        displayMessage(LCD_DOOR_LOCK_SYSTEM, "Attempts left: " + String(maxTryAttempt - tryAttempt), "");
+      playFailureSound();
+      delay(1700);
+
+      if (tryAttempt < maxTryAttempt) {
+        displayMessage(LCD_DOOR_LOCK_SYSTEM, "Attempts left: ", String(maxTryAttempt - tryAttempt));
         delay(1000);
       }
 
-      playFailureSound();
-      delay(1700);
       return false;
     }
   }

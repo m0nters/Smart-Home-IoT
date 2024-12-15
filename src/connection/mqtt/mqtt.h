@@ -10,10 +10,11 @@ extern const int mqtt_port;
 extern PubSubClient mqttClient;
 
 // variables from website to fetch
-extern bool isDoorPermanentlyLocked;
-extern byte hashedPassword[32];
 extern bool isMutedEntryDetection;
 extern bool isMutedDoorSystem;
+extern bool isDoorPermanentlyLocked;
+extern int maxTryAttempt;
+extern byte hashedPassword[32];
 
 void mqttSetup();
 void mqttConnect();
