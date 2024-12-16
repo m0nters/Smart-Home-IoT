@@ -14,6 +14,7 @@ extern bool isMutedEntryDetection;
 extern bool isMutedDoorSystem;
 extern bool isDoorPermanentlyLocked;
 extern int maxTryAttempt;
+extern int passwordLength;
 extern byte hashedPassword[32];
 
 void mqttSetup();

@@ -44,6 +44,9 @@ void websiteDataHandler(char* topic, byte* payload, unsigned int length) {
   else if (String(topic) == "home-0PPKrXoRcgyppks/maxTryAttempt") {
     maxTryAttempt = message.toInt();
   }
+  else if (String(topic) == "home-0PPKrXoRcgyppks/passwordLength") {
+    passwordLength = message.toInt();
+  }
   // user change password on website
   else if (String(topic) == "home-0PPKrXoRcgyppks/hashedPassword") {
     for (unsigned int i = 0; i < length; i++) {
