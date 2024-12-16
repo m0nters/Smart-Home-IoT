@@ -309,17 +309,6 @@
         "className": ""
     },
     {
-        "id": "4a5a31bd176cd1c0",
-        "type": "ui_group",
-        "name": "Thông tin tài khoản",
-        "tab": "d1294323841f2b1b",
-        "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "7b3c8a6d5c674459",
         "type": "ui_form",
         "z": "6c42d53024a128bd",
@@ -369,7 +358,7 @@
         "type": "function",
         "z": "6c42d53024a128bd",
         "name": "find corresponding username",
-        "func": "const bcrypt = global.get('bcrypt'); \n\nconst username = msg.payload.username;\nglobal.set(\"username\", username); // save current session through `username` global variable\nmsg.inputPassword = msg.payload.password; // `msg.payload` is gonna be overwritten later\n\n// SQL query to get the stored password hash for the username\nmsg.topic = `\n    SELECT password, role \n    FROM users \n    WHERE username = ?\n`;\nmsg.payload = [username];\nreturn msg;\n",
+        "func": "const bcrypt = global.get('bcrypt'); \n\nconst username = msg.payload.username;\nglobal.set(\"username\", username); // save current session through `username` global variable, use for \"Cài đặt\" tab -- do not delete\nmsg.inputPassword = msg.payload.password; // `msg.payload` is gonna be overwritten later\n\n// SQL query to get the stored password hash for the username\nmsg.topic = `\n    SELECT password, role \n    FROM users \n    WHERE username = ?\n`;\nmsg.payload = [username];\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -605,7 +594,7 @@
         "type": "function",
         "z": "6c42d53024a128bd",
         "name": "check password",
-        "func": "const bcrypt = global.get('bcrypt');\n\nif (msg.payload.length == 0) {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n    return msg;\n}\n\nconst storedHash = msg.payload[0].password;\nconst userPassword = msg.inputPassword;\ndelete msg.inputPassword;\n\nconst isMatch = bcrypt.compareSync(userPassword, storedHash);\n\nif (isMatch) {\n    msg.role = msg.payload[0].role;\n    global.set(\"role\", msg.role);\n    msg.topic = \"Đăng nhập thành công!\";\n    msg.payload = \"Đã đăng nhập với vai trò \" + msg.role;\n    msg.username = global.get(\"username\");\n} else {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n}\n\nreturn msg;",
+        "func": "const bcrypt = global.get('bcrypt');\n\nif (msg.payload.length == 0) {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n    return msg;\n}\n\nconst storedHash = msg.payload[0].password;\nconst userPassword = msg.inputPassword;\ndelete msg.inputPassword;\n\nconst isMatch = bcrypt.compareSync(userPassword, storedHash);\n\nif (isMatch) {\n    msg.role = msg.payload[0].role;\n    msg.topic = \"Đăng nhập thành công!\";\n    msg.payload = \"Đã đăng nhập với vai trò \" + msg.role;\n    msg.username = global.get(\"username\");\n} else {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -675,7 +664,7 @@
         "order": 4,
         "width": 0,
         "height": 0,
-        "passthru": false,
+        "passthru": true,
         "label": "Đăng xuất",
         "tooltip": "",
         "color": "white",
@@ -751,6 +740,35 @@
         "x": 1120,
         "y": 540,
         "wires": []
+    },
+    {
+        "id": "941b4175f7352d2c",
+        "type": "inject",
+        "z": "6c42d53024a128bd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "abe22c328c50ff2d"
+            ]
+        ]
     },
     {
         "id": "bcaab93f321626c8",
@@ -2190,98 +2208,6 @@
         "y": 520,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "019641b862949ccd",
-        "type": "ui_text",
-        "z": "1d78ea86ba59c938",
-        "group": "4a5a31bd176cd1c0",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Tên người dùng",
-        "format": "{{msg.username}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 560,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "31cda2f63c5a440e",
-        "type": "ui_text",
-        "z": "1d78ea86ba59c938",
-        "group": "4a5a31bd176cd1c0",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Vai trò",
-        "format": "{{msg.role}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 530,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "a941350bfb7d8cbf",
-        "type": "inject",
-        "z": "1d78ea86ba59c938",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 680,
-        "wires": [
-            [
-                "190d0a7f44769f84"
-            ]
-        ]
-    },
-    {
-        "id": "190d0a7f44769f84",
-        "type": "function",
-        "z": "1d78ea86ba59c938",
-        "name": "fetch data",
-        "func": "msg.username = global.get(\"username\");\nmsg.role = global.get(\"role\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 300,
-        "y": 680,
-        "wires": [
-            [
-                "019641b862949ccd",
-                "31cda2f63c5a440e"
-            ]
         ]
     }
 ]
