@@ -594,7 +594,7 @@
         "type": "function",
         "z": "6c42d53024a128bd",
         "name": "check password",
-        "func": "const bcrypt = global.get('bcrypt');\n\nif (msg.payload.length == 0) {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n    return msg;\n}\n\nconst storedHash = msg.payload[0].password;\nconst userPassword = msg.inputPassword;\ndelete msg.inputPassword;\n\nconst isMatch = bcrypt.compareSync(userPassword, storedHash);\n\nif (isMatch) {\n    msg.role = msg.payload[0].role;\n    msg.topic = \"Đăng nhập thành công!\";\n    msg.payload = \"Đã đăng nhập với vai trò \" + msg.role;\n    msg.username = global.get(\"username\");\n} else {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n}\n\nreturn msg;",
+        "func": "const bcrypt = global.get('bcrypt');\n\nif (msg.payload.length == 0) {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n\n    const previousUsername = global.get(\"previousUsername\");\n    global.set(\"username\", previousUsername);\n    return msg;\n}\n\nconst storedHash = msg.payload[0].password;\nconst userPassword = msg.inputPassword;\ndelete msg.inputPassword;\n\nconst isMatch = bcrypt.compareSync(userPassword, storedHash);\n\nif (isMatch) {\n    msg.role = msg.payload[0].role;\n    global.set(\"role\", msg.role);\n\n    msg.topic = \"Đăng nhập thành công!\";\n    msg.payload = \"Đã đăng nhập với vai trò \" + msg.role;\n    \n    msg.username = global.get(\"username\");\n    global.set(\"previousUsername\", msg.username);\n} else {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n    \n    const previousUsername = global.get(\"previousUsername\");\n    global.set(\"username\", previousUsername);\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -638,7 +638,7 @@
         "type": "function",
         "z": "6c42d53024a128bd",
         "name": "set role & username",
-        "func": "msg.username = \"Khách\";\nmsg.role = \"guest\";\nreturn msg;",
+        "func": "msg.username = \"Khách\";\nmsg.role = \"guest\";\nglobal.set(\"username\", msg.username);\nglobal.set(\"role\", msg.role);\nglobal.set(\"previousUsername\", \"Khách\");\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -742,7 +742,7 @@
         "wires": []
     },
     {
-        "id": "941b4175f7352d2c",
+        "id": "f55435f9f09f9806",
         "type": "inject",
         "z": "6c42d53024a128bd",
         "name": "",
@@ -755,18 +755,39 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 340,
+        "x": 310,
+        "y": 460,
         "wires": [
             [
-                "abe22c328c50ff2d"
+                "69d8a36ad763053b"
+            ]
+        ]
+    },
+    {
+        "id": "69d8a36ad763053b",
+        "type": "function",
+        "z": "6c42d53024a128bd",
+        "name": "update current user & role periodically",
+        "func": "msg.username = global.get(\"username\") || \"Khách\";\nmsg.role = global.get(\"role\") || \"guest\";\nglobal.set(\"username\", msg.username);\nglobal.set(\"role\", msg.role);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 460,
+        "wires": [
+            [
+                "56f67e020506f28d",
+                "ac0377a97577e93d"
             ]
         ]
     },
@@ -1105,7 +1126,7 @@
         "type": "function",
         "z": "68edb1e124448d83",
         "name": "validate user",
-        "func": "const username = msg.username;\nconst role = msg.role;\ndelete msg.role;\ndelete msg.username;\n\nif (msg.payload.length == 0) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Người dùng không tồn tại\";\n    return msg;\n}\n\nmsg.topic = \"Thành công\";\nmsg.payload = `Người dùng \"${username}\" hiện đang có vai trò \"${role}\"!`;\nmsg.query = `\n    UPDATE users\n    SET role = ?\n    WHERE username = ?\n`\nmsg.params = [role, username];\n\n\nreturn msg;",
+        "func": "const username = msg.username;\nconst role = msg.role;\ndelete msg.role;\ndelete msg.username;\n\nif (msg.payload.length == 0) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Người dùng không tồn tại\";\n    return msg;\n}\n\nif (msg.payload[0].role == role) {\n    msg.topic = \"Không có gì thay đổi\";\n    msg.payload = `Vai trò người dùng này vốn đã là ${role}`;\n    return msg;\n}\n\nmsg.topic = \"Thành công\";\nmsg.payload = `Người dùng \"${username}\" hiện đang có vai trò \"${role}\"!`;\nmsg.query = `\n    UPDATE users\n    SET role = ?\n    WHERE username = ?\n`\nmsg.params = [role, username];\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1222,7 +1243,7 @@
         "splitLayout": "",
         "className": "",
         "x": 110,
-        "y": 680,
+        "y": 800,
         "wires": [
             [
                 "5670491c46209952"
@@ -1242,7 +1263,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 680,
+        "y": 800,
         "wires": [
             [
                 "8fafa085fdede451"
@@ -1256,7 +1277,7 @@
         "mydb": "394d12c30be39e77",
         "name": "",
         "x": 470,
-        "y": 680,
+        "y": 800,
         "wires": [
             [
                 "3f64965812deee9a"
@@ -1268,7 +1289,7 @@
         "type": "function",
         "z": "68edb1e124448d83",
         "name": "validate user",
-        "func": "if (msg.payload.length == 0) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Người dùng không tồn tại!\";\n    return msg;\n}\n\nmsg.topic = \"Xóa thành công\";\nmsg.payload = \"Người dùng chỉ định đã được xóa\";\nmsg.query = `\n    DELETE FROM users\n    WHERE username = ?\n`;\nmsg.params = [msg.username];\nreturn msg;",
+        "func": "if (msg.payload.length == 0) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Người dùng không tồn tại!\";\n    return msg;\n}\n\nmsg.logout = 0;\nif (msg.payload[0].username == global.get(\"username\")) {\n    msg.topic = \"Không thể xóa chính bản thân\";\n    msg.payload = \"Yêu cầu mật khẩu, vui lòng vào mục \\\"Cài đặt\\\"\";\n    return msg;\n}\n\nmsg.topic = \"Xóa thành công\";\nif (msg.logout == 0) {\n    msg.payload = \"Người dùng chỉ định đã được xóa\";\n}\nelse {\n    msg.payload = \"Bạn đã xóa chính bản thân!\";\n}\n\nmsg.query = `\n    DELETE FROM users\n    WHERE username = ?\n`;\nmsg.params = [msg.username];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1276,7 +1297,7 @@
         "finalize": "",
         "libs": [],
         "x": 650,
-        "y": 680,
+        "y": 800,
         "wires": [
             [
                 "b353978d15985437",
@@ -1300,7 +1321,7 @@
         "topic": "",
         "name": "",
         "x": 870,
-        "y": 760,
+        "y": 880,
         "wires": []
     },
     {
@@ -1316,7 +1337,7 @@
         "finalize": "",
         "libs": [],
         "x": 870,
-        "y": 680,
+        "y": 800,
         "wires": [
             [
                 "69e72e8fbaa31ee1"
@@ -1330,10 +1351,30 @@
         "mydb": "394d12c30be39e77",
         "name": "",
         "x": 1070,
-        "y": 680,
+        "y": 800,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "4a235ac45ad2f447",
+        "type": "comment",
+        "z": "68edb1e124448d83",
+        "name": "Xóa người dùng",
+        "info": "",
+        "x": 100,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "105c7b21d544c5bf",
+        "type": "comment",
+        "z": "68edb1e124448d83",
+        "name": "không xóa username không tồn tại hoặc chính bản thân",
+        "info": "",
+        "x": 730,
+        "y": 760,
+        "wires": []
     },
     {
         "id": "0489155dcefb20a9",
@@ -1952,7 +1993,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
+        "x": 780,
         "y": 240,
         "wires": [
             [
@@ -1973,7 +2014,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
+        "x": 670,
         "y": 140,
         "wires": [
             [
@@ -2109,7 +2150,7 @@
         "type": "function",
         "z": "1d78ea86ba59c938",
         "name": "query current user in database",
-        "func": "msg.password = msg.payload.password; // `msg.payload` will be overwritten later\n\nmsg.topic = `\n    SELECT password FROM users\n    WHERE username = ?\n`;\nmsg.payload = [global.get(\"username\")];\n\nreturn msg;",
+        "func": "msg.password = msg.payload.password; // `msg.payload` will be overwritten later\n\nmsg.topic = `\n    SELECT * FROM users\n    WHERE username = ?\n`;\nmsg.payload = [global.get(\"username\")];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2130,11 +2171,11 @@
         "z": "1d78ea86ba59c938",
         "mydb": "394d12c30be39e77",
         "name": "",
-        "x": 590,
-        "y": 500,
+        "x": 130,
+        "y": 640,
         "wires": [
             [
-                "c0203e0b2e68e343"
+                "865e5a4e8440527a"
             ]
         ]
     },
@@ -2143,15 +2184,15 @@
         "type": "function",
         "z": "1d78ea86ba59c938",
         "name": "validate password before deleting account",
-        "func": "const bcrypt = global.get(\"bcrypt\");\nconst storedHash = msg.payload[0].password;\nconst userPassword = msg.password;\ndelete msg.password;\n\nconst isMatch = bcrypt.compareSync(userPassword, storedHash);\n\nif (isMatch) {\n    // Prepare SQL query to delete account\n    msg.query = `\n        DELETE FROM users \n        WHERE username = ?\n    `;\n    msg.params = [global.get(\"username\")];\n    msg.topic = \"Đã xóa tài khoản người dùng!\";\n    msg.payload = \"Tài khoản đã được xóa thành công.\";\n} else {\n    msg.topic = \"Xóa tài khoản người dùng thất bại\";\n    msg.payload = \"Mật khẩu không đúng\";\n}\n\nreturn msg;",
+        "func": "const bcrypt = global.get(\"bcrypt\");\nconst storedHash = msg.account[0].password;\nconst userPassword = msg.password;\ndelete msg.password;\n\nconst isMatch = bcrypt.compareSync(userPassword, storedHash);\n\nif (isMatch) {\n    // Prepare SQL query to delete account\n    msg.query = `\n        DELETE FROM users \n        WHERE username = ?\n    `;\n    msg.params = [global.get(\"username\")];\n    msg.topic = \"Đã xóa tài khoản người dùng!\";\n    msg.payload = \"Tài khoản đã được xóa thành công.\";\n} else {\n    msg.topic = \"Xóa tài khoản người dùng thất bại\";\n    msg.payload = \"Mật khẩu không đúng\";\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 520,
+        "x": 1610,
+        "y": 640,
         "wires": [
             [
                 "cd6ddcb5c6334215",
@@ -2174,8 +2215,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1190,
-        "y": 580,
+        "x": 1910,
+        "y": 700,
         "wires": []
     },
     {
@@ -2190,8 +2231,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 440,
+        "x": 1990,
+        "y": 580,
         "wires": [
             [
                 "e58b05ce3e68071b"
@@ -2204,10 +2245,338 @@
         "z": "1d78ea86ba59c938",
         "mydb": "394d12c30be39e77",
         "name": "",
-        "x": 1390,
-        "y": 520,
+        "x": 2150,
+        "y": 660,
+        "wires": [
+            [
+                "ddbe4ea8d28c6544"
+            ]
+        ]
+    },
+    {
+        "id": "4a27baee57e24ae7",
+        "type": "comment",
+        "z": "1d78ea86ba59c938",
+        "name": "Xóa tài khoản bản thân",
+        "info": "",
+        "x": 120,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3d3e70046eafda6c",
+        "type": "comment",
+        "z": "1d78ea86ba59c938",
+        "name": "Đặt lại mật khẩu",
+        "info": "",
+        "x": 100,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "70b9883156599267",
+        "type": "change",
+        "z": "1d78ea86ba59c938",
+        "name": "set visible view",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"show\":[\"Đăng nhập\"],\"hide\":[\"Trang admin\",\"Cài đặt\",\"Trang chủ\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2520,
+        "y": 600,
+        "wires": [
+            [
+                "cfdc98df7d92ddc7"
+            ]
+        ]
+    },
+    {
+        "id": "cfdc98df7d92ddc7",
+        "type": "ui_ui_control",
+        "z": "1d78ea86ba59c938",
+        "name": "",
+        "events": "all",
+        "x": 2660,
+        "y": 660,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "ddbe4ea8d28c6544",
+        "type": "function",
+        "z": "1d78ea86ba59c938",
+        "name": "log out if success",
+        "func": "global.set(\"username\", \"Khách\");\nglobal.set(\"role\", \"guest\");\nglobal.set(\"previousUsername\", \"Khách\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2350,
+        "y": 640,
+        "wires": [
+            [
+                "70b9883156599267",
+                "a09b96a89ea3d60b"
+            ]
+        ]
+    },
+    {
+        "id": "a09b96a89ea3d60b",
+        "type": "change",
+        "z": "1d78ea86ba59c938",
+        "name": "back to login page",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Đăng nhập\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2490,
+        "y": 720,
+        "wires": [
+            [
+                "cfdc98df7d92ddc7"
+            ]
+        ]
+    },
+    {
+        "id": "865e5a4e8440527a",
+        "type": "function",
+        "z": "1d78ea86ba59c938",
+        "name": "function 1",
+        "func": "msg.role = \"user\";\nif (msg.payload[0].role == \"admin\") {\n    msg.role = \"admin\";\n}\nmsg.account = msg.payload; // `msg.payload` is gonna be overwritten later\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 640,
+        "wires": [
+            [
+                "bb773d4213f8466e"
+            ]
+        ]
+    },
+    {
+        "id": "bb773d4213f8466e",
+        "type": "switch",
+        "z": "1d78ea86ba59c938",
+        "name": "",
+        "property": "role",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "admin",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "user",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 640,
+        "wires": [
+            [
+                "7faecd7bead47958"
+            ],
+            [
+                "c0203e0b2e68e343"
+            ]
+        ]
+    },
+    {
+        "id": "7faecd7bead47958",
+        "type": "function",
+        "z": "1d78ea86ba59c938",
+        "name": "query how many admin left?",
+        "func": "msg.topic = `\n    SELECT * FROM users\n    WHERE role = \"admin\"\n`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 540,
+        "wires": [
+            [
+                "29ba51439f5daf92"
+            ]
+        ]
+    },
+    {
+        "id": "79108b6e9f5bd713",
+        "type": "function",
+        "z": "1d78ea86ba59c938",
+        "name": "decide continue going or not",
+        "func": "msg.allow = 1;\nif (msg.payload.length == 1) { // only you left is admin\n    msg.allow = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 540,
+        "wires": [
+            [
+                "f52cb3eee78e254b"
+            ]
+        ]
+    },
+    {
+        "id": "29ba51439f5daf92",
+        "type": "mysql",
+        "z": "1d78ea86ba59c938",
+        "mydb": "394d12c30be39e77",
+        "name": "",
+        "x": 890,
+        "y": 540,
+        "wires": [
+            [
+                "79108b6e9f5bd713"
+            ]
+        ]
+    },
+    {
+        "id": "f52cb3eee78e254b",
+        "type": "switch",
+        "z": "1d78ea86ba59c938",
+        "name": "",
+        "property": "allow",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1290,
+        "y": 540,
+        "wires": [
+            [
+                "5574dabbd0b0947b"
+            ],
+            [
+                "c0203e0b2e68e343"
+            ]
+        ]
+    },
+    {
+        "id": "5574dabbd0b0947b",
+        "type": "function",
+        "z": "1d78ea86ba59c938",
+        "name": "notify failed",
+        "func": "msg.topic = \"Lỗi\";\nmsg.payload = \"Bạn đang là admin duy nhất\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 500,
+        "wires": [
+            [
+                "a41e55ac8b177bcb"
+            ]
+        ]
+    },
+    {
+        "id": "a41e55ac8b177bcb",
+        "type": "ui_toast",
+        "z": "1d78ea86ba59c938",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1710,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3910d2df68ffec91",
+        "type": "comment",
+        "z": "1d78ea86ba59c938",
+        "name": "nếu là admin",
+        "info": "",
+        "x": 650,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a72df20e22fce39d",
+        "type": "comment",
+        "z": "1d78ea86ba59c938",
+        "name": "nếu là user",
+        "info": "",
+        "x": 560,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "1e250f33cbc92057",
+        "type": "comment",
+        "z": "1d78ea86ba59c938",
+        "name": "chỉ còn bản thân bạn là admin",
+        "info": "",
+        "x": 1490,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "548e5436e2786019",
+        "type": "comment",
+        "z": "1d78ea86ba59c938",
+        "name": "vẫn còn từ 1 admin khác trở lên",
+        "info": "",
+        "x": 1480,
+        "y": 580,
+        "wires": []
     }
 ]
