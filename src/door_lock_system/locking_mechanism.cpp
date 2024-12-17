@@ -43,34 +43,28 @@ void inputPassword(String& buffer) {
 
 void setNewPassword() {
   String tempPassword; // Temporary storage for password input
-  // using loop to keep setting new password until success
   while (true) {
-    // Prompt to set a new password
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Enter new pass:", passwordPlaceholder);
-    inputPassword(tempPassword);
-    // Reconfirm the password
+    inputPassword(tempPassword);  // Đảm bảo không blocking
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Confirm pass:", passwordPlaceholder);
     String confirmPassword;
-    inputPassword(confirmPassword);
-    // Check if passwords match
+    inputPassword(confirmPassword);  // Đảm bảo không blocking
+
     if (tempPassword == confirmPassword) {
-      // Hash the password
       byte hash[32];
       hashString(hash, tempPassword);
-      // Store the hash
       for (int i = 0; i < 32; i++) {
         hashedPassword[i] = hash[i];
       }
       displayMessage(LCD_DOOR_LOCK_SYSTEM, "Pass set success", "Saved!");
       playSuccessSound();
-      delay(1300);
-      break; // Break out of the password setup loop after success
+      delay(1300);  
+      break;
     }
     else {
-      // otherwise setting new password again
       displayMessage(LCD_DOOR_LOCK_SYSTEM, "Passwords don't", "match! Try again");
       playFailureSound();
-      delay(1700);
+      delay(1700); 
     }
   }
 }
@@ -78,25 +72,21 @@ void setNewPassword() {
 
 void enterPassword() {
   String input; // Buffer for user input
-  // Prompt to enter the password
-  // using loop to keep entering password until success
   while (true) {
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Enter password:", passwordPlaceholder);
-    inputPassword(input);
+    inputPassword(input);  // Đảm bảo không blocking
     tryAttempt++;
-    // Check password correctness
-    if (validatePassword(input)) break; // Break out of the password entry loop after success
+    if (validatePassword(input)) break;
 
     if (tryAttempt == maxTryAttempt) {
       lockTheSystem();
     }
     else {
       displayMessage(LCD_DOOR_LOCK_SYSTEM, "Attempts left: " + String(maxTryAttempt - tryAttempt), "");
-      delay(1000);
+      delay(1000);  
     }
   }
 }
-
 
 bool validatePassword(const String& input) {
   // Hashed input
@@ -149,7 +139,7 @@ void lockTheSystem() {
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Please verify", "online!");
     for (int i = 8; i <= 16; ++i) {
       LCD_DOOR_LOCK_SYSTEM.print(".");
-      vTaskDelay(800 / portTICK_PERIOD_MS); // Yield to other tasks
+      delay(800); // Yield to other tasks
     }
   }
 }

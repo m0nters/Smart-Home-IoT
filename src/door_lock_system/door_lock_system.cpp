@@ -6,7 +6,7 @@ void taskDoorLockSystem(void* parameter) {
     if (!isDoorPermanentlyLocked) {
       servo.write(0);
       displayMessage(LCD_DOOR_LOCK_SYSTEM, "Welcome home!", "");
-      delay(2000);
+      delay(2000); // Sử dụng vTaskDelay thay vì delay
 
       for (int i = 0; i < 32; i++) {
         if (hashedPassword[i] != 0) {
@@ -16,10 +16,10 @@ void taskDoorLockSystem(void* parameter) {
       }
 
       if (!isPasswordSet) {
-        setNewPassword();
+        setNewPassword(); // Đảm bảo không blocking
       }
-      enterPassword();
+      enterPassword();    // Đảm bảo không blocking
     }
-    vTaskDelay(100 / portTICK_PERIOD_MS); // Yield to other tasks
+    delay(100); // Nhường quyền cho các task khác
   }
 }

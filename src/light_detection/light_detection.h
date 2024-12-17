@@ -6,7 +6,7 @@
 
 // Automatic light
 const int LED_PIN = 12; 
-const int LDR_PIN = 13;
+const int LDR_PIN = 33;
 
 void taskLightDetection(void *parameter);
 void light_detection_init();

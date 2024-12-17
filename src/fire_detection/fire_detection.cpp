@@ -54,6 +54,6 @@ void taskFireDetection(void * parameter) {
     }
 
     FastLED.show();
-    vTaskDelay(50 / portTICK_PERIOD_MS); // Run every 1ms
+    delay(50); // Run every 1ms
   }
 }

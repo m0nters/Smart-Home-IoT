@@ -20,4 +20,3 @@ void taskFireDetection(void * parameter);
 void fire_detection_init();
 
 #endif
-

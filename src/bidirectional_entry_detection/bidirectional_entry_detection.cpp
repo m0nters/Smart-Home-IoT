@@ -24,6 +24,6 @@ void taskBidirectionalEntryDetection(void *parameter) {
           }
         }
       }
-      vTaskDelay(100 / portTICK_PERIOD_MS); // Yield to other tasks
+      delay(100); // Yield to other tasks
   }
 }
