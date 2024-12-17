@@ -74,16 +74,16 @@ void enterPassword() {
   String input; // Buffer for user input
   while (true) {
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Enter password:", passwordPlaceholder);
-    inputPassword(input);  // Đảm bảo không blocking
-    tryAttempt++;
-    if (validatePassword(input)) break;
+    inputPassword(input);
 
-    if (tryAttempt == maxTryAttempt) {
+    tryAttempt++;
+    mqttClient.publish("home-0PPKrXoRcgyppks/tryAttempt", String(tryAttempt).c_str());
+
+    // Check password correctness
+    if (validatePassword(input)) break; // Break out of the password entry loop after success
+
+    if (tryAttempt >= maxTryAttempt) { // the reason for `>=` is that user may change `maxTryAttempt` to something less than `tryAttempt`
       lockTheSystem();
-    }
-    else {
-      displayMessage(LCD_DOOR_LOCK_SYSTEM, "Attempts left: " + String(maxTryAttempt - tryAttempt), "");
-      delay(1000);  
     }
   }
 }
@@ -99,28 +99,43 @@ bool validatePassword(const String& input) {
       if (tryAttempt == maxTryAttempt - 1) {
         displayMessage(LCD_DOOR_LOCK_SYSTEM, "Wrong password", "Last attempt!");
       }
-      else if (tryAttempt == maxTryAttempt) {
+      else if (tryAttempt >= maxTryAttempt) { // the reason for `>=` is that user may change `maxTryAttempt` to something less than `tryAttempt`
         displayMessage(LCD_DOOR_LOCK_SYSTEM, "Stop! Max", "attempts reached!");
       }
       else {
         displayMessage(LCD_DOOR_LOCK_SYSTEM, "Wrong password", "Try again!");
       }
+
       playFailureSound();
       delay(1700);
+
+      if (tryAttempt < maxTryAttempt) {
+        displayMessage(LCD_DOOR_LOCK_SYSTEM, "Attempts left: ", String(maxTryAttempt - tryAttempt));
+        delay(1000);
+      }
+
       return false;
     }
   }
   // Hashes match
   displayMessage(LCD_DOOR_LOCK_SYSTEM, "Door unlocked!", "");
-  isDoorLocked = false; 
+
+  isDoorLocked = false;
+  mqttClient.publish("home-0PPKrXoRcgyppks/isDoorLocked", "false");
+
   tryAttempt = 0; // Reset the attempt counter
+  mqttClient.publish("home-0PPKrXoRcgyppks/tryAttempt", String(tryAttempt).c_str());
+
   servo.write(90); // Open the door
   playSuccessSound();
   delay(1300);
   while (!isHomeEntryCompleted) {
     awaitDoorClosure(); // Wait for the door to be closed
     servo.write(0); // Close the door
+
     isDoorLocked = true;
+    mqttClient.publish("home-0PPKrXoRcgyppks/isDoorLocked", "true");
+
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Door closed!", "");
     isHomeEntryCompleted = true; // User has entered the house, turn off the sound
     playDoorClosedSound();
@@ -133,15 +148,23 @@ bool validatePassword(const String& input) {
 
 void lockTheSystem() {
   isDoorPermanentlyLocked = true;
+  mqttClient.publish("home-0PPKrXoRcgyppks/isDoorPermanentlyLocked", "true");
   displayMessage(LCD_DOOR_LOCK_SYSTEM, "System locked...", "");
   delay(3000);
   while (isDoorPermanentlyLocked) {
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Please verify", "online!");
     for (int i = 8; i <= 16; ++i) {
       LCD_DOOR_LOCK_SYSTEM.print(".");
-      delay(800); // Yield to other tasks
+      if (!isDoorPermanentlyLocked) break; // if there's signal from server to unlock the door, then out of lock loop
+      vTaskDelay(800 / portTICK_PERIOD_MS); // Yield to other tasks
     }
   }
+
+  tryAttempt = 0; // Reset the attempt counter
+  mqttClient.publish("home-0PPKrXoRcgyppks/tryAttempt", String(tryAttempt).c_str());
+
+  displayMessage(LCD_DOOR_LOCK_SYSTEM, "System unlocked!", "");
+  delay(3000);
 }
 
 

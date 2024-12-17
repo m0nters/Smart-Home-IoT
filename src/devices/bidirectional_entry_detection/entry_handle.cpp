@@ -2,6 +2,7 @@
 
 void handleVisitorArrival() { // 500ms
   visitorCount++;
+  mqttClient.publish("home-0PPKrXoRcgyppks/visitorCount", String(visitorCount).c_str());
   displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "Entering...", "Total: " + String(visitorCount));
   if (isMutedEntryDetection) {
     delay(500);
@@ -18,6 +19,7 @@ void handleVisitorArrival() { // 500ms
 
 void handleVisitorExit() { // 500ms
   visitorCount != 0 ? visitorCount-- : visitorCount = 0;
+  mqttClient.publish("home-0PPKrXoRcgyppks/visitorCount", String(visitorCount).c_str());
   displayMessage(LCD_BIENTRY_DETECTION_SYSTEM, "Exiting...", "Total: " + String(visitorCount));
   if (isMutedEntryDetection) {
     delay(500);
