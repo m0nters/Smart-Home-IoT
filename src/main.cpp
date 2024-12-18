@@ -20,6 +20,10 @@ bool isDoorPermanentlyLocked = false; // type password wrong >= `maxTryAttempt` 
 bool isDoorLocked = true; // by default the door is locked, meaning even if the electricity goes off, the system is still safe
 byte hashedPassword[32] = { 0 };
 
+// light detection
+int lightValueForChart = 0;
+bool isAutomaticLight = 1;
+
 
 // everything works in here, this is the entry point
 void setup() {
@@ -42,4 +46,5 @@ void setup() {
 }
 
 void loop() {
+  
 }

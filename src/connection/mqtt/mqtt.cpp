@@ -53,6 +53,12 @@ void websiteDataHandler(char* topic, byte* payload, unsigned int length) {
       hashedPassword[i] = payload[i];
     }
   }
+   else if (String(topic) == "home-0PPKrXoRcgyppks/lightValue") {
+    lightValueForChart == message.toInt();
+  }
+  else if (String(topic) == "home-0PPKrXoRcgyppks/isAutomaticLight") {
+    isAutomaticLight = (message == "true");
+  }
 }
 
 void taskMQTT(void* parameter) {

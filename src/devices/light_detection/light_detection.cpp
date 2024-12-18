@@ -5,13 +5,19 @@
 void taskLightDetection(void *parameter) {
   while (true) {
     int lightValue = analogRead(LDR_PIN);
-    Serial.println(lightValue);
-    if (lightValue > 700) {
+    
+    int mappedLightValue = 100 - ((lightValue - 32) * 100 / (4063 - 32));
+    
+    lightValueForChart = mappedLightValue;
+    
+    if (mappedLightValue < 60 && isAutomaticLight) { 
       digitalWrite(LED_PIN, HIGH);
     } else {
       digitalWrite(LED_PIN, LOW);
     }
-
-    delay(100); // Run every 100ms
+    
+    mqttClient.publish("home-0PPKrXoRcgyppks/lightValue", String(lightValueForChart).c_str());
+    
+    delay(100);
   }
 }
