@@ -8,7 +8,7 @@ void taskLightDetection(void *parameter) {
     
     int mappedLightValue = 100 - ((lightValue - 32) * 100 / (4063 - 32));
     
-    lightValueForChart = mappedLightValue;
+    lightValueForGauge = mappedLightValue;
     
     if (mappedLightValue < 60 && isAutomaticLight) { 
       digitalWrite(LED_PIN, HIGH);
@@ -16,7 +16,7 @@ void taskLightDetection(void *parameter) {
       digitalWrite(LED_PIN, LOW);
     }
     
-    mqttClient.publish("home-0PPKrXoRcgyppks/lightValue", String(lightValueForChart).c_str());
+    mqttClient.publish("home-0PPKrXoRcgyppks/lightValue", String(lightValueForGauge).c_str());
     
     delay(100);
   }

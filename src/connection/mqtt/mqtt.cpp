@@ -54,11 +54,24 @@ void websiteDataHandler(char* topic, byte* payload, unsigned int length) {
     }
   }
    else if (String(topic) == "home-0PPKrXoRcgyppks/lightValue") {
-    lightValueForChart == message.toInt();
+    lightValueForGauge == message.toInt();
   }
   else if (String(topic) == "home-0PPKrXoRcgyppks/isAutomaticLight") {
     isAutomaticLight = (message == "true");
   }
+    else if (String(topic) == "home-0PPKrXoRcgyppks/temperature") {
+    temperatureForGauge = message.toFloat();
+  }
+  else if (String(topic) == "home-0PPKrXoRcgyppks/humidity") {
+    humidityForGauge = message.toFloat();
+  }
+  else if (String(topic) == "home-0PPKrXoRcgyppks/fireAlarmSound") {
+    isFireAlarmSound = (message == "true");
+  }
+   else if (String(topic) == "home-0PPKrXoRcgyppks/mistSpray") {
+    isMistSpray = (message == "true");
+  }
+  
 }
 
 void taskMQTT(void* parameter) {

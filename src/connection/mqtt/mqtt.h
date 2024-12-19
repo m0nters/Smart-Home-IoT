@@ -16,8 +16,12 @@ extern bool isDoorPermanentlyLocked;
 extern int maxTryAttempt;
 extern int passwordLength;
 
-extern int lightValueForChart;
+extern int lightValueForGauge;
+extern float temperatureForGauge;
+extern float humidityForGauge;
 extern bool isAutomaticLight;
+extern bool isFireAlarmSound;
+extern bool isMistSpray;
 extern byte hashedPassword[32];
 
 void mqttSetup();

@@ -8,7 +8,7 @@
 const int LED_PIN = 12; 
 const int LDR_PIN = 33;
 
-extern int lightValueForChart;
+extern int lightValueForGauge;
 
 void taskLightDetection(void *parameter);
 void light_detection_init();

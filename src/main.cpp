@@ -21,8 +21,16 @@ bool isDoorLocked = true; // by default the door is locked, meaning even if the 
 byte hashedPassword[32] = { 0 };
 
 // light detection
-int lightValueForChart = 0;
+int lightValueForGauge = 0;
 bool isAutomaticLight = 1;
+
+// fire detection
+float temperatureForGauge = 0.0;
+float lastTemperature = 0.0; 
+float lastHumidity = 0.0;
+float humidityForGauge = 0.0;
+bool isFireAlarmSound = 1;
+bool isMistSpray = 0;
 
 
 // everything works in here, this is the entry point
