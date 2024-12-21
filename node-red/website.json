@@ -2276,7 +2276,7 @@
     "type": "function",
     "z": "d10d190a1524a039",
     "name": "push people count to cloud",
-    "func": "let peopleCount = parseInt(msg.payload);\n\n// Đổi định dạng ngày giờ theo múi giờ Việt Nam\nlet timestampVN = new Date().toLocaleString(\"vi-VN\", { timeZone: \"Asia/Ho_Chi_Minh\" });\n\nmsg.payload = {\n    timestamp: timestampVN,  // Định dạng ngày giờ theo Việt Nam\n    people: peopleCount        // Giá trị nhiệt độ\n};\n\nreturn msg;",
+    "func": "let peopleCount = parseInt(msg.payload) || 0;\n\n\nlet timestampVN = new Date().toLocaleString(\"vi-VN\", { timeZone: \"Asia/Ho_Chi_Minh\" });\n\nmsg.payload = {\n    timestamp: timestampVN,\n    people: peopleCount     \n};\n\nreturn msg;",
     "outputs": 1,
     "timeout": 0,
     "noerr": 0,
