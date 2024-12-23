@@ -18,6 +18,6 @@ void taskLightDetection(void *parameter) {
     
     mqttClient.publish("home-0PPKrXoRcgyppks/lightValue", String(lightValueForGauge).c_str());
     
-    delay(100);
+    vTaskDelay(100);
   }
 }

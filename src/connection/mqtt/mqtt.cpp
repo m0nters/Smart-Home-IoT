@@ -1,6 +1,6 @@
 #include "mqtt.h"
 
-const char* mqtt_server = "test.mosquitto.org";
+const char* mqtt_server = "broker.hivemq.com";
 const int mqtt_port = 1883;
 PubSubClient mqttClient(wifiClient);
 
@@ -33,33 +33,13 @@ void websiteDataHandler(char* topic, byte* payload, unsigned int length) {
   if (String(topic) == "home-0PPKrXoRcgyppks/isMutedEntryDetection") {
     isMutedEntryDetection = (message == "true");
   }
-  else if (String(topic) == "home-0PPKrXoRcgyppks/isMutedDoorSystem") {
-    isMutedDoorSystem = (message == "true");
-  }
-  // user unlock door that is in permanently locked state on website
-  else if (String(topic) == "home-0PPKrXoRcgyppks/isDoorPermanentlyLocked") {
-    isDoorPermanentlyLocked = (message == "true");
-  }
-  // user change max try attempt on website
-  else if (String(topic) == "home-0PPKrXoRcgyppks/maxTryAttempt") {
-    maxTryAttempt = message.toInt();
-  }
-  else if (String(topic) == "home-0PPKrXoRcgyppks/passwordLength") {
-    passwordLength = message.toInt();
-  }
-  // user change password on website
-  else if (String(topic) == "home-0PPKrXoRcgyppks/hashedPassword") {
-    for (unsigned int i = 0; i < length; i++) {
-      hashedPassword[i] = payload[i];
-    }
-  }
-   else if (String(topic) == "home-0PPKrXoRcgyppks/lightValue") {
+  else if (String(topic) == "home-0PPKrXoRcgyppks/lightValue") {
     lightValueForGauge == message.toInt();
   }
   else if (String(topic) == "home-0PPKrXoRcgyppks/isAutomaticLight") {
     isAutomaticLight = (message == "true");
   }
-    else if (String(topic) == "home-0PPKrXoRcgyppks/temperature") {
+  else if (String(topic) == "home-0PPKrXoRcgyppks/temperature") {
     temperatureForGauge = message.toFloat();
   }
   else if (String(topic) == "home-0PPKrXoRcgyppks/humidity") {
@@ -68,10 +48,10 @@ void websiteDataHandler(char* topic, byte* payload, unsigned int length) {
   else if (String(topic) == "home-0PPKrXoRcgyppks/fireAlarmSound") {
     isFireAlarmSound = (message == "true");
   }
-   else if (String(topic) == "home-0PPKrXoRcgyppks/mistSpray") {
+  else if (String(topic) == "home-0PPKrXoRcgyppks/mistSpray") {
     isMistSpray = (message == "true");
   }
-  
+
 }
 
 void taskMQTT(void* parameter) {

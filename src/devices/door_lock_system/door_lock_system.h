@@ -19,11 +19,8 @@ extern String passwordPlaceholder; // for display on LCD screen
 
 // Specification variables for websites inherited from `main.cpp`
 extern bool isPasswordSet; // has the user set a password?
-extern int tryAttempt;
-extern int maxTryAttempt;
 extern int passwordLength;
 extern bool isMutedDoorSystem; // turn on/off sound effect
-extern bool isDoorPermanentlyLocked; // type password wrong `maxTryAttempt` times, this will be true
 extern bool isDoorLocked;
 extern byte hashedPassword[32];
 

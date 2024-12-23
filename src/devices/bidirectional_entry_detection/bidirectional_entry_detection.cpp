@@ -24,6 +24,6 @@ void taskBidirectionalEntryDetection(void *parameter) {
           }
         }
       }
-      delay(100); // Yield to other tasks
+      vTaskDelay(100); // Yield to other tasks
   }
 }
