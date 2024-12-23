@@ -6,17 +6,13 @@
 
 // Specification variables for websites
 // for bidirectional entry detection
-int i = 0;
 int visitorCount = 0;
 bool isMutedEntryDetection = false; // turn on/off sound effect
 
 // for door lock system
 bool isPasswordSet = false; // has the user set a password?
-int tryAttempt = 0; // how many times user has typed password since last successful
-int maxTryAttempt = 3; // how many times user can type password wrong before the door is permanently locked
 int passwordLength = 4;
 bool isMutedDoorSystem = false; // turn on/off sound effect
-bool isDoorPermanentlyLocked = false; // type password wrong >= `maxTryAttempt` times, this will be true
 bool isDoorLocked = true; // by default the door is locked, meaning even if the electricity goes off, the system is still safe
 byte hashedPassword[32] = { 0 };
 

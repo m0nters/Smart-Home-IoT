@@ -1,7 +1,6 @@
 #pragma once
 #include "../../connection/mqtt/mqtt.h"
 #include <Arduino.h> 
-#include "../../connection/mqtt/mqtt.h"
 
 // Automatic light
 const int LED_PIN = 12; 
