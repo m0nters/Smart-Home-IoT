@@ -1,6 +1,6 @@
 #include "mqtt.h"
 
-const char* mqtt_server = "test.mosquitto.org";
+const char* mqtt_server = "broker.hivemq.com";
 const int mqtt_port = 1883;
 PubSubClient mqttClient(wifiClient);
 
@@ -52,6 +52,30 @@ void websiteDataHandler(char* topic, byte* payload, unsigned int length) {
     for (unsigned int i = 0; i < length; i++) {
       hashedPassword[i] = payload[i];
     }
+  }
+  // user change light value on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/lightValue") {
+    lightValueForGauge == message.toInt();
+  }
+  // turn on/off automatic light on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/isAutomaticLight") {
+    isAutomaticLight = (message == "true");
+  }
+  // user change temperature value on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/temperature") {
+    temperatureForGauge = message.toFloat();
+  }
+  // user change humidity value on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/humidity") {
+    humidityForGauge = message.toFloat();
+  }
+  // turn on/off fire alarm sound on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/fireAlarmSound") {
+    isFireAlarmSound = (message == "true");
+  }
+  // turn on/off mist spray on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/mistSpray") {
+    isMistSpray = (message == "true");
   }
 }
 

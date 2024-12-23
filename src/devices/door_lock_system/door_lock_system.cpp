@@ -20,6 +20,6 @@ void taskDoorLockSystem(void* parameter) {
       }
       enterPassword();
     }
-    vTaskDelay(100 / portTICK_PERIOD_MS); // Yield to other tasks
+    vTaskDelay(pdMS_TO_TICKS(50));
   }
 }

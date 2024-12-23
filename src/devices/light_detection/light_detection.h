@@ -1,14 +1,13 @@
-#ifndef LIGHT_DETECTION_H
-#define LIGHT_DETECTION_H
 #pragma once
 
 #include <Arduino.h> 
+#include "../../connection/mqtt/mqtt.h"
 
 // Automatic light
 const int LED_PIN = 12; 
 const int LDR_PIN = 33;
 
+extern int lightValueForGauge;
+
 void taskLightDetection(void *parameter);
 void light_detection_init();
-
-#endif
