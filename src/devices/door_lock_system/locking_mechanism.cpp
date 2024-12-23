@@ -81,6 +81,7 @@ void enterPassword() {
   }
 }
 
+
 bool validatePassword(const String& input) {
   // Hashed input
   byte hasedInput[32];

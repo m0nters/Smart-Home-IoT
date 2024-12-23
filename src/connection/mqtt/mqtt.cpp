@@ -15,7 +15,7 @@ void mqttConnect() {
     String clientId = "ESP32Client-" + String(random(0xffff), HEX); // e.g. ESP32Client-9c7b
     if (mqttClient.connect(clientId.c_str())) {
       // Subscribe to topics if needed
-      mqttClient.subscribe("home-0PPKrXoRcgyppks/#");
+      mqttClient.subscribe("home-0PPKrXoRcgyppks/#", 1);
     }
     else {
       delay(5000);
@@ -36,15 +36,18 @@ void websiteDataHandler(char* topic, byte* payload, unsigned int length) {
   else if (String(topic) == "home-0PPKrXoRcgyppks/lightValue") {
     lightValueForGauge == message.toInt();
   }
+  // turn on/off automatic light on website
   else if (String(topic) == "home-0PPKrXoRcgyppks/isAutomaticLight") {
     isAutomaticLight = (message == "true");
   }
   else if (String(topic) == "home-0PPKrXoRcgyppks/temperature") {
     temperatureForGauge = message.toFloat();
   }
+  // user change humidity value on website
   else if (String(topic) == "home-0PPKrXoRcgyppks/humidity") {
     humidityForGauge = message.toFloat();
   }
+  // turn on/off fire alarm sound on website
   else if (String(topic) == "home-0PPKrXoRcgyppks/fireAlarmSound") {
     isFireAlarmSound = (message == "true");
   }
