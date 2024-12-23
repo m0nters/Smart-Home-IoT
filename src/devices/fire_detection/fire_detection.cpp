@@ -58,11 +58,11 @@ void taskFireDetection(void* parameter) {
       fill_solid(leds, NUM_LEDS, CRGB::Red);
       digitalWrite(WATER_PIN, HIGH);
 
-      // Điều khiển buzzer ngắt quãng
-      unsigned long currentMillis = millis();
-      if (currentMillis - previousMillis >= interval) {
-        previousMillis = currentMillis;  // Cập nhật thời gian trước đó
-        buzzerState = !buzzerState;      // Chuyển trạng thái buzzer
+      if (isFireAlarmSound) {
+        unsigned long currentMillis = millis();
+        if (currentMillis - previousMillis >= interval) {
+          previousMillis = currentMillis;
+          buzzerState = !buzzerState;
 
         if (buzzerState) {
           tone(BUZZER_FIRE_PIN, 2000);  // Buzzer kêu
@@ -70,15 +70,19 @@ void taskFireDetection(void* parameter) {
         else {
           noTone(BUZZER_FIRE_PIN);      // Tắt buzzer
         }
+      } else {
+          noTone(BUZZER_FIRE_PIN);
       }
     }
     else {
       noTone(BUZZER_FIRE_PIN);
       digitalWrite(WATER_PIN, LOW);
-      fill_solid(leds, NUM_LEDS, CRGB::Red);
+      fill_solid(leds, NUM_LEDS, CRGB::Red); // Đèn đỏ
     }
 
+    // Hiển thị LEDs
     FastLED.show();
    vTaskDelay(pdMS_TO_TICKS(50));
   }
 }
+

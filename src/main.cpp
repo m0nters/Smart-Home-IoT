@@ -6,6 +6,7 @@
 
 // Specification variables for websites
 // for bidirectional entry detection
+int i = 0;
 int visitorCount = 0;
 bool isMutedEntryDetection = false; // turn on/off sound effect
 
@@ -52,4 +53,5 @@ void setup() {
 }
 
 void loop() {
+  
 }

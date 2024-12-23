@@ -21,5 +21,7 @@ extern CRGB leds[NUM_LEDS];    // Khai báo biến LEDs
 extern DHTesp dhtSensor;       // Khai báo biến DHT
 
 
+
+
 void taskFireDetection(void * parameter);
 void fire_detection_init();

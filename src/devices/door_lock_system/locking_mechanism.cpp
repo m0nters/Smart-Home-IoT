@@ -43,34 +43,28 @@ void inputPassword(String& buffer) {
 
 void setNewPassword() {
   String tempPassword; // Temporary storage for password input
-  // using loop to keep setting new password until success
   while (true) {
-    // Prompt to set a new password
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Enter new pass:", passwordPlaceholder);
-    inputPassword(tempPassword);
-    // Reconfirm the password
+    inputPassword(tempPassword);  // Đảm bảo không blocking
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Confirm pass:", passwordPlaceholder);
     String confirmPassword;
-    inputPassword(confirmPassword);
-    // Check if passwords match
+    inputPassword(confirmPassword);  // Đảm bảo không blocking
+
     if (tempPassword == confirmPassword) {
-      // Hash the password
       byte hash[32];
       hashString(hash, tempPassword);
-      // Store the hash
       for (int i = 0; i < 32; i++) {
         hashedPassword[i] = hash[i];
       }
       displayMessage(LCD_DOOR_LOCK_SYSTEM, "Pass set success", "Saved!");
       playSuccessSound();
-      delay(1300);
-      break; // Break out of the password setup loop after success
+      delay(1300);  
+      break;
     }
     else {
-      // otherwise setting new password again
       displayMessage(LCD_DOOR_LOCK_SYSTEM, "Passwords don't", "match! Try again");
       playFailureSound();
-      delay(1700);
+      delay(1700); 
     }
   }
 }
@@ -78,8 +72,6 @@ void setNewPassword() {
 
 void enterPassword() {
   String input; // Buffer for user input
-  // Prompt to enter the password
-  // using loop to keep entering password until success
   while (true) {
     displayMessage(LCD_DOOR_LOCK_SYSTEM, "Enter password:", passwordPlaceholder);
     inputPassword(input);
@@ -95,7 +87,6 @@ void enterPassword() {
     }
   }
 }
-
 
 bool validatePassword(const String& input) {
   // Hashed input
