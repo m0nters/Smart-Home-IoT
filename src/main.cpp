@@ -50,7 +50,7 @@ void setup() {
   xTaskCreate(taskFireDetection, "Fire Detection", 4096, NULL, 2, NULL);
   xTaskCreate(taskBidirectionalEntryDetection, "Bidirectional Entry Detection", 4096, NULL, 3, NULL);
   xTaskCreate(taskDoorLockSystem, "Door Lock System", 4096, NULL, 4, NULL);
-  xTaskCreate(taskMQTT, "MQTT Task", 4096, NULL, 1, NULL);
+  xTaskCreate(taskMQTT, "MQTT Task", 4096, NULL, 5, NULL);
 }
 
 void loop() {

@@ -20,6 +20,6 @@ void taskDoorLockSystem(void* parameter) {
       }
       enterPassword();    // Đảm bảo không blocking
     }
-    delay(100); // Nhường quyền cho các task khác
+    vTaskDelay(100); // Nhường quyền cho các task khác
   }
 }

@@ -1,6 +1,6 @@
 #include "mqtt.h"
 
-const char* mqtt_server = "test.mosquitto.org";
+const char* mqtt_server = "broker.hivemq.com";
 const int mqtt_port = 1883;
 PubSubClient mqttClient(wifiClient);
 
@@ -15,7 +15,7 @@ void mqttConnect() {
     String clientId = "ESP32Client-" + String(random(0xffff), HEX); // e.g. ESP32Client-9c7b
     if (mqttClient.connect(clientId.c_str())) {
       // Subscribe to topics if needed
-      mqttClient.subscribe("home-0PPKrXoRcgyppks/#");
+      mqttClient.subscribe("home-0PPKrXoRcgyppks/#", 1);
     }
     else {
       delay(5000);
