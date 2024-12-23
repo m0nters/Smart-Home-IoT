@@ -23,9 +23,14 @@ extern bool isAutomaticLight;
 extern bool isFireAlarmSound;
 extern bool isMistSpray;
 extern byte hashedPassword[32];
+extern int lightValueForGauge;
+extern float temperatureForGauge;
+extern float humidityForGauge;
+extern bool isAutomaticLight;
+extern bool isFireAlarmSound;
+extern bool isMistSpray;
 
 void mqttSetup();
 void mqttConnect();
 void websiteDataHandler(char* topic, byte* payload, unsigned int length);
-void publishData();
 void taskMQTT(void* parameter);

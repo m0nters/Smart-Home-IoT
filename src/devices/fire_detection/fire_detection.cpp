@@ -86,7 +86,7 @@ void taskFireDetection(void *parameter) {
     FastLED.show();
 
     // Tạm dừng 50ms trước khi lặp lại
-  vTaskDelay(pdMS_TO_TICKS(50));
+    delay(50);
   }
 }
 

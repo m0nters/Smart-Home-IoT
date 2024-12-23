@@ -1,5 +1,3 @@
-#ifndef FIRE_DETECTION_H
-#define FIRE_DETECTION_H
 #pragma once
 
 #include <Arduino.h> 
@@ -27,5 +25,3 @@ extern DHTesp dhtSensor;       // Khai báo biến DHT
 
 void taskFireDetection(void * parameter);
 void fire_detection_init();
-
-#endif
