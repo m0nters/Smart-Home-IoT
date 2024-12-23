@@ -30,7 +30,8 @@ void taskFireDetection(void* parameter) {
     // Điều khiển WATER_PIN dựa trên điều kiện phun sương
     if (isMistSpray) {
       digitalWrite(WATER_PIN, HIGH);
-    } else if (temperature < 40.0 && !isMistSpray) {
+    }
+    else if (temperature < 40.0 && !isMistSpray) {
       digitalWrite(WATER_PIN, LOW);
     }
 
@@ -64,25 +65,26 @@ void taskFireDetection(void* parameter) {
           previousMillis = currentMillis;
           buzzerState = !buzzerState;
 
-        if (buzzerState) {
-          tone(BUZZER_FIRE_PIN, 2000);  // Buzzer kêu
+          if (buzzerState) {
+            tone(BUZZER_FIRE_PIN, 2000);  // Buzzer kêu
+          }
+          else {
+            noTone(BUZZER_FIRE_PIN);      // Tắt buzzer
+          }
         }
         else {
-          noTone(BUZZER_FIRE_PIN);      // Tắt buzzer
-        }
-      } else {
           noTone(BUZZER_FIRE_PIN);
+        }
       }
-    }
-    else {
-      noTone(BUZZER_FIRE_PIN);
-      digitalWrite(WATER_PIN, LOW);
-      fill_solid(leds, NUM_LEDS, CRGB::Red); // Đèn đỏ
-    }
+      else {
+        noTone(BUZZER_FIRE_PIN);
+        digitalWrite(WATER_PIN, LOW);
+        fill_solid(leds, NUM_LEDS, CRGB::Red); // Đèn đỏ
+      }
 
-    // Hiển thị LEDs
-    FastLED.show();
-   vTaskDelay(pdMS_TO_TICKS(50));
+      // Hiển thị LEDs
+      FastLED.show();
+      vTaskDelay(pdMS_TO_TICKS(50));
+    }
   }
 }
-
