@@ -15,7 +15,7 @@ void mqttConnect() {
     String clientId = "ESP32Client-" + String(random(0xffff), HEX); // e.g. ESP32Client-9c7b
     if (mqttClient.connect(clientId.c_str())) {
       // Subscribe to topics if needed
-      mqttClient.subscribe("home-0PPKrXoRcgyppks/#");
+      mqttClient.subscribe("home-0PPKrXoRcgyppks/#", 1);
     }
     else {
       delay(5000);
@@ -33,25 +33,29 @@ void websiteDataHandler(char* topic, byte* payload, unsigned int length) {
   if (String(topic) == "home-0PPKrXoRcgyppks/isMutedEntryDetection") {
     isMutedEntryDetection = (message == "true");
   }
-  else if (String(topic) == "home-0PPKrXoRcgyppks/isMutedDoorSystem") {
-    isMutedDoorSystem = (message == "true");
+  // user change light value on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/lightValue") {
+    lightValueForGauge == message.toInt();
   }
-  // user unlock door that is in permanently locked state on website
-  else if (String(topic) == "home-0PPKrXoRcgyppks/isDoorPermanentlyLocked") {
-    isDoorPermanentlyLocked = (message == "true");
+  // turn on/off automatic light on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/isAutomaticLight") {
+    isAutomaticLight = (message == "true");
   }
-  // user change max try attempt on website
-  else if (String(topic) == "home-0PPKrXoRcgyppks/maxTryAttempt") {
-    maxTryAttempt = message.toInt();
+  // user change temperature value on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/temperature") {
+    temperatureForGauge = message.toFloat();
   }
-  else if (String(topic) == "home-0PPKrXoRcgyppks/passwordLength") {
-    passwordLength = message.toInt();
+  // user change humidity value on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/humidity") {
+    humidityForGauge = message.toFloat();
   }
-  // user change password on website
-  else if (String(topic) == "home-0PPKrXoRcgyppks/hashedPassword") {
-    for (unsigned int i = 0; i < length; i++) {
-      hashedPassword[i] = payload[i];
-    }
+  // turn on/off fire alarm sound on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/fireAlarmSound") {
+    isFireAlarmSound = (message == "true");
+  }
+  // turn on/off mist spray on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/mistSpray") {
+    isMistSpray = (message == "true");
   }
 }
 

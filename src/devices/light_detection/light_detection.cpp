@@ -2,15 +2,26 @@
 
 // Task for Light Detection
 
-void taskLightDetection(void *parameter) {
+void taskLightDetection(void* parameter) {
+  float lastLightValue = -1.0;
   while (true) {
     int lightValue = analogRead(LDR_PIN);
-    if (lightValue > 700) {
+
+    int mappedLightValue = 100 - ((lightValue - 32) * 100 / (4063 - 32));
+    lightValueForGauge = mappedLightValue;
+
+    if (mappedLightValue < 60 && isAutomaticLight) {
       digitalWrite(LED_PIN, HIGH);
-    } else {
+    }
+    else {
       digitalWrite(LED_PIN, LOW);
     }
 
-    vTaskDelay(100 / portTICK_PERIOD_MS); // Run every 100ms
+    if (abs(mappedLightValue - lastLightValue) >= 0.5) {
+      mqttClient.publish("home-0PPKrXoRcgyppks/lightValue", String(lightValueForGauge).c_str());
+      lastLightValue = mappedLightValue;
+    }
+
+    vTaskDelay(pdMS_TO_TICKS(50));
   }
 }
