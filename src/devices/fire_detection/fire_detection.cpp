@@ -81,9 +81,14 @@ void taskFireDetection(void *parameter) {
       digitalWrite(WATER_PIN, LOW);
       fill_solid(leds, NUM_LEDS, CRGB::Red); // Đèn đỏ
     }
-
-    // Hiển thị LEDs
     FastLED.show();
+    // Hiển thị LEDs
+    if (isNeoPixel) {
+      FastLED.setBrightness(200);
+    }
+    else {
+      FastLED.setBrightness(0);
+    }
 
     // Tạm dừng 50ms trước khi lặp lại
     vTaskDelay(50);

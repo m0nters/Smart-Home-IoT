@@ -11,8 +11,11 @@ bool isMutedEntryDetection = false; // turn on/off sound effect
 
 // for door lock system
 bool isPasswordSet = false; // has the user set a password?
+int tryAttempt = 0; // how many times user has typed password since last successful
+int maxTryAttempt = 3; // how many times user can type password wrong before the door is permanently locked
 int passwordLength = 4;
 bool isMutedDoorSystem = false; // turn on/off sound effect
+bool isDoorPermanentlyLocked = false; // type password wrong >= `maxTryAttempt` times, this will be true
 bool isDoorLocked = true; // by default the door is locked, meaning even if the electricity goes off, the system is still safe
 byte hashedPassword[32] = { 0 };
 
@@ -27,7 +30,7 @@ float lastHumidity = 0.0;
 float humidityForGauge = 0.0;
 bool isFireAlarmSound = 1;
 bool isMistSpray = 0;
-bool isNeoPixel = 1;
+bool isNeoPixel = 0;
 
 // everything works in here, this is the entry point
 void setup() {

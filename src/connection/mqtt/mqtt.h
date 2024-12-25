@@ -11,13 +11,18 @@ extern PubSubClient mqttClient;
 
 // variables from website to fetch
 extern bool isMutedEntryDetection;
+extern bool isMutedDoorSystem;
+extern bool isDoorPermanentlyLocked;
+extern int maxTryAttempt;
+extern int passwordLength;
 
 extern int lightValueForGauge;
-extern bool isAutomaticLight;
-extern bool isMistSpray;
 extern float temperatureForGauge;
 extern float humidityForGauge;
+extern bool isAutomaticLight;
 extern bool isFireAlarmSound;
+extern bool isMistSpray;
+extern bool isNeoPixel;
 
 extern byte hashedPassword[32];
 

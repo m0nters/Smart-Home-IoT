@@ -3,7 +3,7 @@
 // Task for Door Lock System 
 void taskDoorLockSystem(void* parameter) {
   while (true) {
-
+    if (!isDoorPermanentlyLocked) {
       servo.write(0);
       displayMessage(LCD_DOOR_LOCK_SYSTEM, "Welcome home!", "");
       delay(2000);
@@ -21,5 +21,5 @@ void taskDoorLockSystem(void* parameter) {
       enterPassword();
     }
     vTaskDelay(100 / portTICK_PERIOD_MS); // Yield to other tasks
+  }
 }
-

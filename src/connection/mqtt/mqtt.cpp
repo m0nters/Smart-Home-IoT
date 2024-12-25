@@ -33,6 +33,20 @@ void websiteDataHandler(char* topic, byte* payload, unsigned int length) {
   if (String(topic) == "home-0PPKrXoRcgyppks/isMutedEntryDetection") {
     isMutedEntryDetection = (message == "true");
   }
+  else if (String(topic) == "home-0PPKrXoRcgyppks/isMutedDoorSystem") {
+    isMutedDoorSystem = (message == "true");
+  }
+  // user unlock door that is in permanently locked state on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/isDoorPermanentlyLocked") {
+    isDoorPermanentlyLocked = (message == "true");
+  }
+  // user change max try attempt on website
+  else if (String(topic) == "home-0PPKrXoRcgyppks/maxTryAttempt") {
+    maxTryAttempt = message.toInt();
+  }
+  else if (String(topic) == "home-0PPKrXoRcgyppks/passwordLength") {
+    passwordLength = message.toInt();
+  }
   // user change password on website
   else if (String(topic) == "home-0PPKrXoRcgyppks/hashedPassword") {
     for (unsigned int i = 0; i < length; i++) {
@@ -62,6 +76,9 @@ void websiteDataHandler(char* topic, byte* payload, unsigned int length) {
   // turn on/off mist spray on website
   else if (String(topic) == "home-0PPKrXoRcgyppks/mistSpray") {
     isMistSpray = (message == "true");
+  }
+    else if (String(topic) == "home-0PPKrXoRcgyppks/neoPixel") {
+    isNeoPixel = (message == "true");
   }
 }
 
