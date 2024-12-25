@@ -27,6 +27,7 @@ float lastHumidity = 0.0;
 float humidityForGauge = 0.0;
 bool isFireAlarmSound = 1;
 bool isMistSpray = 0;
+bool isNeoPixel = 1;
 
 // everything works in here, this is the entry point
 void setup() {

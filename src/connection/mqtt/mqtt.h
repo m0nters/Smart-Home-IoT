@@ -15,10 +15,11 @@ extern bool isMutedEntryDetection;
 extern int lightValueForGauge;
 extern bool isAutomaticLight;
 extern bool isMistSpray;
-extern byte hashedPassword[32];
 extern float temperatureForGauge;
 extern float humidityForGauge;
 extern bool isFireAlarmSound;
+
+extern byte hashedPassword[32];
 
 void mqttSetup();
 void mqttConnect();
