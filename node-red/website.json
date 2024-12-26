@@ -1,3211 +1,3482 @@
 [
-  {
-    "id": "1d88525d826416b3",
-    "type": "tab",
-    "label": "Flow 1",
-    "disabled": false,
-    "info": "",
-    "env": []
-  },
-  {
-    "id": "a000d975ea74f088",
-    "type": "tab",
-    "label": "Đăng nhập",
-    "disabled": false,
-    "info": "",
-    "env": []
-  },
-  {
-    "id": "e275fdd343e891db",
-    "type": "tab",
-    "label": "Trang admin",
-    "disabled": false,
-    "info": "",
-    "env": []
-  },
-  {
-    "id": "9ad21237fb19bcc8",
-    "type": "tab",
-    "label": "Trang chủ (trang user)",
-    "disabled": false,
-    "info": "",
-    "env": []
-  },
-  {
-    "id": "b313f7617d390c8e",
-    "type": "tab",
-    "label": "Cài đặt",
-    "disabled": false,
-    "info": "",
-    "env": []
-  },
-  {
-    "id": "be1323cee010e7ec",
-    "type": "ui_base",
-    "theme": {
-      "name": "theme-light",
-      "lightTheme": {
-        "default": "#0094CE",
-        "baseColor": "#0094CE",
-        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-        "edited": true,
-        "reset": false
-      },
-      "darkTheme": {
-        "default": "#097479",
-        "baseColor": "#097479",
-        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-        "edited": false
-      },
-      "customTheme": {
-        "name": "Untitled Theme 1",
-        "default": "#4B7930",
-        "baseColor": "#4B7930",
-        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-      },
-      "themeState": {
-        "base-color": {
-          "default": "#0094CE",
-          "value": "#0094CE",
-          "edited": false
+    {
+        "id": "a000d975ea74f088",
+        "type": "tab",
+        "label": "Đăng nhập",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e275fdd343e891db",
+        "type": "tab",
+        "label": "Trang admin",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9ad21237fb19bcc8",
+        "type": "tab",
+        "label": "Trang chủ (trang user)",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b313f7617d390c8e",
+        "type": "tab",
+        "label": "Cài đặt",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "be1323cee010e7ec",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
         },
-        "page-titlebar-backgroundColor": {
-          "value": "#0094CE",
-          "edited": false
-        },
-        "page-backgroundColor": {
-          "value": "#fafafa",
-          "edited": false
-        },
-        "page-sidebar-backgroundColor": {
-          "value": "#ffffff",
-          "edited": false
-        },
-        "group-textColor": {
-          "value": "#1bbfff",
-          "edited": false
-        },
-        "group-borderColor": {
-          "value": "#ffffff",
-          "edited": false
-        },
-        "group-backgroundColor": {
-          "value": "#ffffff",
-          "edited": false
-        },
-        "widget-textColor": {
-          "value": "#111111",
-          "edited": false
-        },
-        "widget-backgroundColor": {
-          "value": "#0094ce",
-          "edited": false
-        },
-        "widget-borderColor": {
-          "value": "#ffffff",
-          "edited": false
-        },
-        "base-font": {
-          "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
         }
-      },
-      "angularTheme": {
-        "primary": "indigo",
-        "accents": "blue",
-        "warn": "red",
-        "background": "grey",
-        "palette": "light"
-      }
     },
-    "site": {
-      "name": "Node-RED Dashboard",
-      "hideToolbar": "false",
-      "allowSwipe": "false",
-      "lockMenu": "false",
-      "allowTempTheme": "true",
-      "dateFormat": "DD/MM/YYYY",
-      "sizes": {
-        "sx": 48,
-        "sy": 48,
-        "gx": 6,
-        "gy": 6,
-        "cx": 6,
-        "cy": 6,
-        "px": 0,
-        "py": 0
-      }
+    {
+        "id": "f0987cb3c87e44bd",
+        "type": "ui_group",
+        "name": "Bộ đếm người ra vào",
+        "tab": "862df58f2eea4a92",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "862df58f2eea4a92",
+        "type": "ui_tab",
+        "name": "Trang chủ",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "5b1222462257e78c",
+        "type": "ui_tab",
+        "name": "Đăng nhập",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f8a6abae877c7f5f",
+        "type": "ui_tab",
+        "name": "Trang admin",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "8ae268ba7cc8e2e0",
+        "type": "ui_group",
+        "name": "Đăng ký người dùng mới",
+        "tab": "f8a6abae877c7f5f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ccca45ee97dbdfb5",
+        "type": "ui_group",
+        "name": "Bộ khóa cửa",
+        "tab": "862df58f2eea4a92",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "11b82a1622765a34",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6d6e7b31db3b08c3",
+        "type": "ui_group",
+        "name": "Xóa người dùng",
+        "tab": "f8a6abae877c7f5f",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d1294323841f2b1b",
+        "type": "ui_tab",
+        "name": "Cài đặt",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "7dd48ba56ec41588",
+        "type": "ui_group",
+        "name": "Đặt lại mật khẩu",
+        "tab": "d1294323841f2b1b",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e37fc10a99f2d6f9",
+        "type": "ui_group",
+        "name": "Xóa tài khoản",
+        "tab": "d1294323841f2b1b",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1aca4485bcad202f",
+        "type": "ui_group",
+        "name": "Chỉnh vai trò người dùng",
+        "tab": "f8a6abae877c7f5f",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "adminUserGroup",
+        "type": "ui_group",
+        "name": "Quản lý user",
+        "tab": "adminTab",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "adminTab",
+        "type": "ui_tab",
+        "name": "Trang admin",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8a5adeafdaa0f660",
+        "type": "ui_group",
+        "name": "Đăng nhập",
+        "tab": "5b1222462257e78c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "462319f5aa2aab02",
+        "type": "ui_group",
+        "name": "Bộ điều khiển đèn",
+        "tab": "862df58f2eea4a92",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "afda3bbd1e2f5a7b",
+        "type": "ui_group",
+        "name": "Bộ báo cháy",
+        "tab": "862df58f2eea4a92",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "75bfe65070b58787",
+        "type": "firebase config",
+        "firebaseurl": "smart-home-iot-91449-default-rtdb",
+        "loginType": "none"
+    },
+    {
+        "id": "380f7df3c09dc5a7",
+        "type": "pushsafer-api-key",
+        "name": ""
+    },
+    {
+        "id": "e2af5a346038ef95",
+        "type": "pushsafer-notification-template",
+        "name": "",
+        "title": "Thông báo: Có người ra vào. Số người hiện tại trong nhà:",
+        "icon": "",
+        "iconcolor": "#ffffff",
+        "sound": "1",
+        "vibration": "",
+        "priority": "1",
+        "devices": "",
+        "timetolive": "",
+        "retry": "",
+        "expire": "",
+        "confirm": "",
+        "answer": "",
+        "answeroptions": "",
+        "answerforce": "",
+        "url": "",
+        "urltitle": "",
+        "image": "",
+        "image2": "",
+        "image3": ""
+    },
+    {
+        "id": "f67a422731a97891",
+        "type": "pushsafer-notification-template",
+        "name": "",
+        "title": "Thông báo nhiệt độ nhà cao !!! Có khả năng cháy nổ.",
+        "icon": "",
+        "iconcolor": "#ffffff",
+        "sound": "8",
+        "vibration": "",
+        "priority": "2",
+        "devices": "",
+        "timetolive": "",
+        "retry": "",
+        "expire": "",
+        "confirm": "",
+        "answer": "",
+        "answeroptions": "",
+        "answerforce": "",
+        "url": "",
+        "urltitle": "",
+        "image": "",
+        "image2": "",
+        "image3": ""
+    },
+    {
+        "id": "c1bea5a954f4e12b",
+        "type": "ui_spacer",
+        "z": "9ad21237fb19bcc8",
+        "name": "spacer",
+        "group": "8a5adeafdaa0f660",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "fc7ff0ecf4509d79",
+        "type": "ui_spacer",
+        "z": "9ad21237fb19bcc8",
+        "name": "spacer",
+        "group": "8a5adeafdaa0f660",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "692c965e74b8b151",
+        "type": "ui_spacer",
+        "z": "9ad21237fb19bcc8",
+        "name": "spacer",
+        "group": "8a5adeafdaa0f660",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "79d31313ab32fe77",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d81c906f76198b82",
+        "type": "MySQLdatabase",
+        "name": "users",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "user_management",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "377187aef7ac36a3",
+        "type": "ui_form",
+        "z": "a000d975ea74f088",
+        "name": "",
+        "label": "",
+        "group": "8a5adeafdaa0f660",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Tên người dùng",
+                "value": "username",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Mật khẩu",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "username": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "Đăng nhập",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "c0f92a3865fd48e4"
+            ]
+        ]
+    },
+    {
+        "id": "c0f92a3865fd48e4",
+        "type": "function",
+        "z": "a000d975ea74f088",
+        "name": "find corresponding username",
+        "func": "const bcrypt = global.get('bcrypt'); \n\nconst username = msg.payload.username;\nglobal.set(\"username\", username); // save current session through `username` global variable, use for \"Cài đặt\" tab -- do not delete\nmsg.inputPassword = msg.payload.password; // `msg.payload` is gonna be overwritten later\n\n// SQL query to get the stored password hash for the username\nmsg.topic = `\n    SELECT password, role \n    FROM users \n    WHERE username = ?\n`;\nmsg.payload = [username];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [
+                "3c1a444a1f260801"
+            ]
+        ]
+    },
+    {
+        "id": "3c1a444a1f260801",
+        "type": "mysql",
+        "z": "a000d975ea74f088",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 810,
+        "y": 220,
+        "wires": [
+            [
+                "840e161df7caec9e"
+            ]
+        ]
+    },
+    {
+        "id": "6731ddcd1f65cccc",
+        "type": "ui_ui_control",
+        "z": "a000d975ea74f088",
+        "name": "",
+        "events": "all",
+        "x": 1940,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a9bbf9df39a008a",
+        "type": "switch",
+        "z": "a000d975ea74f088",
+        "name": "",
+        "property": "role",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "guest",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "admin",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "user",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 1230,
+        "y": 240,
+        "wires": [
+            [
+                "caeb96200fe28f25"
+            ],
+            [
+                "2c6c617853bda101",
+                "9d3162c06ded3a3a"
+            ],
+            [
+                "bf3ffb97a21ffbd4",
+                "1ae5e88f8ad2f0b3"
+            ]
+        ]
+    },
+    {
+        "id": "2c6c617853bda101",
+        "type": "change",
+        "z": "a000d975ea74f088",
+        "name": "setting which tab is visible",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"show\":[\"Đăng nhập\",\"Trang admin\",\"Cài đặt\"],\"hide\":[\"Trang chủ\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 220,
+        "wires": [
+            [
+                "6731ddcd1f65cccc"
+            ]
+        ]
+    },
+    {
+        "id": "bf3ffb97a21ffbd4",
+        "type": "change",
+        "z": "a000d975ea74f088",
+        "name": "setting which tab is visible",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"show\":[\"Đăng nhập\",\"Trang chủ\",\"Cài đặt\"],\"hide\":[\"Đăng ký\",\"Trang admin\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 320,
+        "wires": [
+            [
+                "6731ddcd1f65cccc"
+            ]
+        ]
+    },
+    {
+        "id": "5b59504a908f76ea",
+        "type": "ui_toast",
+        "z": "a000d975ea74f088",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1250,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9d3162c06ded3a3a",
+        "type": "change",
+        "z": "a000d975ea74f088",
+        "name": "jump to Trang admin",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Trang admin\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 180,
+        "wires": [
+            [
+                "6731ddcd1f65cccc"
+            ]
+        ]
+    },
+    {
+        "id": "1ae5e88f8ad2f0b3",
+        "type": "change",
+        "z": "a000d975ea74f088",
+        "name": "jump to Trang chủ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Trang chủ\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1550,
+        "y": 360,
+        "wires": [
+            [
+                "6731ddcd1f65cccc"
+            ]
+        ]
+    },
+    {
+        "id": "41533482e08e4a28",
+        "type": "comment",
+        "z": "a000d975ea74f088",
+        "name": "if is admin",
+        "info": "",
+        "x": 1540,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4cd6d5ec39420dd7",
+        "type": "comment",
+        "z": "a000d975ea74f088",
+        "name": "if is user",
+        "info": "",
+        "x": 1540,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "840e161df7caec9e",
+        "type": "function",
+        "z": "a000d975ea74f088",
+        "name": "check password",
+        "func": "const bcrypt = global.get('bcrypt');\n\nif (msg.payload.length == 0) {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n\n    const previousUsername = global.get(\"previousUsername\");\n    global.set(\"username\", previousUsername);\n    return msg;\n}\n\nconst storedHash = msg.payload[0].password;\nconst userPassword = msg.inputPassword;\ndelete msg.inputPassword;\n\nconst isMatch = bcrypt.compareSync(userPassword, storedHash);\n\nif (isMatch) {\n    msg.role = msg.payload[0].role;\n    global.set(\"role\", msg.role);\n\n    msg.topic = \"Đăng nhập thành công!\";\n    msg.payload = \"Đã đăng nhập với vai trò \" + msg.role;\n    \n    msg.username = global.get(\"username\");\n    global.set(\"previousUsername\", msg.username);\n} else {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n    \n    const previousUsername = global.get(\"previousUsername\");\n    global.set(\"username\", previousUsername);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 220,
+        "wires": [
+            [
+                "7a9bbf9df39a008a",
+                "5b59504a908f76ea",
+                "3fe99f6cbc2756e3",
+                "78a17488de55ec9e"
+            ]
+        ]
+    },
+    {
+        "id": "3fe99f6cbc2756e3",
+        "type": "ui_text",
+        "z": "a000d975ea74f088",
+        "group": "8a5adeafdaa0f660",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tên người dùng đang đăng nhập",
+        "format": "{{msg.username}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1260,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d504a9e3f3317d12",
+        "type": "function",
+        "z": "a000d975ea74f088",
+        "name": "set role & username",
+        "func": "msg.username = \"Khách\";\nmsg.role = \"guest\";\nglobal.set(\"username\", msg.username);\nglobal.set(\"role\", msg.role);\nglobal.set(\"previousUsername\", \"Khách\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 340,
+        "wires": [
+            [
+                "7a9bbf9df39a008a",
+                "3fe99f6cbc2756e3",
+                "78a17488de55ec9e"
+            ]
+        ]
+    },
+    {
+        "id": "84b02e721aee32e5",
+        "type": "ui_button",
+        "z": "a000d975ea74f088",
+        "name": "",
+        "group": "8a5adeafdaa0f660",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Đăng xuất",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "d504a9e3f3317d12"
+            ]
+        ]
+    },
+    {
+        "id": "caeb96200fe28f25",
+        "type": "change",
+        "z": "a000d975ea74f088",
+        "name": "setting which tab is visible",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"show\":[\"Đăng nhập\"],\"hide\":[\"Trang admin\",\"Cài đặt\",\"Trang chủ\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 80,
+        "wires": [
+            [
+                "6731ddcd1f65cccc"
+            ]
+        ]
+    },
+    {
+        "id": "5cda550c818526a5",
+        "type": "comment",
+        "z": "a000d975ea74f088",
+        "name": "if is guest",
+        "info": "",
+        "x": 1540,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "78a17488de55ec9e",
+        "type": "ui_text",
+        "z": "a000d975ea74f088",
+        "group": "8a5adeafdaa0f660",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Vai trò hiện tại",
+        "format": "{{msg.role}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1120,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "470f0f2070e96bec",
+        "type": "inject",
+        "z": "a000d975ea74f088",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "b71b703f2818dbdd"
+            ]
+        ]
+    },
+    {
+        "id": "b71b703f2818dbdd",
+        "type": "function",
+        "z": "a000d975ea74f088",
+        "name": "update current user & role periodically",
+        "func": "msg.username = global.get(\"username\") || \"Khách\";\nmsg.role = global.get(\"role\") || \"guest\";\nglobal.set(\"username\", msg.username);\nglobal.set(\"role\", msg.role);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 460,
+        "wires": [
+            [
+                "3fe99f6cbc2756e3",
+                "78a17488de55ec9e"
+            ]
+        ]
+    },
+    {
+        "id": "3c484b67c745514e",
+        "type": "ui_form",
+        "z": "e275fdd343e891db",
+        "name": "",
+        "label": "",
+        "group": "8ae268ba7cc8e2e0",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Tên người dùng",
+                "value": "username",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Mật khẩu",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Xác nhận lại mật khẩu",
+                "value": "confirmPassword",
+                "type": "password",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Vai trò (admin, user)",
+                "value": "role",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "username": "",
+            "password": "",
+            "confirmPassword": "",
+            "role": ""
+        },
+        "payload": "",
+        "submit": "Đăng ký",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "5efb157a3c739e9f"
+            ]
+        ]
+    },
+    {
+        "id": "5efb157a3c739e9f",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "validate register",
+        "func": "const bcrypt = global.get(\"bcrypt\"); \n\nconst username = msg.payload.username;\nconst password = msg.payload.password;\nconst confirmPassword = msg.payload.confirmPassword;\nconst role = msg.payload.role;\n\nif (password !== confirmPassword) {\n    msg.topic = \"Lỗi\"\n    msg.payload = \"Mật khẩu không khớp. Vui lòng thử lại!\";\n    return msg;\n}\n\nif (role != \"admin\" && role != \"user\") {\n    msg.topic = \"Lỗi\"\n    msg.payload = \"Vai trò không hợp lệ. Vui lòng thử lại!\";\n    return msg;\n}\n\nconst hashedPassword = bcrypt.hashSync(password, 12);  // 12 is the salt rounds\n\n// SQL query to insert the new user with hashed password\nmsg.query = \"INSERT INTO users (username, password, role) VALUES (?, ?, ?)\";\nmsg.params = [username, hashedPassword, role];\n\nmsg.topic = \"Đang xử lí...\";\nmsg.payload = \"Vui lòng chờ đợi trong giây lát.\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "ce1482e3daa92607",
+                "89d9575255fac79b"
+            ]
+        ]
+    },
+    {
+        "id": "92af3599447216db",
+        "type": "mysql",
+        "z": "e275fdd343e891db",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 850,
+        "y": 180,
+        "wires": [
+            [
+                "4503a8f13d3be75c"
+            ]
+        ]
+    },
+    {
+        "id": "ce1482e3daa92607",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "add user info into database",
+        "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "92af3599447216db"
+            ]
+        ]
+    },
+    {
+        "id": "89d9575255fac79b",
+        "type": "ui_toast",
+        "z": "e275fdd343e891db",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 590,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "35cf6ad604c08cf9",
+        "type": "ui_toast",
+        "z": "e275fdd343e891db",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1530,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "4503a8f13d3be75c",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "if register successfully",
+        "func": "if (msg.payload) {\n    msg.topic = \"Thành công\";\n    msg.payload = \"Tài khoản mới đã được thêm vào cơ sở dữ liệu!\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 120,
+        "wires": [
+            [
+                "35cf6ad604c08cf9"
+            ]
+        ]
+    },
+    {
+        "id": "5399bf4da1bd8cf9",
+        "type": "catch",
+        "z": "e275fdd343e891db",
+        "name": "if register failed (mysql error)",
+        "scope": [
+            "92af3599447216db"
+        ],
+        "uncaught": false,
+        "x": 1040,
+        "y": 240,
+        "wires": [
+            [
+                "87406675dc7e68fa"
+            ]
+        ]
+    },
+    {
+        "id": "87406675dc7e68fa",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "mysql error handling",
+        "func": "if (msg.error.message.startsWith(\"Error: Duplicate entry\")) {\n    // Error due to duplicate username\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Username này đã có người sử dụng!\";\n} else {\n    // Handle other errors\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Đã xảy ra lỗi không xác định! Chi tiết lỗi: \" + msg.error.message;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 160,
+        "wires": [
+            [
+                "35cf6ad604c08cf9"
+            ]
+        ]
+    },
+    {
+        "id": "a3fd60251a36593a",
+        "type": "ui_form",
+        "z": "e275fdd343e891db",
+        "name": "",
+        "label": "",
+        "group": "1aca4485bcad202f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Tên người dùng",
+                "value": "username",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Vai trò",
+                "value": "role",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "username": "",
+            "role": ""
+        },
+        "payload": "",
+        "submit": "Hoàn tất",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "063a2ee49c3cf415"
+            ]
+        ]
+    },
+    {
+        "id": "063a2ee49c3cf415",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "validate role",
+        "func": "const username = msg.payload.username;\nconst role = msg.payload.role;\n\nmsg.username = username;\nmsg.role = role;\n\nif (role != \"user\" && role != \"admin\") {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Vai trò không hợp lệ. Vui lòng thử lại!\";\n    return msg;\n}\n\nmsg.topic = \"Đang xử lí...\";\nmsg.payload = \"Vui lòng chờ đợi trong giây lát\";\nmsg.query = `\n    SELECT *\n    FROM users\n    WHERE username = ?\n`;\nmsg.params = [username];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 480,
+        "wires": [
+            [
+                "f7f7032438b4eb43",
+                "95dee7b8c86d93d4"
+            ]
+        ]
+    },
+    {
+        "id": "f7f7032438b4eb43",
+        "type": "ui_toast",
+        "z": "e275fdd343e891db",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 570,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "95dee7b8c86d93d4",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "query corresponding user",
+        "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 480,
+        "wires": [
+            [
+                "c91aeb210d488592"
+            ]
+        ]
+    },
+    {
+        "id": "c91aeb210d488592",
+        "type": "mysql",
+        "z": "e275fdd343e891db",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 850,
+        "y": 520,
+        "wires": [
+            [
+                "fe1de8f442ec48f7"
+            ]
+        ]
+    },
+    {
+        "id": "fe1de8f442ec48f7",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "validate user",
+        "func": "const username = msg.username;\nconst role = msg.role;\ndelete msg.role;\ndelete msg.username;\n\nif (msg.payload.length == 0) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Người dùng không tồn tại\";\n    return msg;\n}\n\nif (msg.payload[0].role == role) {\n    msg.topic = \"Không có gì thay đổi\";\n    msg.payload = `Vai trò người dùng này vốn đã là ${role}`;\n    return msg;\n}\n\nmsg.topic = \"Thành công\";\nmsg.payload = `Người dùng \"${username}\" hiện đang có vai trò \"${role}\"!`;\nmsg.query = `\n    UPDATE users\n    SET role = ?\n    WHERE username = ?\n`\nmsg.params = [role, username];\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 500,
+        "wires": [
+            [
+                "bfd43988fed94ca3",
+                "61898f853f535540"
+            ]
+        ]
+    },
+    {
+        "id": "bfd43988fed94ca3",
+        "type": "ui_toast",
+        "z": "e275fdd343e891db",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1210,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "61898f853f535540",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "update role in database",
+        "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 480,
+        "wires": [
+            [
+                "5e96e37967d74443"
+            ]
+        ]
+    },
+    {
+        "id": "5e96e37967d74443",
+        "type": "mysql",
+        "z": "e275fdd343e891db",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 1490,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f65923214fae846",
+        "type": "comment",
+        "z": "e275fdd343e891db",
+        "name": "Đăng kí người dùng mới",
+        "info": "",
+        "x": 150,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d39dea47664efdd9",
+        "type": "comment",
+        "z": "e275fdd343e891db",
+        "name": "Chỉnh sửa vai trò người dùng",
+        "info": "",
+        "x": 140,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6c6217afbca05a45",
+        "type": "ui_form",
+        "z": "e275fdd343e891db",
+        "name": "",
+        "label": "",
+        "group": "6d6e7b31db3b08c3",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Tên người dùng",
+                "value": "username",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "username": ""
+        },
+        "payload": "",
+        "submit": "Xóa",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 110,
+        "y": 800,
+        "wires": [
+            [
+                "5ea563f04447a34e"
+            ]
+        ]
+    },
+    {
+        "id": "5ea563f04447a34e",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "find user",
+        "func": "msg.username = msg.payload.username;\nmsg.topic = `\n    SELECT *\n    FROM users\n    WHERE username = ?\n`;\nmsg.payload = [msg.username];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 800,
+        "wires": [
+            [
+                "83cdbe0e4329c5c0"
+            ]
+        ]
+    },
+    {
+        "id": "83cdbe0e4329c5c0",
+        "type": "mysql",
+        "z": "e275fdd343e891db",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 470,
+        "y": 800,
+        "wires": [
+            [
+                "2e6eda24386e0a54"
+            ]
+        ]
+    },
+    {
+        "id": "2e6eda24386e0a54",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "validate user",
+        "func": "if (msg.payload.length == 0) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Người dùng không tồn tại!\";\n    return msg;\n}\n\nmsg.logout = 0;\nif (msg.payload[0].username == global.get(\"username\")) {\n    msg.topic = \"Không thể xóa chính bản thân\";\n    msg.payload = \"Yêu cầu mật khẩu, vui lòng vào mục \\\"Cài đặt\\\"\";\n    return msg;\n}\n\nmsg.topic = \"Xóa thành công\";\nif (msg.logout == 0) {\n    msg.payload = \"Người dùng chỉ định đã được xóa\";\n}\nelse {\n    msg.payload = \"Bạn đã xóa chính bản thân!\";\n}\n\nmsg.query = `\n    DELETE FROM users\n    WHERE username = ?\n`;\nmsg.params = [msg.username];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 800,
+        "wires": [
+            [
+                "b2aaf3a2ce916650",
+                "210ec088908ec8ac"
+            ]
+        ]
+    },
+    {
+        "id": "b2aaf3a2ce916650",
+        "type": "ui_toast",
+        "z": "e275fdd343e891db",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 870,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "210ec088908ec8ac",
+        "type": "function",
+        "z": "e275fdd343e891db",
+        "name": "delete user in database",
+        "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 800,
+        "wires": [
+            [
+                "2f3aa3f49892beb7"
+            ]
+        ]
+    },
+    {
+        "id": "2f3aa3f49892beb7",
+        "type": "mysql",
+        "z": "e275fdd343e891db",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 1070,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3fbcb7bb1c36339d",
+        "type": "comment",
+        "z": "e275fdd343e891db",
+        "name": "Xóa người dùng",
+        "info": "",
+        "x": 100,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "97e1a4f012fe693c",
+        "type": "comment",
+        "z": "e275fdd343e891db",
+        "name": "không xóa username không tồn tại hoặc chính bản thân",
+        "info": "",
+        "x": 730,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "bc5836cbdf6dafe3",
+        "type": "ui_gauge",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "group": "f0987cb3c87e44bd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Số người hiện tại đang ở trong nhà",
+        "label": "Người",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1140,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ab210482e9f17934",
+        "type": "ui_switch",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "label": "Bật/tắt âm lượng",
+        "tooltip": "",
+        "group": "f0987cb3c87e44bd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 850,
+        "y": 240,
+        "wires": [
+            [
+                "ccdc2555429de4ab"
+            ]
+        ]
+    },
+    {
+        "id": "ccdc2555429de4ab",
+        "type": "mqtt out",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/isMutedEntryDetection",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79d31313ab32fe77",
+        "x": 1210,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "afe9d599bab2c1ff",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/visitorCount",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 750,
+        "y": 280,
+        "wires": [
+            [
+                "bc5836cbdf6dafe3"
+            ]
+        ]
+    },
+    {
+        "id": "dc28b40c659e54ee",
+        "type": "ui_switch",
+        "z": "9ad21237fb19bcc8",
+        "name": "Bật/tắt chế độ điều khiển đèn tự động",
+        "label": "Bật/tắt chế độ điều khiển đèn tự động",
+        "tooltip": "",
+        "group": "462319f5aa2aab02",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 510,
+        "y": 1280,
+        "wires": [
+            [
+                "9604e5b8898f84b4"
+            ]
+        ]
+    },
+    {
+        "id": "22585248c63df1dd",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/lightValue",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 520,
+        "y": 1120,
+        "wires": [
+            [
+                "48ad528fe244d6c1"
+            ]
+        ]
+    },
+    {
+        "id": "48ad528fe244d6c1",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "get light value",
+        "func": "\nlet lightValue = parseFloat(msg.payload);\n\n\nmsg.payload = lightValue;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 1120,
+        "wires": [
+            [
+                "a9db7a2289f1127e"
+            ]
+        ]
+    },
+    {
+        "id": "a9db7a2289f1127e",
+        "type": "ui_gauge",
+        "z": "9ad21237fb19bcc8",
+        "name": "Độ sáng (%)",
+        "group": "462319f5aa2aab02",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Độ sáng (%)",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#000000",
+            "#ff0505",
+            "#fbff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1070,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "9604e5b8898f84b4",
+        "type": "mqtt out",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/isAutomaticLight",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79d31313ab32fe77",
+        "x": 910,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "986a58c69f387a52",
+        "type": "ui_gauge",
+        "z": "9ad21237fb19bcc8",
+        "name": "Nhiệt độ",
+        "group": "afda3bbd1e2f5a7b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Nhiệt độ hiện tại (độ C)",
+        "label": " °C",
+        "format": "{{value}}",
+        "min": "-40",
+        "max": "80",
+        "colors": [
+            "#00ff1e",
+            "#fbff00",
+            "#ff0000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 840,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "c4e3308628fa7cf4",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 390,
+        "y": 1500,
+        "wires": [
+            [
+                "0ff9021b2fd5c33f"
+            ]
+        ]
+    },
+    {
+        "id": "0ff9021b2fd5c33f",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "get temperature",
+        "func": "let temperature = parseFloat(msg.payload);\n\n\nmsg.payload = temperature;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 1520,
+        "wires": [
+            [
+                "986a58c69f387a52"
+            ]
+        ]
+    },
+    {
+        "id": "6f959d90b58b61ab",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "get humidity",
+        "func": "let humidity = parseFloat(msg.payload);\n\n\nmsg.payload = humidity;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1600,
+        "wires": [
+            [
+                "9c62d45563fd9b2e"
+            ]
+        ]
+    },
+    {
+        "id": "032ca84664e5a91a",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 1600,
+        "wires": [
+            [
+                "6f959d90b58b61ab"
+            ]
+        ]
+    },
+    {
+        "id": "9c62d45563fd9b2e",
+        "type": "ui_gauge",
+        "z": "9ad21237fb19bcc8",
+        "name": "Độ ẩm",
+        "group": "afda3bbd1e2f5a7b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Độ ẩm hiện tại (%)",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 810,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "baaff8a0c3fa7170",
+        "type": "ui_switch",
+        "z": "9ad21237fb19bcc8",
+        "name": "Bật/tắt âm chuông báo cháy",
+        "label": "Bật/tắt âm chuông báo cháy",
+        "tooltip": "",
+        "group": "afda3bbd1e2f5a7b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 560,
+        "y": 1720,
+        "wires": [
+            [
+                "7cef895bf5d62452"
+            ]
+        ]
+    },
+    {
+        "id": "d4585459cf881e4b",
+        "type": "ui_switch",
+        "z": "9ad21237fb19bcc8",
+        "name": "Bật phun sương",
+        "label": "Bật phun sương",
+        "tooltip": "",
+        "group": "afda3bbd1e2f5a7b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 580,
+        "y": 1820,
+        "wires": [
+            [
+                "ed3f1c05d14f10b5"
+            ]
+        ]
+    },
+    {
+        "id": "7cef895bf5d62452",
+        "type": "mqtt out",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/fireAlarmSound",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79d31313ab32fe77",
+        "x": 900,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "ed3f1c05d14f10b5",
+        "type": "mqtt out",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/mistSpray",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79d31313ab32fe77",
+        "x": 870,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "c4a3fc5eff87bf04",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 430,
+        "y": 1920,
+        "wires": [
+            [
+                "a72995a5d9f0a197"
+            ]
+        ]
+    },
+    {
+        "id": "a72995a5d9f0a197",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "push temperature/humidity to cloud",
+        "func": "let temperature = context.get(\"temperature\");\nlet humidity = context.get(\"humidity\");\n\nif (msg.topic === \"home-0PPKrXoRcgyppks/temperature\") {\n    temperature = parseFloat(msg.payload);\n    context.set(\"temperature\", temperature);\n} else if (msg.topic === \"home-0PPKrXoRcgyppks/humidity\") {\n    humidity = parseFloat(msg.payload);\n    context.set(\"humidity\", humidity);\n}\n\nlet timestampVN = new Date().toLocaleString(\"vi-VN\", { timeZone: \"Asia/Ho_Chi_Minh\" });\n\n\nmsg.payload = {\n    timestamp: timestampVN,  \n    temperature: temperature,   \n    humidity: humidity        \n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 1920,
+        "wires": [
+            [
+                "c79d32011ef268fa"
+            ]
+        ]
+    },
+    {
+        "id": "69cf210309b3fe10",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "get temperature from cloud",
+        "func": "let data = msg.payload;\n\n// Kiểm tra xem dữ liệu có phải là đối tượng (object) không\nif (typeof data === 'object' && !Array.isArray(data)) {\n    // Chuyển đối tượng thành mảng các phần tử\n    let entries = Object.values(data); // Lấy tất cả giá trị từ các khóa\n    \n    msg.payload = entries.map(entry => {\n        return {\n            timestamp: entry.timestamp || \"Không xác định\", // Thời gian\n            temperature: entry.temperature || \"N/A\",  // Nhiệt độ\n            humidity: entry.humidity || \"N/A\"  \n        };\n    });\n    \n    return msg;\n} else {\n    node.error(\"Dữ liệu không hợp lệ từ Firebase\");\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 2100,
+        "wires": [
+            [
+                "3ae0554d406cff91"
+            ]
+        ]
+    },
+    {
+        "id": "3ae0554d406cff91",
+        "type": "ui_template",
+        "z": "9ad21237fb19bcc8",
+        "group": "afda3bbd1e2f5a7b",
+        "name": "Lịch sử nhiệt độ và độ ẩm",
+        "order": 4,
+        "width": "6",
+        "height": "6",
+        "format": "<div style=\"font-family: Arial, sans-serif;\">\n    <h3>Lịch sử nhiệt độ và độ ẩm</h3>\n    <table style=\"width: 100%; border-collapse: collapse;\">\n        <thead>\n            <tr>\n                <th style=\"border: 1px solid #ddd; padding: 8px;\">Thời gian</th>\n                <th style=\"border: 1px solid #ddd; padding: 8px;\">Nhiệt độ (°C)</th>\n                <th style=\"border: 1px solid #ddd; padding: 8px;\">Độ ẩm (%)</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr ng-repeat=\"item in msg.payload\">\n                <td style=\"border: 1px solid #ddd; padding: 8px;\">{{item.timestamp}}</td>\n                <td style=\"border: 1px solid #ddd; padding: 8px;\">{{item.temperature}}</td>\n                <td style=\"border: 1px solid #ddd; padding: 8px;\">{{item.humidity}}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1590,
+        "y": 2100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2a4aa8bf9f8aabf",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 420,
+        "y": 2000,
+        "wires": [
+            [
+                "a72995a5d9f0a197"
+            ]
+        ]
+    },
+    {
+        "id": "fcbbd80cfed1986c",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/visitorCount",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 750,
+        "y": 400,
+        "wires": [
+            [
+                "3f2f907424376b48"
+            ]
+        ]
+    },
+    {
+        "id": "3f2f907424376b48",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "push people count to cloud",
+        "func": "let peopleCount = parseInt(msg.payload) || 0;\n\n\nlet timestampVN = new Date().toLocaleString(\"vi-VN\", { timeZone: \"Asia/Ho_Chi_Minh\" });\n\nmsg.payload = {\n    timestamp: timestampVN,\n    people: peopleCount     \n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 400,
+        "wires": [
+            [
+                "4cbdc8c3c38689b6"
+            ]
+        ]
+    },
+    {
+        "id": "573c33bd0b67c6e0",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "get temperature from cloud",
+        "func": "let data = msg.payload;\n\n// Kiểm tra xem dữ liệu có phải là đối tượng (object) không\nif (typeof data === 'object' && !Array.isArray(data)) {\n    // Chuyển đối tượng thành mảng các phần tử\n    let entries = Object.values(data); // Lấy tất cả giá trị từ các khóa\n    \n    msg.payload = entries.map(entry => {\n        return {\n            timestamp: entry.timestamp || \"Không xác định\", // Thời gian\n            people: entry.people || \"0\",  // Nhiệt độ\n        };\n    });\n    \n    return msg;\n} else {\n    node.error(\"Dữ liệu không hợp lệ từ Firebase\");\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 460,
+        "wires": [
+            [
+                "707aba84a1a61183"
+            ]
+        ]
+    },
+    {
+        "id": "707aba84a1a61183",
+        "type": "ui_template",
+        "z": "9ad21237fb19bcc8",
+        "group": "f0987cb3c87e44bd",
+        "name": "Lịch sử số người trong nhà",
+        "order": 3,
+        "width": "6",
+        "height": "6",
+        "format": "<div style=\"font-family: Arial, sans-serif;\">\n    <h3>Lịch sử số người trong nhà</h3>\n    <table style=\"width: 100%; border-collapse: collapse;\">\n        <thead>\n            <tr>\n                <th style=\"border: 1px solid #ddd; padding: 8px;\">Thời gian</th>\n                <th style=\"border: 1px solid #ddd; padding: 8px;\">Số người</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr ng-repeat=\"item in msg.payload\">\n                <td style=\"border: 1px solid #ddd; padding: 8px;\">{{item.timestamp}}</td>\n                <td style=\"border: 1px solid #ddd; padding: 8px;\">{{item.people}}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1840,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad939ecdf2159520",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/visitorCount",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 910,
+        "y": 520,
+        "wires": [
+            [
+                "64003ece635a33cd"
+            ]
+        ]
+    },
+    {
+        "id": "8acadda426957b96",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 2280,
+        "wires": [
+            [
+                "7665259667d39687"
+            ]
+        ]
+    },
+    {
+        "id": "7665259667d39687",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "get temperature for alert",
+        "func": "let temperature = parseFloat(msg.payload);\n\n\nmsg.payload = temperature;\n\nif (temperature > 40) {\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 2280,
+        "wires": [
+            [
+                "66705ea16d71862d"
+            ]
+        ]
+    },
+    {
+        "id": "c79d32011ef268fa",
+        "type": "firebase modify",
+        "z": "9ad21237fb19bcc8",
+        "name": "Push Temperature History ",
+        "firebaseconfig": "75bfe65070b58787",
+        "childpath": "Temperature and Humidity",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 1190,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4cbdc8c3c38689b6",
+        "type": "firebase modify",
+        "z": "9ad21237fb19bcc8",
+        "name": "Push Visitor Count History ",
+        "firebaseconfig": "75bfe65070b58787",
+        "childpath": "People",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 1310,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b9bc7ada9a0ec49d",
+        "type": "firebase.on",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "firebaseconfig": "75bfe65070b58787",
+        "childpath": "Temperature and Humidity",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 600,
+        "y": 2100,
+        "wires": [
+            [
+                "69cf210309b3fe10"
+            ]
+        ]
+    },
+    {
+        "id": "70e2725324f91e13",
+        "type": "firebase.on",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "firebaseconfig": "75bfe65070b58787",
+        "childpath": "People",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 780,
+        "y": 460,
+        "wires": [
+            [
+                "573c33bd0b67c6e0"
+            ]
+        ]
+    },
+    {
+        "id": "64003ece635a33cd",
+        "type": "pushsafer",
+        "z": "9ad21237fb19bcc8",
+        "name": "People Alert",
+        "apikey": "380f7df3c09dc5a7",
+        "notificationtemplate": "e2af5a346038ef95",
+        "x": 1210,
+        "y": 520,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "66705ea16d71862d",
+        "type": "pushsafer",
+        "z": "9ad21237fb19bcc8",
+        "name": "Fire alert",
+        "apikey": "380f7df3c09dc5a7",
+        "notificationtemplate": "f67a422731a97891",
+        "x": 880,
+        "y": 2280,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "80d5a5d413402a65",
+        "type": "ui_button",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "group": "ccca45ee97dbdfb5",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Mở khóa cửa",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 580,
+        "y": 720,
+        "wires": [
+            [
+                "4de9808e9a9d98b4"
+            ]
+        ]
+    },
+    {
+        "id": "4de9808e9a9d98b4",
+        "type": "mqtt out",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/isDoorPermanentlyLocked",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79d31313ab32fe77",
+        "x": 880,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "7a1d589051c42d1b",
+        "type": "ui_switch",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "label": "Bật/tắt âm lượng",
+        "tooltip": "",
+        "group": "ccca45ee97dbdfb5",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 590,
+        "y": 660,
+        "wires": [
+            [
+                "50027a013948d59d"
+            ]
+        ]
+    },
+    {
+        "id": "50027a013948d59d",
+        "type": "mqtt out",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/isMutedDoorSystem",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79d31313ab32fe77",
+        "x": 920,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "95d6b56b7e94ac74",
+        "type": "ui_numeric",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "label": "Số lần nhập tối đa trước khi khóa hệ thống",
+        "tooltip": "",
+        "group": "ccca45ee97dbdfb5",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 670,
+        "y": 800,
+        "wires": [
+            [
+                "da1c7ef5a99d79e9"
+            ]
+        ]
+    },
+    {
+        "id": "da1c7ef5a99d79e9",
+        "type": "mqtt out",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/maxTryAttempt",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79d31313ab32fe77",
+        "x": 1140,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "6efc547c31b23de8",
+        "type": "ui_form",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "label": "",
+        "group": "ccca45ee97dbdfb5",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Mật khẩu mới",
+                "value": "newPassword",
+                "type": "password",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Xác nhận mật khẩu mới",
+                "value": "confirmPassword",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "newPassword": "",
+            "confirmPassword": ""
+        },
+        "payload": "",
+        "submit": "Đổi mật khẩu",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 570,
+        "y": 880,
+        "wires": [
+            [
+                "945b63570607af1d"
+            ]
+        ]
+    },
+    {
+        "id": "945b63570607af1d",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "check whether new password is valid",
+        "func": "msg.newPassword = msg.payload.newPassword;\nmsg.confirmPassword = msg.payload.confirmPassword;\n\nmsg.valid = 1;\n\nif (msg.newPassword != msg.confirmPassword) {\n    msg.valid = 0;\n\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Mật khẩu mới không khớp. Vui lòng thử lại\";\n    return msg;\n}\n\nif (msg.newPassword.length != 4) {\n    msg.valid = 0;\n\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Mật khẩu phải đúng 4 ký tự!\";\n    return msg;\n}\n\n\nconst validPasswordRegex = /^[0-9A-D]+$/;\nif (!validPasswordRegex.test(msg.newPassword)) {\n    msg.valid = 0;\n\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Mật khẩu chỉ bao gồm các ký tự số từ 0-9 hoặc chữ từ A-D (viết hoa)\";\n    return msg;\n}\n\nmsg.topic = \"Đang xử lí\";\nmsg.payload = \"Vui lòng chờ trong giây lát...\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 880,
+        "wires": [
+            [
+                "fabb285582d1fe48",
+                "2a126d1b0e0358fc"
+            ]
+        ]
+    },
+    {
+        "id": "fabb285582d1fe48",
+        "type": "ui_toast",
+        "z": "9ad21237fb19bcc8",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1150,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "2a126d1b0e0358fc",
+        "type": "switch",
+        "z": "9ad21237fb19bcc8",
+        "name": "if not error, continue",
+        "property": "valid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1180,
+        "y": 880,
+        "wires": [
+            [
+                "7b7762526ce43664",
+                "4acbb8e77021e139"
+            ]
+        ]
+    },
+    {
+        "id": "7b7762526ce43664",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "change password",
+        "func": "const crypto = global.get('crypto'); // Import the crypto module\n\nconst newPassword = msg.newPassword;\n\nconst hash = crypto.createHash('sha256').update(newPassword).digest(); // This will give you a Buffer\n\nmsg.payload = hash;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 880,
+        "wires": [
+            [
+                "2b48499556eaced0"
+            ]
+        ]
+    },
+    {
+        "id": "2b48499556eaced0",
+        "type": "mqtt out",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/hashedPassword",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79d31313ab32fe77",
+        "x": 1770,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "4acbb8e77021e139",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "show notification",
+        "func": "msg.topic = \"Đổi mật khẩu thành công\"\nmsg.payload = \"Mật khẩu của bạn đã được thay đổi!\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 960,
+        "wires": [
+            [
+                "a4109a1ee4fd85ea"
+            ]
+        ]
+    },
+    {
+        "id": "a4109a1ee4fd85ea",
+        "type": "ui_toast",
+        "z": "9ad21237fb19bcc8",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1630,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "259763da3314bc0e",
+        "type": "ui_text",
+        "z": "9ad21237fb19bcc8",
+        "group": "ccca45ee97dbdfb5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tình trạng",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 840,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "291ea8bedf5132aa",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/isDoorLocked",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 580,
+        "wires": [
+            [
+                "f9c13863a32576eb"
+            ]
+        ]
+    },
+    {
+        "id": "bc9b3ed3f9f6f44c",
+        "type": "mqtt in",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/isDoorPermanentlyLocked",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "79d31313ab32fe77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "f9c13863a32576eb"
+            ]
+        ]
+    },
+    {
+        "id": "f9c13863a32576eb",
+        "type": "function",
+        "z": "9ad21237fb19bcc8",
+        "name": "status config",
+        "func": "// Get the latest values from the context\nlet isDoorLocked = context.get(\"isDoorLocked\") || false;\nlet isDoorPermanentlyLocked = context.get(\"isDoorPermanentlyLocked\") || false;\n\n// Update the value from the incoming message\nif (msg.topic === \"home-0PPKrXoRcgyppks/isDoorLocked\") {\n    isDoorLocked = msg.payload === true;\n    context.set(\"isDoorLocked\", isDoorLocked);\n} else if (msg.topic === \"home-0PPKrXoRcgyppks/isDoorPermanentlyLocked\") {\n    isDoorPermanentlyLocked = msg.payload === true;\n    context.set(\"isDoorPermanentlyLocked\", isDoorPermanentlyLocked);\n}\n\n// Determine the output payload\nif (isDoorPermanentlyLocked) {\n    msg.payload = \"Khóa vĩnh viễn\";\n} else if (isDoorLocked) {\n    msg.payload = \"Khóa\";\n} else {\n    msg.payload = \"Mở\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 620,
+        "wires": [
+            [
+                "259763da3314bc0e"
+            ]
+        ]
+    },
+    {
+        "id": "a4a55cd088cf4488",
+        "type": "ui_switch",
+        "z": "9ad21237fb19bcc8",
+        "name": "Bật/tắt NeoPixel",
+        "label": "Bật/tắt NeoPixel",
+        "tooltip": "",
+        "group": "afda3bbd1e2f5a7b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 440,
+        "y": 1380,
+        "wires": [
+            [
+                "e632e630a3660a01"
+            ]
+        ]
+    },
+    {
+        "id": "e632e630a3660a01",
+        "type": "mqtt out",
+        "z": "9ad21237fb19bcc8",
+        "name": "",
+        "topic": "home-0PPKrXoRcgyppks/neoPixel",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "79d31313ab32fe77",
+        "x": 880,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "155e0636ae4fe24f",
+        "type": "ui_form",
+        "z": "b313f7617d390c8e",
+        "name": "",
+        "label": "",
+        "group": "7dd48ba56ec41588",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Mật khẩu cũ",
+                "value": "oldPassword",
+                "type": "password",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Mật khẩu mới",
+                "value": "newPassword",
+                "type": "password",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Xác nhận mật khẩu mới",
+                "value": "confirmPassword",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "oldPassword": "",
+            "newPassword": "",
+            "confirmPassword": ""
+        },
+        "payload": "",
+        "submit": "Hoàn tất",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "3790624345ac2f88"
+            ]
+        ]
+    },
+    {
+        "id": "3790624345ac2f88",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "validate new password input",
+        "func": "msg.oldPassword = msg.payload.oldPassword;\nmsg.newPassword = msg.payload.newPassword;\nmsg.confirmPassword = msg.payload.confirmPassword;\n\nif (msg.oldPassword == msg.newPassword) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Mật khẩu mới và mật khẩu cũ phải khác nhau!\";\n    return msg;\n}\nif (msg.newPassword != msg.confirmPassword) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Mật khẩu mới cài đặt không khớp. Vui lòng thử lại!\";\n    return msg;\n}\n\nmsg.topic = \"Đang xử lí...\";\nmsg.payload = \"Vui lòng chờ trong giây lát\";\nmsg.query = \"SELECT * FROM users WHERE username = ?\"\nmsg.params = [global.get(\"username\")];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "0319e35f03058759",
+                "9766b8482ddbb03f"
+            ]
+        ]
+    },
+    {
+        "id": "389d436f0b51863f",
+        "type": "mysql",
+        "z": "b313f7617d390c8e",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 530,
+        "y": 200,
+        "wires": [
+            [
+                "143ed584d9c09ab9",
+                "cb0ca932c01b4ba8"
+            ]
+        ]
+    },
+    {
+        "id": "143ed584d9c09ab9",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "validate old password input",
+        "func": "const bcrypt = global.get('bcrypt');\n\n// Retrieve stored hash from the database\nconst storedHash = msg.payload[0].password;\n\n// Extract passwords from the input\nconst userOldPassword = msg.oldPassword;\nconst userNewPassword = msg.newPassword;\ndelete msg.oldPassword;\ndelete msg.newPassword;\ndelete msg.confirmPassword;\n\n// Compare the old password with the stored hash\nconst isMatch = bcrypt.compareSync(userOldPassword, storedHash);\n\nif (isMatch) {\n    // Hash the new password\n    const hashedNewPassword = bcrypt.hashSync(userNewPassword, 12);\n\n    // Prepare SQL query to update the password\n    msg.query = `\n        UPDATE users \n        SET password = ? \n        WHERE username = ?\n    `;\n    msg.params = [hashedNewPassword, global.get(\"username\")];\n    msg.topic = \"Chỉnh sửa thành công\";\n    msg.payload = \"Mật khẩu đã được cập nhật thành công.\";\n} else {\n    msg.topic = \"Chỉnh sửa thất bại\";\n    msg.payload = \"Mật khẩu cũ không đúng\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 240,
+        "wires": [
+            [
+                "43d6f39ab2146b18",
+                "f66e61e8bb5c7afc"
+            ]
+        ]
+    },
+    {
+        "id": "0319e35f03058759",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "query corresponding user in database",
+        "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 140,
+        "wires": [
+            [
+                "389d436f0b51863f"
+            ]
+        ]
+    },
+    {
+        "id": "9766b8482ddbb03f",
+        "type": "ui_toast",
+        "z": "b313f7617d390c8e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 550,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "43d6f39ab2146b18",
+        "type": "ui_toast",
+        "z": "b313f7617d390c8e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1010,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f66e61e8bb5c7afc",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "change password of corresponding user in database",
+        "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 180,
+        "wires": [
+            [
+                "4428971f3d4d5948"
+            ]
+        ]
+    },
+    {
+        "id": "4428971f3d4d5948",
+        "type": "mysql",
+        "z": "b313f7617d390c8e",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 1350,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb0ca932c01b4ba8",
+        "type": "debug",
+        "z": "b313f7617d390c8e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "7fd980b78cc12b96",
+        "type": "ui_form",
+        "z": "b313f7617d390c8e",
+        "name": "",
+        "label": "",
+        "group": "e37fc10a99f2d6f9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Mật khẩu",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "password": ""
+        },
+        "payload": "",
+        "submit": "Xóa",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 90,
+        "y": 540,
+        "wires": [
+            [
+                "692da322e20a9f9c"
+            ]
+        ]
+    },
+    {
+        "id": "692da322e20a9f9c",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "query current user in database",
+        "func": "msg.password = msg.payload.password; // `msg.payload` will be overwritten later\n\nmsg.topic = `\n    SELECT * FROM users\n    WHERE username = ?\n`;\nmsg.payload = [global.get(\"username\")];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 540,
+        "wires": [
+            [
+                "202902d46e7a1bac"
+            ]
+        ]
+    },
+    {
+        "id": "202902d46e7a1bac",
+        "type": "mysql",
+        "z": "b313f7617d390c8e",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 130,
+        "y": 640,
+        "wires": [
+            [
+                "0e64a30aa93b57fd"
+            ]
+        ]
+    },
+    {
+        "id": "d16b109168283f33",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "validate password before deleting account",
+        "func": "const bcrypt = global.get(\"bcrypt\");\nconst storedHash = msg.account[0].password;\nconst userPassword = msg.password;\ndelete msg.password;\n\nconst isMatch = bcrypt.compareSync(userPassword, storedHash);\n\nif (isMatch) {\n    // Prepare SQL query to delete account\n    msg.query = `\n        DELETE FROM users \n        WHERE username = ?\n    `;\n    msg.params = [global.get(\"username\")];\n    msg.topic = \"Đã xóa tài khoản người dùng!\";\n    msg.payload = \"Tài khoản đã được xóa thành công.\";\n} else {\n    msg.topic = \"Xóa tài khoản người dùng thất bại\";\n    msg.payload = \"Mật khẩu không đúng\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 640,
+        "wires": [
+            [
+                "992aba96dfb5967d",
+                "a1b69f090aa879fd"
+            ]
+        ]
+    },
+    {
+        "id": "992aba96dfb5967d",
+        "type": "ui_toast",
+        "z": "b313f7617d390c8e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1910,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a1b69f090aa879fd",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "delete corresponding account in database",
+        "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1990,
+        "y": 580,
+        "wires": [
+            [
+                "2769621da318a467"
+            ]
+        ]
+    },
+    {
+        "id": "2769621da318a467",
+        "type": "mysql",
+        "z": "b313f7617d390c8e",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 2150,
+        "y": 660,
+        "wires": [
+            [
+                "d05297746daeebb8"
+            ]
+        ]
+    },
+    {
+        "id": "677efbae05024493",
+        "type": "comment",
+        "z": "b313f7617d390c8e",
+        "name": "Xóa tài khoản bản thân",
+        "info": "",
+        "x": 120,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "103a8d1def9861b5",
+        "type": "comment",
+        "z": "b313f7617d390c8e",
+        "name": "Đặt lại mật khẩu",
+        "info": "",
+        "x": 100,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "57fbc855b6f25f16",
+        "type": "change",
+        "z": "b313f7617d390c8e",
+        "name": "set visible view",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"show\":[\"Đăng nhập\"],\"hide\":[\"Trang admin\",\"Cài đặt\",\"Trang chủ\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2520,
+        "y": 600,
+        "wires": [
+            [
+                "e3bb89f99ff2ea88"
+            ]
+        ]
+    },
+    {
+        "id": "e3bb89f99ff2ea88",
+        "type": "ui_ui_control",
+        "z": "b313f7617d390c8e",
+        "name": "",
+        "events": "all",
+        "x": 2660,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d05297746daeebb8",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "log out if success",
+        "func": "global.set(\"username\", \"Khách\");\nglobal.set(\"role\", \"guest\");\nglobal.set(\"previousUsername\", \"Khách\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2350,
+        "y": 640,
+        "wires": [
+            [
+                "57fbc855b6f25f16",
+                "2afe62f2dcf1f61a"
+            ]
+        ]
+    },
+    {
+        "id": "2afe62f2dcf1f61a",
+        "type": "change",
+        "z": "b313f7617d390c8e",
+        "name": "back to login page",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Đăng nhập\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2490,
+        "y": 720,
+        "wires": [
+            [
+                "e3bb89f99ff2ea88"
+            ]
+        ]
+    },
+    {
+        "id": "0e64a30aa93b57fd",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "function 1",
+        "func": "msg.role = \"user\";\nif (msg.payload[0].role == \"admin\") {\n    msg.role = \"admin\";\n}\nmsg.account = msg.payload; // `msg.payload` is gonna be overwritten later\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 640,
+        "wires": [
+            [
+                "f8b71ebe4ce78c1a"
+            ]
+        ]
+    },
+    {
+        "id": "f8b71ebe4ce78c1a",
+        "type": "switch",
+        "z": "b313f7617d390c8e",
+        "name": "",
+        "property": "role",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "admin",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "user",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 640,
+        "wires": [
+            [
+                "3d79561ccbef5f31"
+            ],
+            [
+                "d16b109168283f33"
+            ]
+        ]
+    },
+    {
+        "id": "3d79561ccbef5f31",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "query how many admin left?",
+        "func": "msg.topic = `\n    SELECT * FROM users\n    WHERE role = \"admin\"\n`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 540,
+        "wires": [
+            [
+                "e91be77c34b5dcc7"
+            ]
+        ]
+    },
+    {
+        "id": "4b9031b228f5b4a2",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "decide continue going or not",
+        "func": "msg.allow = 1;\nif (msg.payload.length == 1) { // only you left is admin\n    msg.allow = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 540,
+        "wires": [
+            [
+                "a405a4dfbd4fcc11"
+            ]
+        ]
+    },
+    {
+        "id": "e91be77c34b5dcc7",
+        "type": "mysql",
+        "z": "b313f7617d390c8e",
+        "mydb": "d81c906f76198b82",
+        "name": "",
+        "x": 890,
+        "y": 540,
+        "wires": [
+            [
+                "4b9031b228f5b4a2"
+            ]
+        ]
+    },
+    {
+        "id": "a405a4dfbd4fcc11",
+        "type": "switch",
+        "z": "b313f7617d390c8e",
+        "name": "",
+        "property": "allow",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1290,
+        "y": 540,
+        "wires": [
+            [
+                "d1dae642f40c7f67"
+            ],
+            [
+                "d16b109168283f33"
+            ]
+        ]
+    },
+    {
+        "id": "d1dae642f40c7f67",
+        "type": "function",
+        "z": "b313f7617d390c8e",
+        "name": "notify failed",
+        "func": "msg.topic = \"Lỗi\";\nmsg.payload = \"Bạn đang là admin duy nhất\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 500,
+        "wires": [
+            [
+                "383f69191e634e9c"
+            ]
+        ]
+    },
+    {
+        "id": "383f69191e634e9c",
+        "type": "ui_toast",
+        "z": "b313f7617d390c8e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1710,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3784479a9893c512",
+        "type": "comment",
+        "z": "b313f7617d390c8e",
+        "name": "nếu là admin",
+        "info": "",
+        "x": 650,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b90c3780b9e73e40",
+        "type": "comment",
+        "z": "b313f7617d390c8e",
+        "name": "nếu là user",
+        "info": "",
+        "x": 560,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b288eeaec135c3db",
+        "type": "comment",
+        "z": "b313f7617d390c8e",
+        "name": "chỉ còn bản thân bạn là admin",
+        "info": "",
+        "x": 1490,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e0904f902388711a",
+        "type": "comment",
+        "z": "b313f7617d390c8e",
+        "name": "vẫn còn từ 1 admin khác trở lên",
+        "info": "",
+        "x": 1480,
+        "y": 580,
+        "wires": []
     }
-  },
-  {
-    "id": "f0987cb3c87e44bd",
-    "type": "ui_group",
-    "name": "Bộ đếm người ra vào",
-    "tab": "862df58f2eea4a92",
-    "order": 3,
-    "disp": true,
-    "width": "6",
-    "collapse": false,
-    "className": ""
-  },
-  {
-    "id": "862df58f2eea4a92",
-    "type": "ui_tab",
-    "name": "Trang chủ",
-    "icon": "dashboard",
-    "disabled": false,
-    "hidden": true
-  },
-  {
-    "id": "5b1222462257e78c",
-    "type": "ui_tab",
-    "name": "Đăng nhập",
-    "icon": "dashboard",
-    "disabled": false,
-    "hidden": false
-  },
-  {
-    "id": "394d12c30be39e77",
-    "type": "MySQLdatabase",
-    "name": "users",
-    "host": "127.0.0.1",
-    "port": "3306",
-    "db": "user_management",
-    "tz": "",
-    "charset": "UTF8"
-  },
-  {
-    "id": "f8a6abae877c7f5f",
-    "type": "ui_tab",
-    "name": "Trang admin",
-    "icon": "dashboard",
-    "disabled": false,
-    "hidden": true
-  },
-  {
-    "id": "8ae268ba7cc8e2e0",
-    "type": "ui_group",
-    "name": "Đăng ký người dùng mới",
-    "tab": "f8a6abae877c7f5f",
-    "order": 1,
-    "disp": true,
-    "width": "6",
-    "collapse": false,
-    "className": ""
-  },
-  {
-    "id": "ccca45ee97dbdfb5",
-    "type": "ui_group",
-    "name": "Bộ khóa cửa",
-    "tab": "862df58f2eea4a92",
-    "order": 4,
-    "disp": true,
-    "width": "6",
-    "collapse": false,
-    "className": ""
-  },
-  {
-    "id": "11b82a1622765a34",
-    "type": "mqtt-broker",
-    "name": "",
-    "broker": "test.mosquitto.org",
-    "port": "1883",
-    "clientid": "",
-    "autoConnect": true,
-    "usetls": false,
-    "protocolVersion": "4",
-    "keepalive": "60",
-    "cleansession": true,
-    "autoUnsubscribe": true,
-    "birthTopic": "",
-    "birthQos": "0",
-    "birthRetain": "false",
-    "birthPayload": "",
-    "birthMsg": {},
-    "closeTopic": "",
-    "closeQos": "0",
-    "closeRetain": "false",
-    "closePayload": "",
-    "closeMsg": {},
-    "willTopic": "",
-    "willQos": "0",
-    "willRetain": "false",
-    "willPayload": "",
-    "willMsg": {},
-    "userProps": "",
-    "sessionExpiry": ""
-  },
-  {
-    "id": "6d6e7b31db3b08c3",
-    "type": "ui_group",
-    "name": "Xóa người dùng",
-    "tab": "f8a6abae877c7f5f",
-    "order": 3,
-    "disp": true,
-    "width": "6",
-    "collapse": false,
-    "className": ""
-  },
-  {
-    "id": "d1294323841f2b1b",
-    "type": "ui_tab",
-    "name": "Cài đặt",
-    "icon": "dashboard",
-    "disabled": false,
-    "hidden": true
-  },
-  {
-    "id": "7dd48ba56ec41588",
-    "type": "ui_group",
-    "name": "Đặt lại mật khẩu",
-    "tab": "d1294323841f2b1b",
-    "order": 2,
-    "disp": true,
-    "width": "6",
-    "collapse": false,
-    "className": ""
-  },
-  {
-    "id": "e37fc10a99f2d6f9",
-    "type": "ui_group",
-    "name": "Xóa tài khoản",
-    "tab": "d1294323841f2b1b",
-    "order": 3,
-    "disp": true,
-    "width": "6",
-    "collapse": false,
-    "className": ""
-  },
-  {
-    "id": "1aca4485bcad202f",
-    "type": "ui_group",
-    "name": "Chỉnh vai trò người dùng",
-    "tab": "f8a6abae877c7f5f",
-    "order": 2,
-    "disp": true,
-    "width": "6",
-    "collapse": false,
-    "className": ""
-  },
-  {
-    "id": "adminUserGroup",
-    "type": "ui_group",
-    "name": "Quản lý user",
-    "tab": "adminTab",
-    "order": 1,
-    "disp": true,
-    "width": "6",
-    "collapse": false
-  },
-  {
-    "id": "adminTab",
-    "type": "ui_tab",
-    "name": "Trang admin",
-    "icon": "dashboard",
-    "order": 2,
-    "disabled": false,
-    "hidden": false
-  },
-  {
-    "id": "8a5adeafdaa0f660",
-    "type": "ui_group",
-    "name": "Đăng nhập",
-    "tab": "5b1222462257e78c",
-    "order": 1,
-    "disp": true,
-    "width": "6",
-    "collapse": false,
-    "className": ""
-  },
-  {
-    "id": "462319f5aa2aab02",
-    "type": "ui_group",
-    "name": "Bộ điều khiển đèn",
-    "tab": "862df58f2eea4a92",
-    "order": 1,
-    "disp": true,
-    "width": "6",
-    "collapse": false,
-    "className": ""
-  },
-  {
-    "id": "afda3bbd1e2f5a7b",
-    "type": "ui_group",
-    "name": "Bộ báo cháy",
-    "tab": "862df58f2eea4a92",
-    "order": 2,
-    "disp": true,
-    "width": "6",
-    "collapse": false,
-    "className": ""
-  },
-  {
-    "id": "75bfe65070b58787",
-    "type": "firebase config",
-    "firebaseurl": "smart-home-iot-91449-default-rtdb",
-    "loginType": "none"
-  },
-  {
-    "id": "380f7df3c09dc5a7",
-    "type": "pushsafer-api-key",
-    "name": ""
-  },
-  {
-    "id": "e2af5a346038ef95",
-    "type": "pushsafer-notification-template",
-    "name": "",
-    "title": "Thông báo: Có người ra vào. Số người hiện tại trong nhà:",
-    "icon": "",
-    "iconcolor": "#ffffff",
-    "sound": "1",
-    "vibration": "",
-    "priority": "1",
-    "devices": "",
-    "timetolive": "",
-    "retry": "",
-    "expire": "",
-    "confirm": "",
-    "answer": "",
-    "answeroptions": "",
-    "answerforce": "",
-    "url": "",
-    "urltitle": "",
-    "image": "",
-    "image2": "",
-    "image3": ""
-  },
-  {
-    "id": "f67a422731a97891",
-    "type": "pushsafer-notification-template",
-    "name": "",
-    "title": "Thông báo nhiệt độ nhà cao !!! Có khả năng cháy nổ.",
-    "icon": "",
-    "iconcolor": "#ffffff",
-    "sound": "8",
-    "vibration": "",
-    "priority": "2",
-    "devices": "",
-    "timetolive": "",
-    "retry": "",
-    "expire": "",
-    "confirm": "",
-    "answer": "",
-    "answeroptions": "",
-    "answerforce": "",
-    "url": "",
-    "urltitle": "",
-    "image": "",
-    "image2": "",
-    "image3": ""
-  },
-  {
-    "id": "c1bea5a954f4e12b",
-    "type": "ui_spacer",
-    "z": "9ad21237fb19bcc8",
-    "name": "spacer",
-    "group": "8a5adeafdaa0f660",
-    "order": 1,
-    "width": 1,
-    "height": 1
-  },
-  {
-    "id": "fc7ff0ecf4509d79",
-    "type": "ui_spacer",
-    "z": "9ad21237fb19bcc8",
-    "name": "spacer",
-    "group": "8a5adeafdaa0f660",
-    "order": 1,
-    "width": 1,
-    "height": 1
-  },
-  {
-    "id": "692c965e74b8b151",
-    "type": "ui_spacer",
-    "z": "9ad21237fb19bcc8",
-    "name": "spacer",
-    "group": "8a5adeafdaa0f660",
-    "order": 1,
-    "width": 1,
-    "height": 1
-  },
-  {
-    "id": "79d31313ab32fe77",
-    "type": "mqtt-broker",
-    "name": "",
-    "broker": "broker.hivemq.com",
-    "port": "1883",
-    "clientid": "",
-    "autoConnect": true,
-    "usetls": false,
-    "protocolVersion": "4",
-    "keepalive": "60",
-    "cleansession": true,
-    "autoUnsubscribe": true,
-    "birthTopic": "",
-    "birthQos": "0",
-    "birthRetain": "false",
-    "birthPayload": "",
-    "birthMsg": {},
-    "closeTopic": "",
-    "closeQos": "0",
-    "closeRetain": "false",
-    "closePayload": "",
-    "closeMsg": {},
-    "willTopic": "",
-    "willQos": "0",
-    "willRetain": "false",
-    "willPayload": "",
-    "willMsg": {},
-    "userProps": "",
-    "sessionExpiry": ""
-  },
-  {
-    "id": "7c2ed565f9ebd1ac",
-    "type": "mqtt in",
-    "z": "1d88525d826416b3",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/#",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 410,
-    "y": 320,
-    "wires": [["0f74ed9d3b9bc428"]]
-  },
-  {
-    "id": "0f74ed9d3b9bc428",
-    "type": "debug",
-    "z": "1d88525d826416b3",
-    "name": "msg.payload",
-    "active": true,
-    "tosidebar": true,
-    "console": false,
-    "tostatus": false,
-    "complete": "payload",
-    "targetType": "msg",
-    "statusVal": "",
-    "statusType": "auto",
-    "x": 750,
-    "y": 320,
-    "wires": []
-  },
-  {
-    "id": "658c133ccd392548",
-    "type": "inject",
-    "z": "1d88525d826416b3",
-    "name": "",
-    "props": [
-      {
-        "p": "payload"
-      }
-    ],
-    "repeat": "",
-    "crontab": "",
-    "once": false,
-    "onceDelay": 0.1,
-    "topic": "",
-    "payload": "Hello",
-    "payloadType": "str",
-    "x": 310,
-    "y": 500,
-    "wires": [["8d658546e9483147"]]
-  },
-  {
-    "id": "8d658546e9483147",
-    "type": "mqtt out",
-    "z": "1d88525d826416b3",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/",
-    "qos": "2",
-    "retain": "",
-    "respTopic": "",
-    "contentType": "",
-    "userProps": "",
-    "correl": "",
-    "expiry": "",
-    "broker": "11b82a1622765a34",
-    "x": 610,
-    "y": 500,
-    "wires": []
-  },
-  {
-    "id": "70122d3b548cdfbd",
-    "type": "firebase modify",
-    "z": "1d88525d826416b3",
-    "name": "",
-    "firebaseconfig": "75bfe65070b58787",
-    "childpath": "Data1",
-    "method": "set",
-    "value": "msg.payload",
-    "priority": "msg.priority",
-    "x": 820,
-    "y": 740,
-    "wires": [[]]
-  },
-  {
-    "id": "7ed60539810bad8f",
-    "type": "inject",
-    "z": "1d88525d826416b3",
-    "name": "Hello World",
-    "props": [
-      {
-        "p": "payload"
-      }
-    ],
-    "repeat": "",
-    "crontab": "",
-    "once": false,
-    "onceDelay": 0.1,
-    "topic": "",
-    "payload": "Hello World",
-    "payloadType": "str",
-    "x": 430,
-    "y": 740,
-    "wires": [["70122d3b548cdfbd"]]
-  },
-  {
-    "id": "f6aa6413c9e1e5e7",
-    "type": "firebase.on",
-    "z": "1d88525d826416b3",
-    "name": "",
-    "firebaseconfig": "75bfe65070b58787",
-    "childpath": "Data1",
-    "atStart": true,
-    "eventType": "value",
-    "queries": [],
-    "x": 620,
-    "y": 860,
-    "wires": [["6df7bb07c682e063"]]
-  },
-  {
-    "id": "6df7bb07c682e063",
-    "type": "debug",
-    "z": "1d88525d826416b3",
-    "name": "debug 2",
-    "active": true,
-    "tosidebar": true,
-    "console": false,
-    "tostatus": false,
-    "complete": "payload",
-    "targetType": "msg",
-    "statusVal": "",
-    "statusType": "auto",
-    "x": 960,
-    "y": 860,
-    "wires": []
-  },
-  {
-    "id": "377187aef7ac36a3",
-    "type": "ui_form",
-    "z": "a000d975ea74f088",
-    "name": "",
-    "label": "",
-    "group": "8a5adeafdaa0f660",
-    "order": 3,
-    "width": 0,
-    "height": 0,
-    "options": [
-      {
-        "label": "Tên người dùng",
-        "value": "username",
-        "type": "text",
-        "required": true,
-        "rows": null
-      },
-      {
-        "label": "Mật khẩu",
-        "value": "password",
-        "type": "password",
-        "required": true,
-        "rows": null
-      }
-    ],
-    "formValue": {
-      "username": "",
-      "password": ""
-    },
-    "payload": "",
-    "submit": "Đăng nhập",
-    "cancel": "",
-    "topic": "topic",
-    "topicType": "msg",
-    "splitLayout": "",
-    "className": "",
-    "x": 350,
-    "y": 220,
-    "wires": [["c0f92a3865fd48e4"]]
-  },
-  {
-    "id": "c0f92a3865fd48e4",
-    "type": "function",
-    "z": "a000d975ea74f088",
-    "name": "find corresponding username",
-    "func": "const bcrypt = global.get('bcrypt'); \n\nconst username = msg.payload.username;\nglobal.set(\"username\", username); // save current session through `username` global variable, use for \"Cài đặt\" tab -- do not delete\nmsg.inputPassword = msg.payload.password; // `msg.payload` is gonna be overwritten later\n\n// SQL query to get the stored password hash for the username\nmsg.topic = `\n    SELECT password, role \n    FROM users \n    WHERE username = ?\n`;\nmsg.payload = [username];\nreturn msg;\n",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 610,
-    "y": 220,
-    "wires": [["3c1a444a1f260801"]]
-  },
-  {
-    "id": "3c1a444a1f260801",
-    "type": "mysql",
-    "z": "a000d975ea74f088",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 810,
-    "y": 220,
-    "wires": [["840e161df7caec9e"]]
-  },
-  {
-    "id": "6731ddcd1f65cccc",
-    "type": "ui_ui_control",
-    "z": "a000d975ea74f088",
-    "name": "",
-    "events": "all",
-    "x": 1940,
-    "y": 260,
-    "wires": [[]]
-  },
-  {
-    "id": "7a9bbf9df39a008a",
-    "type": "switch",
-    "z": "a000d975ea74f088",
-    "name": "",
-    "property": "role",
-    "propertyType": "msg",
-    "rules": [
-      {
-        "t": "eq",
-        "v": "guest",
-        "vt": "str"
-      },
-      {
-        "t": "eq",
-        "v": "admin",
-        "vt": "str"
-      },
-      {
-        "t": "eq",
-        "v": "user",
-        "vt": "str"
-      }
-    ],
-    "checkall": "false",
-    "repair": false,
-    "outputs": 3,
-    "x": 1230,
-    "y": 240,
-    "wires": [
-      ["caeb96200fe28f25"],
-      ["2c6c617853bda101", "9d3162c06ded3a3a"],
-      ["bf3ffb97a21ffbd4", "1ae5e88f8ad2f0b3"]
-    ]
-  },
-  {
-    "id": "2c6c617853bda101",
-    "type": "change",
-    "z": "a000d975ea74f088",
-    "name": "setting which tab is visible",
-    "rules": [
-      {
-        "t": "set",
-        "p": "payload",
-        "pt": "msg",
-        "to": "{\"tabs\":{\"show\":[\"Đăng nhập\",\"Trang admin\",\"Cài đặt\"],\"hide\":[\"Trang chủ\"]}}",
-        "tot": "json"
-      }
-    ],
-    "action": "",
-    "property": "",
-    "from": "",
-    "to": "",
-    "reg": false,
-    "x": 1540,
-    "y": 220,
-    "wires": [["6731ddcd1f65cccc"]]
-  },
-  {
-    "id": "bf3ffb97a21ffbd4",
-    "type": "change",
-    "z": "a000d975ea74f088",
-    "name": "setting which tab is visible",
-    "rules": [
-      {
-        "t": "set",
-        "p": "payload",
-        "pt": "msg",
-        "to": "{\"tabs\":{\"show\":[\"Đăng nhập\",\"Trang chủ\",\"Cài đặt\"],\"hide\":[\"Đăng ký\",\"Trang admin\"]}}",
-        "tot": "json"
-      }
-    ],
-    "action": "",
-    "property": "",
-    "from": "",
-    "to": "",
-    "reg": false,
-    "x": 1540,
-    "y": 320,
-    "wires": [["6731ddcd1f65cccc"]]
-  },
-  {
-    "id": "5b59504a908f76ea",
-    "type": "ui_toast",
-    "z": "a000d975ea74f088",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 1250,
-    "y": 320,
-    "wires": []
-  },
-  {
-    "id": "9d3162c06ded3a3a",
-    "type": "change",
-    "z": "a000d975ea74f088",
-    "name": "jump to Trang admin",
-    "rules": [
-      {
-        "t": "set",
-        "p": "payload",
-        "pt": "msg",
-        "to": "{\"tab\":\"Trang admin\"}",
-        "tot": "json"
-      }
-    ],
-    "action": "",
-    "property": "",
-    "from": "",
-    "to": "",
-    "reg": false,
-    "x": 1540,
-    "y": 180,
-    "wires": [["6731ddcd1f65cccc"]]
-  },
-  {
-    "id": "1ae5e88f8ad2f0b3",
-    "type": "change",
-    "z": "a000d975ea74f088",
-    "name": "jump to Trang chủ",
-    "rules": [
-      {
-        "t": "set",
-        "p": "payload",
-        "pt": "msg",
-        "to": "{\"tab\":\"Trang chủ\"}",
-        "tot": "json"
-      }
-    ],
-    "action": "",
-    "property": "",
-    "from": "",
-    "to": "",
-    "reg": false,
-    "x": 1550,
-    "y": 360,
-    "wires": [["6731ddcd1f65cccc"]]
-  },
-  {
-    "id": "41533482e08e4a28",
-    "type": "comment",
-    "z": "a000d975ea74f088",
-    "name": "if is admin",
-    "info": "",
-    "x": 1540,
-    "y": 160,
-    "wires": []
-  },
-  {
-    "id": "4cd6d5ec39420dd7",
-    "type": "comment",
-    "z": "a000d975ea74f088",
-    "name": "if is user",
-    "info": "",
-    "x": 1540,
-    "y": 300,
-    "wires": []
-  },
-  {
-    "id": "840e161df7caec9e",
-    "type": "function",
-    "z": "a000d975ea74f088",
-    "name": "check password",
-    "func": "const bcrypt = global.get('bcrypt');\n\nif (msg.payload.length == 0) {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n\n    const previousUsername = global.get(\"previousUsername\");\n    global.set(\"username\", previousUsername);\n    return msg;\n}\n\nconst storedHash = msg.payload[0].password;\nconst userPassword = msg.inputPassword;\ndelete msg.inputPassword;\n\nconst isMatch = bcrypt.compareSync(userPassword, storedHash);\n\nif (isMatch) {\n    msg.role = msg.payload[0].role;\n    global.set(\"role\", msg.role);\n\n    msg.topic = \"Đăng nhập thành công!\";\n    msg.payload = \"Đã đăng nhập với vai trò \" + msg.role;\n    \n    msg.username = global.get(\"username\");\n    global.set(\"previousUsername\", msg.username);\n} else {\n    msg.topic = \"Đăng nhập thất bại!\";\n    msg.payload = \"Tên người dùng hoặc mật khẩu không đúng!\";\n    \n    const previousUsername = global.get(\"previousUsername\");\n    global.set(\"username\", previousUsername);\n}\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 960,
-    "y": 220,
-    "wires": [
-      [
-        "7a9bbf9df39a008a",
-        "5b59504a908f76ea",
-        "3fe99f6cbc2756e3",
-        "78a17488de55ec9e"
-      ]
-    ]
-  },
-  {
-    "id": "3fe99f6cbc2756e3",
-    "type": "ui_text",
-    "z": "a000d975ea74f088",
-    "group": "8a5adeafdaa0f660",
-    "order": 1,
-    "width": 0,
-    "height": 0,
-    "name": "",
-    "label": "Tên người dùng đang đăng nhập",
-    "format": "{{msg.username}}",
-    "layout": "row-spread",
-    "className": "",
-    "style": false,
-    "font": "",
-    "fontSize": 16,
-    "color": "#000000",
-    "x": 1260,
-    "y": 440,
-    "wires": []
-  },
-  {
-    "id": "d504a9e3f3317d12",
-    "type": "function",
-    "z": "a000d975ea74f088",
-    "name": "set role & username",
-    "func": "msg.username = \"Khách\";\nmsg.role = \"guest\";\nglobal.set(\"username\", msg.username);\nglobal.set(\"role\", msg.role);\nglobal.set(\"previousUsername\", \"Khách\");\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 600,
-    "y": 340,
-    "wires": [["7a9bbf9df39a008a", "3fe99f6cbc2756e3", "78a17488de55ec9e"]]
-  },
-  {
-    "id": "84b02e721aee32e5",
-    "type": "ui_button",
-    "z": "a000d975ea74f088",
-    "name": "",
-    "group": "8a5adeafdaa0f660",
-    "order": 4,
-    "width": 0,
-    "height": 0,
-    "passthru": true,
-    "label": "Đăng xuất",
-    "tooltip": "",
-    "color": "white",
-    "bgcolor": "red",
-    "className": "",
-    "icon": "",
-    "payload": "",
-    "payloadType": "str",
-    "topic": "topic",
-    "topicType": "msg",
-    "x": 330,
-    "y": 340,
-    "wires": [["d504a9e3f3317d12"]]
-  },
-  {
-    "id": "caeb96200fe28f25",
-    "type": "change",
-    "z": "a000d975ea74f088",
-    "name": "setting which tab is visible",
-    "rules": [
-      {
-        "t": "set",
-        "p": "payload",
-        "pt": "msg",
-        "to": "{\"tabs\":{\"show\":[\"Đăng nhập\"],\"hide\":[\"Trang admin\",\"Cài đặt\",\"Trang chủ\"]}}",
-        "tot": "json"
-      }
-    ],
-    "action": "",
-    "property": "",
-    "from": "",
-    "to": "",
-    "reg": false,
-    "x": 1540,
-    "y": 80,
-    "wires": [["6731ddcd1f65cccc"]]
-  },
-  {
-    "id": "5cda550c818526a5",
-    "type": "comment",
-    "z": "a000d975ea74f088",
-    "name": "if is guest",
-    "info": "",
-    "x": 1540,
-    "y": 60,
-    "wires": []
-  },
-  {
-    "id": "78a17488de55ec9e",
-    "type": "ui_text",
-    "z": "a000d975ea74f088",
-    "group": "8a5adeafdaa0f660",
-    "order": 2,
-    "width": 0,
-    "height": 0,
-    "name": "",
-    "label": "Vai trò hiện tại",
-    "format": "{{msg.role}}",
-    "layout": "row-spread",
-    "className": "",
-    "style": false,
-    "font": "",
-    "fontSize": 16,
-    "color": "#000000",
-    "x": 1120,
-    "y": 540,
-    "wires": []
-  },
-  {
-    "id": "470f0f2070e96bec",
-    "type": "inject",
-    "z": "a000d975ea74f088",
-    "name": "",
-    "props": [
-      {
-        "p": "payload"
-      },
-      {
-        "p": "topic",
-        "vt": "str"
-      }
-    ],
-    "repeat": "1",
-    "crontab": "",
-    "once": false,
-    "onceDelay": 0.1,
-    "topic": "",
-    "payload": "",
-    "payloadType": "date",
-    "x": 310,
-    "y": 460,
-    "wires": [["b71b703f2818dbdd"]]
-  },
-  {
-    "id": "b71b703f2818dbdd",
-    "type": "function",
-    "z": "a000d975ea74f088",
-    "name": "update current user & role periodically",
-    "func": "msg.username = global.get(\"username\") || \"Khách\";\nmsg.role = global.get(\"role\") || \"guest\";\nglobal.set(\"username\", msg.username);\nglobal.set(\"role\", msg.role);\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 590,
-    "y": 460,
-    "wires": [["3fe99f6cbc2756e3", "78a17488de55ec9e"]]
-  },
-  {
-    "id": "3c484b67c745514e",
-    "type": "ui_form",
-    "z": "e275fdd343e891db",
-    "name": "",
-    "label": "",
-    "group": "8ae268ba7cc8e2e0",
-    "order": 0,
-    "width": 0,
-    "height": 0,
-    "options": [
-      {
-        "label": "Tên người dùng",
-        "value": "username",
-        "type": "text",
-        "required": true,
-        "rows": null
-      },
-      {
-        "label": "Mật khẩu",
-        "value": "password",
-        "type": "password",
-        "required": true,
-        "rows": null
-      },
-      {
-        "label": "Xác nhận lại mật khẩu",
-        "value": "confirmPassword",
-        "type": "password",
-        "required": true,
-        "rows": null
-      },
-      {
-        "label": "Vai trò (admin, user)",
-        "value": "role",
-        "type": "text",
-        "required": true,
-        "rows": null
-      }
-    ],
-    "formValue": {
-      "username": "",
-      "password": "",
-      "confirmPassword": "",
-      "role": ""
-    },
-    "payload": "",
-    "submit": "Đăng ký",
-    "cancel": "",
-    "topic": "topic",
-    "topicType": "msg",
-    "splitLayout": "",
-    "className": "",
-    "x": 150,
-    "y": 180,
-    "wires": [["5efb157a3c739e9f"]]
-  },
-  {
-    "id": "5efb157a3c739e9f",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "validate register",
-    "func": "const bcrypt = global.get(\"bcrypt\"); \n\nconst username = msg.payload.username;\nconst password = msg.payload.password;\nconst confirmPassword = msg.payload.confirmPassword;\nconst role = msg.payload.role;\n\nif (password !== confirmPassword) {\n    msg.topic = \"Lỗi\"\n    msg.payload = \"Mật khẩu không khớp. Vui lòng thử lại!\";\n    return msg;\n}\n\nif (role != \"admin\" && role != \"user\") {\n    msg.topic = \"Lỗi\"\n    msg.payload = \"Vai trò không hợp lệ. Vui lòng thử lại!\";\n    return msg;\n}\n\nconst hashedPassword = bcrypt.hashSync(password, 12);  // 12 is the salt rounds\n\n// SQL query to insert the new user with hashed password\nmsg.query = \"INSERT INTO users (username, password, role) VALUES (?, ?, ?)\";\nmsg.params = [username, hashedPassword, role];\n\nmsg.topic = \"Đang xử lí...\";\nmsg.payload = \"Vui lòng chờ đợi trong giây lát.\";\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 360,
-    "y": 180,
-    "wires": [["ce1482e3daa92607", "89d9575255fac79b"]]
-  },
-  {
-    "id": "92af3599447216db",
-    "type": "mysql",
-    "z": "e275fdd343e891db",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 850,
-    "y": 180,
-    "wires": [["4503a8f13d3be75c"]]
-  },
-  {
-    "id": "ce1482e3daa92607",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "add user info into database",
-    "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 620,
-    "y": 180,
-    "wires": [["92af3599447216db"]]
-  },
-  {
-    "id": "89d9575255fac79b",
-    "type": "ui_toast",
-    "z": "e275fdd343e891db",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 590,
-    "y": 260,
-    "wires": []
-  },
-  {
-    "id": "35cf6ad604c08cf9",
-    "type": "ui_toast",
-    "z": "e275fdd343e891db",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 1530,
-    "y": 120,
-    "wires": []
-  },
-  {
-    "id": "4503a8f13d3be75c",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "if register successfully",
-    "func": "if (msg.payload) {\n    msg.topic = \"Thành công\";\n    msg.payload = \"Tài khoản mới đã được thêm vào cơ sở dữ liệu!\";\n}\n\nreturn msg;\n",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1060,
-    "y": 120,
-    "wires": [["35cf6ad604c08cf9"]]
-  },
-  {
-    "id": "5399bf4da1bd8cf9",
-    "type": "catch",
-    "z": "e275fdd343e891db",
-    "name": "if register failed (mysql error)",
-    "scope": ["92af3599447216db"],
-    "uncaught": false,
-    "x": 1040,
-    "y": 240,
-    "wires": [["87406675dc7e68fa"]]
-  },
-  {
-    "id": "87406675dc7e68fa",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "mysql error handling",
-    "func": "if (msg.error.message.startsWith(\"Error: Duplicate entry\")) {\n    // Error due to duplicate username\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Username này đã có người sử dụng!\";\n} else {\n    // Handle other errors\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Đã xảy ra lỗi không xác định! Chi tiết lỗi: \" + msg.error.message;\n}\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1300,
-    "y": 160,
-    "wires": [["35cf6ad604c08cf9"]]
-  },
-  {
-    "id": "a3fd60251a36593a",
-    "type": "ui_form",
-    "z": "e275fdd343e891db",
-    "name": "",
-    "label": "",
-    "group": "1aca4485bcad202f",
-    "order": 0,
-    "width": 0,
-    "height": 0,
-    "options": [
-      {
-        "label": "Tên người dùng",
-        "value": "username",
-        "type": "text",
-        "required": true,
-        "rows": null
-      },
-      {
-        "label": "Vai trò",
-        "value": "role",
-        "type": "text",
-        "required": true,
-        "rows": null
-      }
-    ],
-    "formValue": {
-      "username": "",
-      "role": ""
-    },
-    "payload": "",
-    "submit": "Hoàn tất",
-    "cancel": "",
-    "topic": "topic",
-    "topicType": "msg",
-    "splitLayout": "",
-    "className": "",
-    "x": 130,
-    "y": 480,
-    "wires": [["063a2ee49c3cf415"]]
-  },
-  {
-    "id": "063a2ee49c3cf415",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "validate role",
-    "func": "const username = msg.payload.username;\nconst role = msg.payload.role;\n\nmsg.username = username;\nmsg.role = role;\n\nif (role != \"user\" && role != \"admin\") {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Vai trò không hợp lệ. Vui lòng thử lại!\";\n    return msg;\n}\n\nmsg.topic = \"Đang xử lí...\";\nmsg.payload = \"Vui lòng chờ đợi trong giây lát\";\nmsg.query = `\n    SELECT *\n    FROM users\n    WHERE username = ?\n`;\nmsg.params = [username];\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 330,
-    "y": 480,
-    "wires": [["f7f7032438b4eb43", "95dee7b8c86d93d4"]]
-  },
-  {
-    "id": "f7f7032438b4eb43",
-    "type": "ui_toast",
-    "z": "e275fdd343e891db",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 570,
-    "y": 580,
-    "wires": []
-  },
-  {
-    "id": "95dee7b8c86d93d4",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "query corresponding user",
-    "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 650,
-    "y": 480,
-    "wires": [["c91aeb210d488592"]]
-  },
-  {
-    "id": "c91aeb210d488592",
-    "type": "mysql",
-    "z": "e275fdd343e891db",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 850,
-    "y": 520,
-    "wires": [["fe1de8f442ec48f7"]]
-  },
-  {
-    "id": "fe1de8f442ec48f7",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "validate user",
-    "func": "const username = msg.username;\nconst role = msg.role;\ndelete msg.role;\ndelete msg.username;\n\nif (msg.payload.length == 0) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Người dùng không tồn tại\";\n    return msg;\n}\n\nif (msg.payload[0].role == role) {\n    msg.topic = \"Không có gì thay đổi\";\n    msg.payload = `Vai trò người dùng này vốn đã là ${role}`;\n    return msg;\n}\n\nmsg.topic = \"Thành công\";\nmsg.payload = `Người dùng \"${username}\" hiện đang có vai trò \"${role}\"!`;\nmsg.query = `\n    UPDATE users\n    SET role = ?\n    WHERE username = ?\n`\nmsg.params = [role, username];\n\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1030,
-    "y": 500,
-    "wires": [["bfd43988fed94ca3", "61898f853f535540"]]
-  },
-  {
-    "id": "bfd43988fed94ca3",
-    "type": "ui_toast",
-    "z": "e275fdd343e891db",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 1210,
-    "y": 580,
-    "wires": []
-  },
-  {
-    "id": "61898f853f535540",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "update role in database",
-    "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1250,
-    "y": 480,
-    "wires": [["5e96e37967d74443"]]
-  },
-  {
-    "id": "5e96e37967d74443",
-    "type": "mysql",
-    "z": "e275fdd343e891db",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 1490,
-    "y": 480,
-    "wires": [[]]
-  },
-  {
-    "id": "7f65923214fae846",
-    "type": "comment",
-    "z": "e275fdd343e891db",
-    "name": "Đăng kí người dùng mới",
-    "info": "",
-    "x": 150,
-    "y": 140,
-    "wires": []
-  },
-  {
-    "id": "d39dea47664efdd9",
-    "type": "comment",
-    "z": "e275fdd343e891db",
-    "name": "Chỉnh sửa vai trò người dùng",
-    "info": "",
-    "x": 140,
-    "y": 440,
-    "wires": []
-  },
-  {
-    "id": "6c6217afbca05a45",
-    "type": "ui_form",
-    "z": "e275fdd343e891db",
-    "name": "",
-    "label": "",
-    "group": "6d6e7b31db3b08c3",
-    "order": 0,
-    "width": 0,
-    "height": 0,
-    "options": [
-      {
-        "label": "Tên người dùng",
-        "value": "username",
-        "type": "text",
-        "required": true,
-        "rows": null
-      }
-    ],
-    "formValue": {
-      "username": ""
-    },
-    "payload": "",
-    "submit": "Xóa",
-    "cancel": "",
-    "topic": "topic",
-    "topicType": "msg",
-    "splitLayout": "",
-    "className": "",
-    "x": 110,
-    "y": 800,
-    "wires": [["5ea563f04447a34e"]]
-  },
-  {
-    "id": "5ea563f04447a34e",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "find user",
-    "func": "msg.username = msg.payload.username;\nmsg.topic = `\n    SELECT *\n    FROM users\n    WHERE username = ?\n`;\nmsg.payload = [msg.username];\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 300,
-    "y": 800,
-    "wires": [["83cdbe0e4329c5c0"]]
-  },
-  {
-    "id": "83cdbe0e4329c5c0",
-    "type": "mysql",
-    "z": "e275fdd343e891db",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 470,
-    "y": 800,
-    "wires": [["2e6eda24386e0a54"]]
-  },
-  {
-    "id": "2e6eda24386e0a54",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "validate user",
-    "func": "if (msg.payload.length == 0) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Người dùng không tồn tại!\";\n    return msg;\n}\n\nmsg.logout = 0;\nif (msg.payload[0].username == global.get(\"username\")) {\n    msg.topic = \"Không thể xóa chính bản thân\";\n    msg.payload = \"Yêu cầu mật khẩu, vui lòng vào mục \\\"Cài đặt\\\"\";\n    return msg;\n}\n\nmsg.topic = \"Xóa thành công\";\nif (msg.logout == 0) {\n    msg.payload = \"Người dùng chỉ định đã được xóa\";\n}\nelse {\n    msg.payload = \"Bạn đã xóa chính bản thân!\";\n}\n\nmsg.query = `\n    DELETE FROM users\n    WHERE username = ?\n`;\nmsg.params = [msg.username];\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 650,
-    "y": 800,
-    "wires": [["b2aaf3a2ce916650", "210ec088908ec8ac"]]
-  },
-  {
-    "id": "b2aaf3a2ce916650",
-    "type": "ui_toast",
-    "z": "e275fdd343e891db",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 870,
-    "y": 880,
-    "wires": []
-  },
-  {
-    "id": "210ec088908ec8ac",
-    "type": "function",
-    "z": "e275fdd343e891db",
-    "name": "delete user in database",
-    "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 870,
-    "y": 800,
-    "wires": [["2f3aa3f49892beb7"]]
-  },
-  {
-    "id": "2f3aa3f49892beb7",
-    "type": "mysql",
-    "z": "e275fdd343e891db",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 1070,
-    "y": 800,
-    "wires": [[]]
-  },
-  {
-    "id": "3fbcb7bb1c36339d",
-    "type": "comment",
-    "z": "e275fdd343e891db",
-    "name": "Xóa người dùng",
-    "info": "",
-    "x": 100,
-    "y": 760,
-    "wires": []
-  },
-  {
-    "id": "97e1a4f012fe693c",
-    "type": "comment",
-    "z": "e275fdd343e891db",
-    "name": "không xóa username không tồn tại hoặc chính bản thân",
-    "info": "",
-    "x": 730,
-    "y": 760,
-    "wires": []
-  },
-  {
-    "id": "bc5836cbdf6dafe3",
-    "type": "ui_gauge",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "group": "f0987cb3c87e44bd",
-    "order": 2,
-    "width": 0,
-    "height": 0,
-    "gtype": "gage",
-    "title": "Số người hiện tại đang ở trong nhà",
-    "label": "Người",
-    "format": "{{value}}",
-    "min": 0,
-    "max": 10,
-    "colors": ["#00b500", "#e6e600", "#ca3838"],
-    "seg1": "",
-    "seg2": "",
-    "diff": false,
-    "className": "",
-    "x": 1140,
-    "y": 280,
-    "wires": []
-  },
-  {
-    "id": "ab210482e9f17934",
-    "type": "ui_switch",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "label": "Bật/tắt âm lượng",
-    "tooltip": "",
-    "group": "f0987cb3c87e44bd",
-    "order": 1,
-    "width": 0,
-    "height": 0,
-    "passthru": true,
-    "decouple": "false",
-    "topic": "topic",
-    "topicType": "msg",
-    "style": "",
-    "onvalue": "false",
-    "onvalueType": "bool",
-    "onicon": "",
-    "oncolor": "",
-    "offvalue": "true",
-    "offvalueType": "bool",
-    "officon": "",
-    "offcolor": "",
-    "animate": false,
-    "className": "",
-    "x": 850,
-    "y": 240,
-    "wires": [["ccdc2555429de4ab"]]
-  },
-  {
-    "id": "ccdc2555429de4ab",
-    "type": "mqtt out",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/isMutedEntryDetection",
-    "qos": "",
-    "retain": "",
-    "respTopic": "",
-    "contentType": "",
-    "userProps": "",
-    "correl": "",
-    "expiry": "",
-    "broker": "79d31313ab32fe77",
-    "x": 1210,
-    "y": 220,
-    "wires": []
-  },
-  {
-    "id": "afe9d599bab2c1ff",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/visitorCount",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 750,
-    "y": 280,
-    "wires": [["bc5836cbdf6dafe3"]]
-  },
-  {
-    "id": "dc28b40c659e54ee",
-    "type": "ui_switch",
-    "z": "9ad21237fb19bcc8",
-    "name": "Bật/tắt chế độ điều khiển đèn tự động",
-    "label": "Bật/tắt chế độ điều khiển đèn tự động",
-    "tooltip": "",
-    "group": "462319f5aa2aab02",
-    "order": 1,
-    "width": 0,
-    "height": 0,
-    "passthru": true,
-    "decouple": "false",
-    "topic": "topic",
-    "topicType": "msg",
-    "style": "",
-    "onvalue": "true",
-    "onvalueType": "bool",
-    "onicon": "",
-    "oncolor": "",
-    "offvalue": "false",
-    "offvalueType": "bool",
-    "officon": "",
-    "offcolor": "",
-    "animate": false,
-    "className": "",
-    "x": 510,
-    "y": 1280,
-    "wires": [["9604e5b8898f84b4"]]
-  },
-  {
-    "id": "22585248c63df1dd",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/lightValue",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 520,
-    "y": 1120,
-    "wires": [["48ad528fe244d6c1"]]
-  },
-  {
-    "id": "48ad528fe244d6c1",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "get light value",
-    "func": "\nlet lightValue = parseFloat(msg.payload);\n\n\nmsg.payload = lightValue;\n\nreturn msg;\n",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 820,
-    "y": 1120,
-    "wires": [["a9db7a2289f1127e"]]
-  },
-  {
-    "id": "a9db7a2289f1127e",
-    "type": "ui_gauge",
-    "z": "9ad21237fb19bcc8",
-    "name": "Độ sáng (%)",
-    "group": "462319f5aa2aab02",
-    "order": 2,
-    "width": 0,
-    "height": 0,
-    "gtype": "gage",
-    "title": "Độ sáng (%)",
-    "label": "%",
-    "format": "{{value}}",
-    "min": 0,
-    "max": "100",
-    "colors": ["#000000", "#ff0505", "#fbff00"],
-    "seg1": "",
-    "seg2": "",
-    "diff": false,
-    "className": "",
-    "x": 1070,
-    "y": 1120,
-    "wires": []
-  },
-  {
-    "id": "9604e5b8898f84b4",
-    "type": "mqtt out",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/isAutomaticLight",
-    "qos": "",
-    "retain": "",
-    "respTopic": "",
-    "contentType": "",
-    "userProps": "",
-    "correl": "",
-    "expiry": "",
-    "broker": "79d31313ab32fe77",
-    "x": 910,
-    "y": 1280,
-    "wires": []
-  },
-  {
-    "id": "986a58c69f387a52",
-    "type": "ui_gauge",
-    "z": "9ad21237fb19bcc8",
-    "name": "Nhiệt độ",
-    "group": "afda3bbd1e2f5a7b",
-    "order": 4,
-    "width": 0,
-    "height": 0,
-    "gtype": "gage",
-    "title": "Nhiệt độ hiện tại (độ C)",
-    "label": " °C",
-    "format": "{{value}}",
-    "min": "-40",
-    "max": "80",
-    "colors": ["#00ff1e", "#fbff00", "#ff0000"],
-    "seg1": "",
-    "seg2": "",
-    "diff": false,
-    "className": "",
-    "x": 840,
-    "y": 1520,
-    "wires": []
-  },
-  {
-    "id": "c4e3308628fa7cf4",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/temperature",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 390,
-    "y": 1500,
-    "wires": [["0ff9021b2fd5c33f"]]
-  },
-  {
-    "id": "0ff9021b2fd5c33f",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "get temperature",
-    "func": "let temperature = parseFloat(msg.payload);\n\n\nmsg.payload = temperature;\n\nreturn msg;\n",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 660,
-    "y": 1520,
-    "wires": [["986a58c69f387a52"]]
-  },
-  {
-    "id": "6f959d90b58b61ab",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "get humidity",
-    "func": "let humidity = parseFloat(msg.payload);\n\n\nmsg.payload = humidity;\n\nreturn msg;\n",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 630,
-    "y": 1600,
-    "wires": [["9c62d45563fd9b2e"]]
-  },
-  {
-    "id": "032ca84664e5a91a",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/humidity",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 340,
-    "y": 1600,
-    "wires": [["6f959d90b58b61ab"]]
-  },
-  {
-    "id": "9c62d45563fd9b2e",
-    "type": "ui_gauge",
-    "z": "9ad21237fb19bcc8",
-    "name": "Độ ẩm",
-    "group": "afda3bbd1e2f5a7b",
-    "order": 3,
-    "width": 0,
-    "height": 0,
-    "gtype": "wave",
-    "title": "Độ ẩm hiện tại (%)",
-    "label": "%",
-    "format": "{{value}}",
-    "min": 0,
-    "max": "100",
-    "colors": ["#00b500", "#e6e600", "#ca3838"],
-    "seg1": "",
-    "seg2": "",
-    "diff": false,
-    "className": "",
-    "x": 810,
-    "y": 1600,
-    "wires": []
-  },
-  {
-    "id": "baaff8a0c3fa7170",
-    "type": "ui_switch",
-    "z": "9ad21237fb19bcc8",
-    "name": "Bật/tắt âm chuông báo cháy",
-    "label": "Bật/tắt âm chuông báo cháy",
-    "tooltip": "",
-    "group": "afda3bbd1e2f5a7b",
-    "order": 1,
-    "width": 0,
-    "height": 0,
-    "passthru": true,
-    "decouple": "false",
-    "topic": "topic",
-    "topicType": "msg",
-    "style": "",
-    "onvalue": "true",
-    "onvalueType": "bool",
-    "onicon": "",
-    "oncolor": "",
-    "offvalue": "false",
-    "offvalueType": "bool",
-    "officon": "",
-    "offcolor": "",
-    "animate": false,
-    "className": "",
-    "x": 560,
-    "y": 1720,
-    "wires": [["7cef895bf5d62452"]]
-  },
-  {
-    "id": "d4585459cf881e4b",
-    "type": "ui_switch",
-    "z": "9ad21237fb19bcc8",
-    "name": "Bật phun sương",
-    "label": "Bật phun sương",
-    "tooltip": "",
-    "group": "afda3bbd1e2f5a7b",
-    "order": 2,
-    "width": 0,
-    "height": 0,
-    "passthru": true,
-    "decouple": "false",
-    "topic": "topic",
-    "topicType": "msg",
-    "style": "",
-    "onvalue": "true",
-    "onvalueType": "bool",
-    "onicon": "",
-    "oncolor": "",
-    "offvalue": "false",
-    "offvalueType": "bool",
-    "officon": "",
-    "offcolor": "",
-    "animate": false,
-    "className": "",
-    "x": 580,
-    "y": 1820,
-    "wires": [["ed3f1c05d14f10b5"]]
-  },
-  {
-    "id": "7cef895bf5d62452",
-    "type": "mqtt out",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/fireAlarmSound",
-    "qos": "",
-    "retain": "",
-    "respTopic": "",
-    "contentType": "",
-    "userProps": "",
-    "correl": "",
-    "expiry": "",
-    "broker": "79d31313ab32fe77",
-    "x": 900,
-    "y": 1720,
-    "wires": []
-  },
-  {
-    "id": "ed3f1c05d14f10b5",
-    "type": "mqtt out",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/mistSpray",
-    "qos": "",
-    "retain": "",
-    "respTopic": "",
-    "contentType": "",
-    "userProps": "",
-    "correl": "",
-    "expiry": "",
-    "broker": "79d31313ab32fe77",
-    "x": 870,
-    "y": 1820,
-    "wires": []
-  },
-  {
-    "id": "c4a3fc5eff87bf04",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/temperature",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 430,
-    "y": 1920,
-    "wires": [["a72995a5d9f0a197"]]
-  },
-  {
-    "id": "a72995a5d9f0a197",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "push temperature/humidity to cloud",
-    "func": "let temperature = context.get(\"temperature\");\nlet humidity = context.get(\"humidity\");\n\nif (msg.topic === \"home-0PPKrXoRcgyppks/temperature\") {\n    temperature = parseFloat(msg.payload);\n    context.set(\"temperature\", temperature);\n} else if (msg.topic === \"home-0PPKrXoRcgyppks/humidity\") {\n    humidity = parseFloat(msg.payload);\n    context.set(\"humidity\", humidity);\n}\n\nlet timestampVN = new Date().toLocaleString(\"vi-VN\", { timeZone: \"Asia/Ho_Chi_Minh\" });\n\n\nmsg.payload = {\n    timestamp: timestampVN,  \n    temperature: temperature,   \n    humidity: humidity        \n};\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 820,
-    "y": 1920,
-    "wires": [["c79d32011ef268fa"]]
-  },
-  {
-    "id": "69cf210309b3fe10",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "get temperature from cloud",
-    "func": "let data = msg.payload;\n\n// Kiểm tra xem dữ liệu có phải là đối tượng (object) không\nif (typeof data === 'object' && !Array.isArray(data)) {\n    // Chuyển đối tượng thành mảng các phần tử\n    let entries = Object.values(data); // Lấy tất cả giá trị từ các khóa\n    \n    msg.payload = entries.map(entry => {\n        return {\n            timestamp: entry.timestamp || \"Không xác định\", // Thời gian\n            temperature: entry.temperature || \"N/A\",  // Nhiệt độ\n            humidity: entry.humidity || \"N/A\"  \n        };\n    });\n    \n    return msg;\n} else {\n    node.error(\"Dữ liệu không hợp lệ từ Firebase\");\n    return null;\n}",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1120,
-    "y": 2100,
-    "wires": [["3ae0554d406cff91"]]
-  },
-  {
-    "id": "3ae0554d406cff91",
-    "type": "ui_template",
-    "z": "9ad21237fb19bcc8",
-    "group": "afda3bbd1e2f5a7b",
-    "name": "Lịch sử nhiệt độ và độ ẩm",
-    "order": 4,
-    "width": "6",
-    "height": "6",
-    "format": "<div style=\"font-family: Arial, sans-serif;\">\n    <h3>Lịch sử nhiệt độ và độ ẩm</h3>\n    <table style=\"width: 100%; border-collapse: collapse;\">\n        <thead>\n            <tr>\n                <th style=\"border: 1px solid #ddd; padding: 8px;\">Thời gian</th>\n                <th style=\"border: 1px solid #ddd; padding: 8px;\">Nhiệt độ (°C)</th>\n                <th style=\"border: 1px solid #ddd; padding: 8px;\">Độ ẩm (%)</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr ng-repeat=\"item in msg.payload\">\n                <td style=\"border: 1px solid #ddd; padding: 8px;\">{{item.timestamp}}</td>\n                <td style=\"border: 1px solid #ddd; padding: 8px;\">{{item.temperature}}</td>\n                <td style=\"border: 1px solid #ddd; padding: 8px;\">{{item.humidity}}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>",
-    "storeOutMessages": true,
-    "fwdInMessages": true,
-    "resendOnRefresh": true,
-    "templateScope": "local",
-    "className": "",
-    "x": 1590,
-    "y": 2100,
-    "wires": [[]]
-  },
-  {
-    "id": "e2a4aa8bf9f8aabf",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/humidity",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 420,
-    "y": 2000,
-    "wires": [["a72995a5d9f0a197"]]
-  },
-  {
-    "id": "fcbbd80cfed1986c",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/visitorCount",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 750,
-    "y": 400,
-    "wires": [["3f2f907424376b48"]]
-  },
-  {
-    "id": "3f2f907424376b48",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "push people count to cloud",
-    "func": "let peopleCount = parseInt(msg.payload) || 0;\n\n\nlet timestampVN = new Date().toLocaleString(\"vi-VN\", { timeZone: \"Asia/Ho_Chi_Minh\" });\n\nmsg.payload = {\n    timestamp: timestampVN,\n    people: peopleCount     \n};\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1040,
-    "y": 400,
-    "wires": [["4cbdc8c3c38689b6"]]
-  },
-  {
-    "id": "573c33bd0b67c6e0",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "get temperature from cloud",
-    "func": "let data = msg.payload;\n\n// Kiểm tra xem dữ liệu có phải là đối tượng (object) không\nif (typeof data === 'object' && !Array.isArray(data)) {\n    // Chuyển đối tượng thành mảng các phần tử\n    let entries = Object.values(data); // Lấy tất cả giá trị từ các khóa\n    \n    msg.payload = entries.map(entry => {\n        return {\n            timestamp: entry.timestamp || \"Không xác định\", // Thời gian\n            people: entry.people || \"0\",  // Nhiệt độ\n        };\n    });\n    \n    return msg;\n} else {\n    node.error(\"Dữ liệu không hợp lệ từ Firebase\");\n    return null;\n}",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1360,
-    "y": 460,
-    "wires": [["707aba84a1a61183"]]
-  },
-  {
-    "id": "707aba84a1a61183",
-    "type": "ui_template",
-    "z": "9ad21237fb19bcc8",
-    "group": "f0987cb3c87e44bd",
-    "name": "Lịch sử số người trong nhà",
-    "order": 3,
-    "width": "6",
-    "height": "6",
-    "format": "<div style=\"font-family: Arial, sans-serif;\">\n    <h3>Lịch sử số người trong nhà</h3>\n    <table style=\"width: 100%; border-collapse: collapse;\">\n        <thead>\n            <tr>\n                <th style=\"border: 1px solid #ddd; padding: 8px;\">Thời gian</th>\n                <th style=\"border: 1px solid #ddd; padding: 8px;\">Số người</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr ng-repeat=\"item in msg.payload\">\n                <td style=\"border: 1px solid #ddd; padding: 8px;\">{{item.timestamp}}</td>\n                <td style=\"border: 1px solid #ddd; padding: 8px;\">{{item.people}}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>",
-    "storeOutMessages": true,
-    "fwdInMessages": true,
-    "resendOnRefresh": true,
-    "templateScope": "local",
-    "className": "",
-    "x": 1840,
-    "y": 460,
-    "wires": [[]]
-  },
-  {
-    "id": "ad939ecdf2159520",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/visitorCount",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 910,
-    "y": 520,
-    "wires": [["64003ece635a33cd"]]
-  },
-  {
-    "id": "8acadda426957b96",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/temperature",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 330,
-    "y": 2280,
-    "wires": [["7665259667d39687"]]
-  },
-  {
-    "id": "7665259667d39687",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "get temperature for alert",
-    "func": "let temperature = parseFloat(msg.payload);\n\n\nmsg.payload = temperature;\n\nif (temperature > 40) {\n    return msg;\n}\n",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 650,
-    "y": 2280,
-    "wires": [["66705ea16d71862d"]]
-  },
-  {
-    "id": "c79d32011ef268fa",
-    "type": "firebase modify",
-    "z": "9ad21237fb19bcc8",
-    "name": "Push Temperature History ",
-    "firebaseconfig": "75bfe65070b58787",
-    "childpath": "Temperature and Humidity",
-    "method": "push",
-    "value": "msg.payload",
-    "priority": "msg.priority",
-    "x": 1190,
-    "y": 1920,
-    "wires": [[]]
-  },
-  {
-    "id": "4cbdc8c3c38689b6",
-    "type": "firebase modify",
-    "z": "9ad21237fb19bcc8",
-    "name": "Push Visitor Count History ",
-    "firebaseconfig": "75bfe65070b58787",
-    "childpath": "People",
-    "method": "push",
-    "value": "msg.payload",
-    "priority": "msg.priority",
-    "x": 1310,
-    "y": 400,
-    "wires": [[]]
-  },
-  {
-    "id": "b9bc7ada9a0ec49d",
-    "type": "firebase.on",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "firebaseconfig": "75bfe65070b58787",
-    "childpath": "Temperature and Humidity",
-    "atStart": true,
-    "eventType": "value",
-    "queries": [],
-    "x": 600,
-    "y": 2100,
-    "wires": [["69cf210309b3fe10"]]
-  },
-  {
-    "id": "70e2725324f91e13",
-    "type": "firebase.on",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "firebaseconfig": "75bfe65070b58787",
-    "childpath": "People",
-    "atStart": true,
-    "eventType": "value",
-    "queries": [],
-    "x": 780,
-    "y": 460,
-    "wires": [["573c33bd0b67c6e0"]]
-  },
-  {
-    "id": "64003ece635a33cd",
-    "type": "pushsafer",
-    "z": "9ad21237fb19bcc8",
-    "name": "People Alert",
-    "apikey": "380f7df3c09dc5a7",
-    "notificationtemplate": "e2af5a346038ef95",
-    "x": 1210,
-    "y": 520,
-    "wires": [[], []]
-  },
-  {
-    "id": "66705ea16d71862d",
-    "type": "pushsafer",
-    "z": "9ad21237fb19bcc8",
-    "name": "Fire alert",
-    "apikey": "380f7df3c09dc5a7",
-    "notificationtemplate": "f67a422731a97891",
-    "x": 880,
-    "y": 2280,
-    "wires": [[], []]
-  },
-  {
-    "id": "80d5a5d413402a65",
-    "type": "ui_button",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "group": "ccca45ee97dbdfb5",
-    "order": 4,
-    "width": 0,
-    "height": 0,
-    "passthru": false,
-    "label": "Mở khóa cửa",
-    "tooltip": "",
-    "color": "",
-    "bgcolor": "",
-    "className": "",
-    "icon": "",
-    "payload": "false",
-    "payloadType": "bool",
-    "topic": "topic",
-    "topicType": "msg",
-    "x": 580,
-    "y": 720,
-    "wires": [["4de9808e9a9d98b4"]]
-  },
-  {
-    "id": "4de9808e9a9d98b4",
-    "type": "mqtt out",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/isDoorPermanentlyLocked",
-    "qos": "",
-    "retain": "",
-    "respTopic": "",
-    "contentType": "",
-    "userProps": "",
-    "correl": "",
-    "expiry": "",
-    "broker": "79d31313ab32fe77",
-    "x": 880,
-    "y": 720,
-    "wires": []
-  },
-  {
-    "id": "7a1d589051c42d1b",
-    "type": "ui_switch",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "label": "Bật/tắt âm lượng",
-    "tooltip": "",
-    "group": "ccca45ee97dbdfb5",
-    "order": 2,
-    "width": 0,
-    "height": 0,
-    "passthru": true,
-    "decouple": "false",
-    "topic": "topic",
-    "topicType": "msg",
-    "style": "",
-    "onvalue": "false",
-    "onvalueType": "bool",
-    "onicon": "",
-    "oncolor": "",
-    "offvalue": "true",
-    "offvalueType": "bool",
-    "officon": "",
-    "offcolor": "",
-    "animate": false,
-    "className": "",
-    "x": 590,
-    "y": 660,
-    "wires": [["50027a013948d59d"]]
-  },
-  {
-    "id": "50027a013948d59d",
-    "type": "mqtt out",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/isMutedDoorSystem",
-    "qos": "",
-    "retain": "",
-    "respTopic": "",
-    "contentType": "",
-    "userProps": "",
-    "correl": "",
-    "expiry": "",
-    "broker": "79d31313ab32fe77",
-    "x": 920,
-    "y": 660,
-    "wires": []
-  },
-  {
-    "id": "95d6b56b7e94ac74",
-    "type": "ui_numeric",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "label": "Số lần nhập tối đa trước khi khóa hệ thống",
-    "tooltip": "",
-    "group": "ccca45ee97dbdfb5",
-    "order": 3,
-    "width": 0,
-    "height": 0,
-    "wrap": false,
-    "passthru": true,
-    "topic": "topic",
-    "topicType": "msg",
-    "format": "{{value}}",
-    "min": 0,
-    "max": 10,
-    "step": 1,
-    "className": "",
-    "x": 670,
-    "y": 800,
-    "wires": [["da1c7ef5a99d79e9"]]
-  },
-  {
-    "id": "da1c7ef5a99d79e9",
-    "type": "mqtt out",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/maxTryAttempt",
-    "qos": "",
-    "retain": "",
-    "respTopic": "",
-    "contentType": "",
-    "userProps": "",
-    "correl": "",
-    "expiry": "",
-    "broker": "79d31313ab32fe77",
-    "x": 1140,
-    "y": 800,
-    "wires": []
-  },
-  {
-    "id": "6efc547c31b23de8",
-    "type": "ui_form",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "label": "",
-    "group": "ccca45ee97dbdfb5",
-    "order": 5,
-    "width": 0,
-    "height": 0,
-    "options": [
-      {
-        "label": "Mật khẩu mới",
-        "value": "newPassword",
-        "type": "password",
-        "required": true,
-        "rows": null
-      },
-      {
-        "label": "Xác nhận mật khẩu mới",
-        "value": "confirmPassword",
-        "type": "password",
-        "required": true,
-        "rows": null
-      }
-    ],
-    "formValue": {
-      "newPassword": "",
-      "confirmPassword": ""
-    },
-    "payload": "",
-    "submit": "Đổi mật khẩu",
-    "cancel": "",
-    "topic": "topic",
-    "topicType": "msg",
-    "splitLayout": "",
-    "className": "",
-    "x": 570,
-    "y": 880,
-    "wires": [["945b63570607af1d"]]
-  },
-  {
-    "id": "945b63570607af1d",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "check whether new password is valid",
-    "func": "msg.newPassword = msg.payload.newPassword;\nmsg.confirmPassword = msg.payload.confirmPassword;\n\nmsg.valid = 1;\n\nif (msg.newPassword != msg.confirmPassword) {\n    msg.valid = 0;\n\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Mật khẩu mới không khớp. Vui lòng thử lại\";\n    return msg;\n}\n\nif (msg.newPassword.length != 4) {\n    msg.valid = 0;\n\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Mật khẩu phải đúng 4 ký tự!\";\n    return msg;\n}\n\n\nconst validPasswordRegex = /^[0-9A-D]+$/;\nif (!validPasswordRegex.test(msg.newPassword)) {\n    msg.valid = 0;\n\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Mật khẩu chỉ bao gồm các ký tự số từ 0-9 hoặc chữ từ A-D (viết hoa)\";\n    return msg;\n}\n\nmsg.topic = \"Đang xử lí\";\nmsg.payload = \"Vui lòng chờ trong giây lát...\";\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 850,
-    "y": 880,
-    "wires": [["fabb285582d1fe48", "2a126d1b0e0358fc"]]
-  },
-  {
-    "id": "fabb285582d1fe48",
-    "type": "ui_toast",
-    "z": "9ad21237fb19bcc8",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 1150,
-    "y": 940,
-    "wires": []
-  },
-  {
-    "id": "2a126d1b0e0358fc",
-    "type": "switch",
-    "z": "9ad21237fb19bcc8",
-    "name": "if not error, continue",
-    "property": "valid",
-    "propertyType": "msg",
-    "rules": [
-      {
-        "t": "eq",
-        "v": "1",
-        "vt": "num"
-      }
-    ],
-    "checkall": "true",
-    "repair": false,
-    "outputs": 1,
-    "x": 1180,
-    "y": 880,
-    "wires": [["7b7762526ce43664", "4acbb8e77021e139"]]
-  },
-  {
-    "id": "7b7762526ce43664",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "change password",
-    "func": "const crypto = global.get('crypto'); // Import the crypto module\n\nconst newPassword = msg.newPassword;\n\nconst hash = crypto.createHash('sha256').update(newPassword).digest(); // This will give you a Buffer\n\nmsg.payload = hash;\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1430,
-    "y": 880,
-    "wires": [["2b48499556eaced0"]]
-  },
-  {
-    "id": "2b48499556eaced0",
-    "type": "mqtt out",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/hashedPassword",
-    "qos": "",
-    "retain": "",
-    "respTopic": "",
-    "contentType": "",
-    "userProps": "",
-    "correl": "",
-    "expiry": "",
-    "broker": "79d31313ab32fe77",
-    "x": 1770,
-    "y": 880,
-    "wires": []
-  },
-  {
-    "id": "4acbb8e77021e139",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "show notification",
-    "func": "msg.topic = \"Đổi mật khẩu thành công\"\nmsg.payload = \"Mật khẩu của bạn đã được thay đổi!\";\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1410,
-    "y": 960,
-    "wires": [["a4109a1ee4fd85ea"]]
-  },
-  {
-    "id": "a4109a1ee4fd85ea",
-    "type": "ui_toast",
-    "z": "9ad21237fb19bcc8",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 1630,
-    "y": 960,
-    "wires": []
-  },
-  {
-    "id": "259763da3314bc0e",
-    "type": "ui_text",
-    "z": "9ad21237fb19bcc8",
-    "group": "ccca45ee97dbdfb5",
-    "order": 1,
-    "width": 0,
-    "height": 0,
-    "name": "",
-    "label": "Tình trạng",
-    "format": "{{msg.payload}}",
-    "layout": "row-spread",
-    "className": "",
-    "style": false,
-    "font": "",
-    "fontSize": 16,
-    "color": "#000000",
-    "x": 840,
-    "y": 620,
-    "wires": []
-  },
-  {
-    "id": "291ea8bedf5132aa",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/isDoorLocked",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 360,
-    "y": 580,
-    "wires": [["f9c13863a32576eb"]]
-  },
-  {
-    "id": "bc9b3ed3f9f6f44c",
-    "type": "mqtt in",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/isDoorPermanentlyLocked",
-    "qos": "2",
-    "datatype": "auto-detect",
-    "broker": "79d31313ab32fe77",
-    "nl": false,
-    "rap": true,
-    "rh": 0,
-    "inputs": 0,
-    "x": 290,
-    "y": 640,
-    "wires": [["f9c13863a32576eb"]]
-  },
-  {
-    "id": "f9c13863a32576eb",
-    "type": "function",
-    "z": "9ad21237fb19bcc8",
-    "name": "status config",
-    "func": "// Get the latest values from the context\nlet isDoorLocked = context.get(\"isDoorLocked\") || false;\nlet isDoorPermanentlyLocked = context.get(\"isDoorPermanentlyLocked\") || false;\n\n// Update the value from the incoming message\nif (msg.topic === \"home-0PPKrXoRcgyppks/isDoorLocked\") {\n    isDoorLocked = msg.payload === true;\n    context.set(\"isDoorLocked\", isDoorLocked);\n} else if (msg.topic === \"home-0PPKrXoRcgyppks/isDoorPermanentlyLocked\") {\n    isDoorPermanentlyLocked = msg.payload === true;\n    context.set(\"isDoorPermanentlyLocked\", isDoorPermanentlyLocked);\n}\n\n// Determine the output payload\nif (isDoorPermanentlyLocked) {\n    msg.payload = \"Khóa vĩnh viễn\";\n} else if (isDoorLocked) {\n    msg.payload = \"Khóa\";\n} else {\n    msg.payload = \"Mở\";\n}\n\nreturn msg;\n",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 670,
-    "y": 620,
-    "wires": [["259763da3314bc0e"]]
-  },
-  {
-    "id": "a4a55cd088cf4488",
-    "type": "ui_switch",
-    "z": "9ad21237fb19bcc8",
-    "name": "Bật/tắt NeoPixel",
-    "label": "Bật/tắt NeoPixel",
-    "tooltip": "",
-    "group": "afda3bbd1e2f5a7b",
-    "order": 1,
-    "width": 0,
-    "height": 0,
-    "passthru": true,
-    "decouple": "false",
-    "topic": "topic",
-    "topicType": "msg",
-    "style": "",
-    "onvalue": "true",
-    "onvalueType": "bool",
-    "onicon": "",
-    "oncolor": "",
-    "offvalue": "false",
-    "offvalueType": "bool",
-    "officon": "",
-    "offcolor": "",
-    "animate": false,
-    "className": "",
-    "x": 440,
-    "y": 1380,
-    "wires": [["e632e630a3660a01"]]
-  },
-  {
-    "id": "e632e630a3660a01",
-    "type": "mqtt out",
-    "z": "9ad21237fb19bcc8",
-    "name": "",
-    "topic": "home-0PPKrXoRcgyppks/neoPixel",
-    "qos": "1",
-    "retain": "",
-    "respTopic": "",
-    "contentType": "",
-    "userProps": "",
-    "correl": "",
-    "expiry": "",
-    "broker": "79d31313ab32fe77",
-    "x": 880,
-    "y": 1380,
-    "wires": []
-  },
-  {
-    "id": "155e0636ae4fe24f",
-    "type": "ui_form",
-    "z": "b313f7617d390c8e",
-    "name": "",
-    "label": "",
-    "group": "7dd48ba56ec41588",
-    "order": 1,
-    "width": 0,
-    "height": 0,
-    "options": [
-      {
-        "label": "Mật khẩu cũ",
-        "value": "oldPassword",
-        "type": "password",
-        "required": true,
-        "rows": null
-      },
-      {
-        "label": "Mật khẩu mới",
-        "value": "newPassword",
-        "type": "password",
-        "required": true,
-        "rows": null
-      },
-      {
-        "label": "Xác nhận mật khẩu mới",
-        "value": "confirmPassword",
-        "type": "password",
-        "required": true,
-        "rows": null
-      }
-    ],
-    "formValue": {
-      "oldPassword": "",
-      "newPassword": "",
-      "confirmPassword": ""
-    },
-    "payload": "",
-    "submit": "Hoàn tất",
-    "cancel": "",
-    "topic": "topic",
-    "topicType": "msg",
-    "splitLayout": "",
-    "className": "",
-    "x": 90,
-    "y": 160,
-    "wires": [["3790624345ac2f88"]]
-  },
-  {
-    "id": "3790624345ac2f88",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "validate new password input",
-    "func": "msg.oldPassword = msg.payload.oldPassword;\nmsg.newPassword = msg.payload.newPassword;\nmsg.confirmPassword = msg.payload.confirmPassword;\n\nif (msg.oldPassword == msg.newPassword) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Mật khẩu mới và mật khẩu cũ phải khác nhau!\";\n    return msg;\n}\nif (msg.newPassword != msg.confirmPassword) {\n    msg.topic = \"Lỗi\";\n    msg.payload = \"Mật khẩu mới cài đặt không khớp. Vui lòng thử lại!\";\n    return msg;\n}\n\nmsg.topic = \"Đang xử lí...\";\nmsg.payload = \"Vui lòng chờ trong giây lát\";\nmsg.query = \"SELECT * FROM users WHERE username = ?\"\nmsg.params = [global.get(\"username\")];\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 320,
-    "y": 160,
-    "wires": [["0319e35f03058759", "9766b8482ddbb03f"]]
-  },
-  {
-    "id": "389d436f0b51863f",
-    "type": "mysql",
-    "z": "b313f7617d390c8e",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 530,
-    "y": 200,
-    "wires": [["143ed584d9c09ab9", "cb0ca932c01b4ba8"]]
-  },
-  {
-    "id": "143ed584d9c09ab9",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "validate old password input",
-    "func": "const bcrypt = global.get('bcrypt');\n\n// Retrieve stored hash from the database\nconst storedHash = msg.payload[0].password;\n\n// Extract passwords from the input\nconst userOldPassword = msg.oldPassword;\nconst userNewPassword = msg.newPassword;\ndelete msg.oldPassword;\ndelete msg.newPassword;\ndelete msg.confirmPassword;\n\n// Compare the old password with the stored hash\nconst isMatch = bcrypt.compareSync(userOldPassword, storedHash);\n\nif (isMatch) {\n    // Hash the new password\n    const hashedNewPassword = bcrypt.hashSync(userNewPassword, 12);\n\n    // Prepare SQL query to update the password\n    msg.query = `\n        UPDATE users \n        SET password = ? \n        WHERE username = ?\n    `;\n    msg.params = [hashedNewPassword, global.get(\"username\")];\n    msg.topic = \"Chỉnh sửa thành công\";\n    msg.payload = \"Mật khẩu đã được cập nhật thành công.\";\n} else {\n    msg.topic = \"Chỉnh sửa thất bại\";\n    msg.payload = \"Mật khẩu cũ không đúng\";\n}\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 780,
-    "y": 240,
-    "wires": [["43d6f39ab2146b18", "f66e61e8bb5c7afc"]]
-  },
-  {
-    "id": "0319e35f03058759",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "query corresponding user in database",
-    "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 670,
-    "y": 140,
-    "wires": [["389d436f0b51863f"]]
-  },
-  {
-    "id": "9766b8482ddbb03f",
-    "type": "ui_toast",
-    "z": "b313f7617d390c8e",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 550,
-    "y": 60,
-    "wires": []
-  },
-  {
-    "id": "43d6f39ab2146b18",
-    "type": "ui_toast",
-    "z": "b313f7617d390c8e",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 1010,
-    "y": 300,
-    "wires": []
-  },
-  {
-    "id": "f66e61e8bb5c7afc",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "change password of corresponding user in database",
-    "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1120,
-    "y": 180,
-    "wires": [["4428971f3d4d5948"]]
-  },
-  {
-    "id": "4428971f3d4d5948",
-    "type": "mysql",
-    "z": "b313f7617d390c8e",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 1350,
-    "y": 260,
-    "wires": [[]]
-  },
-  {
-    "id": "cb0ca932c01b4ba8",
-    "type": "debug",
-    "z": "b313f7617d390c8e",
-    "name": "debug 1",
-    "active": true,
-    "tosidebar": true,
-    "console": false,
-    "tostatus": false,
-    "complete": "false",
-    "statusVal": "",
-    "statusType": "auto",
-    "x": 720,
-    "y": 340,
-    "wires": []
-  },
-  {
-    "id": "7fd980b78cc12b96",
-    "type": "ui_form",
-    "z": "b313f7617d390c8e",
-    "name": "",
-    "label": "",
-    "group": "e37fc10a99f2d6f9",
-    "order": 1,
-    "width": 0,
-    "height": 0,
-    "options": [
-      {
-        "label": "Mật khẩu",
-        "value": "password",
-        "type": "password",
-        "required": true,
-        "rows": null
-      }
-    ],
-    "formValue": {
-      "password": ""
-    },
-    "payload": "",
-    "submit": "Xóa",
-    "cancel": "",
-    "topic": "topic",
-    "topicType": "msg",
-    "splitLayout": "",
-    "className": "",
-    "x": 90,
-    "y": 540,
-    "wires": [["692da322e20a9f9c"]]
-  },
-  {
-    "id": "692da322e20a9f9c",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "query current user in database",
-    "func": "msg.password = msg.payload.password; // `msg.payload` will be overwritten later\n\nmsg.topic = `\n    SELECT * FROM users\n    WHERE username = ?\n`;\nmsg.payload = [global.get(\"username\")];\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 350,
-    "y": 540,
-    "wires": [["202902d46e7a1bac"]]
-  },
-  {
-    "id": "202902d46e7a1bac",
-    "type": "mysql",
-    "z": "b313f7617d390c8e",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 130,
-    "y": 640,
-    "wires": [["0e64a30aa93b57fd"]]
-  },
-  {
-    "id": "d16b109168283f33",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "validate password before deleting account",
-    "func": "const bcrypt = global.get(\"bcrypt\");\nconst storedHash = msg.account[0].password;\nconst userPassword = msg.password;\ndelete msg.password;\n\nconst isMatch = bcrypt.compareSync(userPassword, storedHash);\n\nif (isMatch) {\n    // Prepare SQL query to delete account\n    msg.query = `\n        DELETE FROM users \n        WHERE username = ?\n    `;\n    msg.params = [global.get(\"username\")];\n    msg.topic = \"Đã xóa tài khoản người dùng!\";\n    msg.payload = \"Tài khoản đã được xóa thành công.\";\n} else {\n    msg.topic = \"Xóa tài khoản người dùng thất bại\";\n    msg.payload = \"Mật khẩu không đúng\";\n}\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1610,
-    "y": 640,
-    "wires": [["992aba96dfb5967d", "a1b69f090aa879fd"]]
-  },
-  {
-    "id": "992aba96dfb5967d",
-    "type": "ui_toast",
-    "z": "b313f7617d390c8e",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 1910,
-    "y": 700,
-    "wires": []
-  },
-  {
-    "id": "a1b69f090aa879fd",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "delete corresponding account in database",
-    "func": "msg.topic = msg.query;\nmsg.payload = msg.params;\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1990,
-    "y": 580,
-    "wires": [["2769621da318a467"]]
-  },
-  {
-    "id": "2769621da318a467",
-    "type": "mysql",
-    "z": "b313f7617d390c8e",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 2150,
-    "y": 660,
-    "wires": [["d05297746daeebb8"]]
-  },
-  {
-    "id": "677efbae05024493",
-    "type": "comment",
-    "z": "b313f7617d390c8e",
-    "name": "Xóa tài khoản bản thân",
-    "info": "",
-    "x": 120,
-    "y": 500,
-    "wires": []
-  },
-  {
-    "id": "103a8d1def9861b5",
-    "type": "comment",
-    "z": "b313f7617d390c8e",
-    "name": "Đặt lại mật khẩu",
-    "info": "",
-    "x": 100,
-    "y": 100,
-    "wires": []
-  },
-  {
-    "id": "57fbc855b6f25f16",
-    "type": "change",
-    "z": "b313f7617d390c8e",
-    "name": "set visible view",
-    "rules": [
-      {
-        "t": "set",
-        "p": "payload",
-        "pt": "msg",
-        "to": "{\"tabs\":{\"show\":[\"Đăng nhập\"],\"hide\":[\"Trang admin\",\"Cài đặt\",\"Trang chủ\"]}}",
-        "tot": "json"
-      }
-    ],
-    "action": "",
-    "property": "",
-    "from": "",
-    "to": "",
-    "reg": false,
-    "x": 2520,
-    "y": 600,
-    "wires": [["e3bb89f99ff2ea88"]]
-  },
-  {
-    "id": "e3bb89f99ff2ea88",
-    "type": "ui_ui_control",
-    "z": "b313f7617d390c8e",
-    "name": "",
-    "events": "all",
-    "x": 2660,
-    "y": 660,
-    "wires": [[]]
-  },
-  {
-    "id": "d05297746daeebb8",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "log out if success",
-    "func": "global.set(\"username\", \"Khách\");\nglobal.set(\"role\", \"guest\");\nglobal.set(\"previousUsername\", \"Khách\");\n\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 2350,
-    "y": 640,
-    "wires": [["57fbc855b6f25f16", "2afe62f2dcf1f61a"]]
-  },
-  {
-    "id": "2afe62f2dcf1f61a",
-    "type": "change",
-    "z": "b313f7617d390c8e",
-    "name": "back to login page",
-    "rules": [
-      {
-        "t": "set",
-        "p": "payload",
-        "pt": "msg",
-        "to": "{\"tab\":\"Đăng nhập\"}",
-        "tot": "json"
-      }
-    ],
-    "action": "",
-    "property": "",
-    "from": "",
-    "to": "",
-    "reg": false,
-    "x": 2490,
-    "y": 720,
-    "wires": [["e3bb89f99ff2ea88"]]
-  },
-  {
-    "id": "0e64a30aa93b57fd",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "function 1",
-    "func": "msg.role = \"user\";\nif (msg.payload[0].role == \"admin\") {\n    msg.role = \"admin\";\n}\nmsg.account = msg.payload; // `msg.payload` is gonna be overwritten later\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 280,
-    "y": 640,
-    "wires": [["f8b71ebe4ce78c1a"]]
-  },
-  {
-    "id": "f8b71ebe4ce78c1a",
-    "type": "switch",
-    "z": "b313f7617d390c8e",
-    "name": "",
-    "property": "role",
-    "propertyType": "msg",
-    "rules": [
-      {
-        "t": "eq",
-        "v": "admin",
-        "vt": "str"
-      },
-      {
-        "t": "eq",
-        "v": "user",
-        "vt": "str"
-      }
-    ],
-    "checkall": "true",
-    "repair": false,
-    "outputs": 2,
-    "x": 450,
-    "y": 640,
-    "wires": [["3d79561ccbef5f31"], ["d16b109168283f33"]]
-  },
-  {
-    "id": "3d79561ccbef5f31",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "query how many admin left?",
-    "func": "msg.topic = `\n    SELECT * FROM users\n    WHERE role = \"admin\"\n`\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 700,
-    "y": 540,
-    "wires": [["e91be77c34b5dcc7"]]
-  },
-  {
-    "id": "4b9031b228f5b4a2",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "decide continue going or not",
-    "func": "msg.allow = 1;\nif (msg.payload.length == 1) { // only you left is admin\n    msg.allow = 0;\n}\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1080,
-    "y": 540,
-    "wires": [["a405a4dfbd4fcc11"]]
-  },
-  {
-    "id": "e91be77c34b5dcc7",
-    "type": "mysql",
-    "z": "b313f7617d390c8e",
-    "mydb": "394d12c30be39e77",
-    "name": "",
-    "x": 890,
-    "y": 540,
-    "wires": [["4b9031b228f5b4a2"]]
-  },
-  {
-    "id": "a405a4dfbd4fcc11",
-    "type": "switch",
-    "z": "b313f7617d390c8e",
-    "name": "",
-    "property": "allow",
-    "propertyType": "msg",
-    "rules": [
-      {
-        "t": "eq",
-        "v": "0",
-        "vt": "num"
-      },
-      {
-        "t": "eq",
-        "v": "1",
-        "vt": "num"
-      }
-    ],
-    "checkall": "true",
-    "repair": false,
-    "outputs": 2,
-    "x": 1290,
-    "y": 540,
-    "wires": [["d1dae642f40c7f67"], ["d16b109168283f33"]]
-  },
-  {
-    "id": "d1dae642f40c7f67",
-    "type": "function",
-    "z": "b313f7617d390c8e",
-    "name": "notify failed",
-    "func": "msg.topic = \"Lỗi\";\nmsg.payload = \"Bạn đang là admin duy nhất\";\nreturn msg;",
-    "outputs": 1,
-    "timeout": 0,
-    "noerr": 0,
-    "initialize": "",
-    "finalize": "",
-    "libs": [],
-    "x": 1490,
-    "y": 500,
-    "wires": [["383f69191e634e9c"]]
-  },
-  {
-    "id": "383f69191e634e9c",
-    "type": "ui_toast",
-    "z": "b313f7617d390c8e",
-    "position": "top right",
-    "displayTime": "3",
-    "highlight": "",
-    "sendall": true,
-    "outputs": 0,
-    "ok": "OK",
-    "cancel": "",
-    "raw": false,
-    "className": "",
-    "topic": "",
-    "name": "",
-    "x": 1710,
-    "y": 500,
-    "wires": []
-  },
-  {
-    "id": "3784479a9893c512",
-    "type": "comment",
-    "z": "b313f7617d390c8e",
-    "name": "nếu là admin",
-    "info": "",
-    "x": 650,
-    "y": 500,
-    "wires": []
-  },
-  {
-    "id": "b90c3780b9e73e40",
-    "type": "comment",
-    "z": "b313f7617d390c8e",
-    "name": "nếu là user",
-    "info": "",
-    "x": 560,
-    "y": 680,
-    "wires": []
-  },
-  {
-    "id": "b288eeaec135c3db",
-    "type": "comment",
-    "z": "b313f7617d390c8e",
-    "name": "chỉ còn bản thân bạn là admin",
-    "info": "",
-    "x": 1490,
-    "y": 460,
-    "wires": []
-  },
-  {
-    "id": "e0904f902388711a",
-    "type": "comment",
-    "z": "b313f7617d390c8e",
-    "name": "vẫn còn từ 1 admin khác trở lên",
-    "info": "",
-    "x": 1480,
-    "y": 580,
-    "wires": []
-  }
 ]
